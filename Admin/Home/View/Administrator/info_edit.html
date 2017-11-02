@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+<body>
+<div class="place">
+<span>位置：</span>
+<ul class="placeul">
+<li><a href="__MODULE__/config.html">首页</a></li>
+<li><a href="__CONTROLLER__/index.html">系统管理员管理</a></li>
+<li><a href="#">管理员修改</a></li>
+</ul>
+</div>
+<div class="formbody">
+<div id="msg">
+<input id="Id" type="hidden" value="{$info['id']}">
+<table class="page_table" cellpadding="0" cellspacing="1">
+<tr>
+<td width="10%" height="32" class="td_left">备注名称：</td>
+<td width="90%" class="left">{$info['rname']}</td>
+</tr>
+<tr>
+<td width="10%" height="32" class="td_left">会员账户：</td>
+<td width="90%" class="left">{$info['username']}</td>
+</tr>	
+<tr>
+<td width="10%" class="td_left">旧 密 码：</td>
+<td width="90%" class="left"><input id="passwords" type="password" style="width:350px;" class="biankuan" placeholder="请输入旧密码后才能修改密码"/></td>
+</tr>
+<tr>
+<td width="10%" class="td_left">新 密 码：</td>
+<td width="90%" class="left"><input id="password" type="password" style="width:350px;" class="biankuan"  placeholder="请输入新的登录密码"/></td>
+</tr>
+<tr>
+<td width="10%" class="td_left">确认密码：</td>
+<td width="90%" class="left"><input id="qrpassword" type="password" style="width:350px;" class="biankuan"  placeholder="请再次输入新的登录密码"/></td>
+</tr>
+<tr><td></td><td align="left"><input type="button"  value="确认提交"  class="tijiao_input" onClick="Get_edit_Save()"/></td></tr>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_edit_Save(){
+var Id =$("#Id").attr("value");
+var passwords =$("#passwords").attr("value");
+var password  =$("#password").attr("value");
+var qrpassword=$("#qrpassword").attr("value");
+jQuery.ajax({
+url: "__CONTROLLER__/info_edit.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Edit",passwords:passwords,password:password,qrpassword:qrpassword,Id:Id},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/index.html')",1000);//==========执行几秒跳转
+}
+});
+
+}
+</script>

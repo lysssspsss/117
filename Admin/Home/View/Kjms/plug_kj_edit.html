@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>网站后台系统管理</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/font-awesome.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/ace-ie.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+        <link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/slackck.css" />
+		<!-- ace settings handler -->
+		<script src="{$Think.const.JS_URL}/assets/js/ace-extra.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/jquery.min.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/jquery.form.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/layer/layer.js"></script>
+		<!--<script src="{$Think.const.JS_URL}/assets/js/jquery.leanModal.min.js"></script>-->
+
+		<!--[if lte IE 8]>
+		<script src="{$Think.const.JS_URL}/assets/js/html5shiv.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/respond.js"></script>
+		<![endif]-->
+	<meta name="__hash__" content="bc49f533e06b21b1b520baeb454014d0_3c9a31d3dd4d2ea30ba11af8a88a0d81" />		
+	</head>
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									修改采集模式
+								</small>
+							</h1>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="plug_kj_runedit" id="plug_kj_runedit" method="post" action="__URL__/plug_kj_runedit">
+								<input type="hidden" name="plug_kj_id" id="plug_kj_id" value="{$plug_kj.plug_kj_id}" />
+                                	<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 采集模式 </label>
+										<div class="col-sm-11">
+                                        <select name="plug_kj_adtypeid"  class="col-sm-4 selector" >
+                                        <foreach name="plug_kjtype_list" item="v">
+                                        <option value="{$v.plug_kjtype_id}" <if condition="$plug_kj['plug_kj_adtypeid'] eq $v['plug_kjtype_id']">selected</if>>{$v.plug_kjtype_name}</option>
+                                        </foreach>
+                                        </select>
+										<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>选择首页开奖的是自动还是手动</span>
+                                        </div>
+									</div>
+									<div class="space-4"></div>
+																	
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+
+
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+		</div><!-- /.main-container -->
+
+	<script type="text/javascript" src="__PUBLIC__/assets/js/region.js"></script>
+<script>
+
+function backpic(picurl){
+	$("#img0").attr("src",picurl);//还原修改前的图片
+	$("input[name='file0']").val("");//清空文本框的值
+	$("input[name='oldcheckpic']").val(picurl);//清空文本框的值
+}
+$("#file0").change(function(){
+	var objUrl = getObjectURL(this.files[0]) ;
+	console.log("objUrl = "+objUrl) ;
+	if (objUrl) {
+		$("#img0").attr("src", objUrl) ;
+	}
+}) ;
+
+//建立一個可存取到該file的url
+function getObjectURL(file) {
+	var url = null ; 
+	if (window.createObjectURL!=undefined) { // basic
+	$("#oldcheckpic").val("nopic");
+		url = window.createObjectURL(file) ;
+	} else if (window.URL!=undefined) { // mozilla(firefox)
+	$("#oldcheckpic").val("nopic");
+		url = window.URL.createObjectURL(file) ;
+	} else if (window.webkitURL!=undefined) { // webkit or chrome
+		$("#oldcheckpic").val("nopic");
+		url = window.webkitURL.createObjectURL(file) ;
+	}
+	return url ;
+}
+
+
+
+//添加操作
+$(function(){
+	$('#plug_kj_runedit').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $(".selector").val()){
+			layer.alert('所属广告位不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('.selector').focus(); 
+			});
+			return false;
+		}
+	
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+			return false;	
+		}
+	}
+});
+$(document).ready(function(){
+
+  $("#plug_kj_checkjsid").click(function(){
+  	$("#pic_jslist").show();
+	$("#pic_list").hide();
+	$("#pic_listurl").hide();
+  });
+  
+  $("#plug_kj_checkid").click(function(){
+  	$("#pic_jslist").hide();
+	$("#pic_list").show();
+	$("#pic_listurl").show();
+  });
+});
+
+</script>
+<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='{$Think.const.JS_URL}/assets/js/jquery1x.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script src="{$Think.const.JS_URL}/assets/js/bootstrap.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/maxlength.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/ace/ace.js"></script>
+		<script src="{$Think.const.JS_URL}/assets/js/ace/ace.sidebar.js"></script>
+
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+			   $('#sidebar2').insertBefore('.page-content');
+			   
+			   $('.navbar-toggle[data-target="#sidebar2"]').insertAfter('#menu-toggler');
+			   
+			   
+			   $(document).on('settings.ace.two_menu', function(e, event_name, event_val) {
+				 if(event_name == 'sidebar_fixed') {
+					 if( $('#sidebar').hasClass('sidebar-fixed') ) {
+						$('#sidebar2').addClass('sidebar-fixed');
+						$('#navbar').addClass('h-navbar');
+					 }
+					 else {
+						$('#sidebar2').removeClass('sidebar-fixed')
+						$('#navbar').removeClass('h-navbar');
+					 }
+				 }
+			   }).triggerHandler('settings.ace.two_menu', ['sidebar_fixed' ,$('#sidebar').hasClass('sidebar-fixed')]);
+			})
+		</script>
+
+		</div><!-- /.main-container -->
+	</body>
+</html>

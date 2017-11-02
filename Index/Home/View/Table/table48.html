@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>江恩旋入号码分布走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">&nbsp &nbsp&nbsp简要说明：<li >威廉.江恩（William Delbert Gann，1878年-1955年）是二十世纪最伟大的投资家之一。 江恩螺旋四方形，也叫江恩正方形。江恩螺旋四方形就是将市场循环一周八等分，而四方形的十字线和对角线上的价格就是极有可能发生转折的重要价位。香港彩票江恩螺旋四方形旋入矩阵是把49个号码按江恩四方形排列，从右下角开始顺时针旋入，最终49被置于中间 </li><li ></li></div>
+
+
+<div class="datalist">
+<foreach name="list" item="vo">
+
+<table width="20%" id="table1" style="width:180px;">
+<tr>
+<td >
+<div align="center" class="table">
+<table width="100%" border="0" align="center" cellspacing="0" id="table2">
+<tr>
+<td  colspan='7'><p align='center'>{$vo['title']}期</td>
+</tr> 
+<?php
+$i=0;
+$zong=array("13","14","15","16","17","18","19","12","33","34","35","36","37","20","11","32","45","46","47","38","21","10","31","44","49","48","39","22","09","30","43","42","41","40","23","08","29","28","27","26","25","24","07","06","05","04","03","02","01");
+foreach ($zong as $key=>$value){
+$i++;
+?>
+<?php if (in_array($value, array($vo['tit1'],$vo['tit2'],$vo['tit3'],$vo['tit4'],$vo['tit5'],$vo['tit6'],$vo['tit7']))){?>
+<td class="<?=cz_band_txt($value)?>"><?=$value?></td>
+<?php }else{?>
+<td><em><?=$value?></em></td>
+<?php } ?>
+
+<?php if ($i % 7==0){?></tr><tr><?php } ?>
+
+<?php } ?>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</foreach>
+</div>
+
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

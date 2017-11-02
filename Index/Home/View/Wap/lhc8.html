@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>特码五行走势 － 六合开奖记录直播</title>
+<meta name="keywords" content="一起发开奖现场,手机报码,特码五行走势,手机开奖网址" />
+<meta name="description" content="一起发开奖现场第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果" />	
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link type="text/css" rel="stylesheet" href="/Index/Public/wap/mobile.css"/>
+	<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+	<link href="{$Think.const.CSS_URL}zoushi-wap.css" rel="stylesheet" type="text/css">
+	<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+	<script language="javascript" src="{$Think.const.JS_URL}zst.js"></script>
+<style type="text/css">
+.bg{ background: #E1E1FF no-repeat center center;text-align:center;color:#000000;font-size:15px;font-family:Arial;}
+.zous-2col-long .zstable2-main-scrollhd {position:fixed;z-index:10;top:85px;left:0px;}
+.zous-2col-long .zstable2-main-scrollbd {margin-top:10;}
+</style>
+</head>
+
+<body>
+<!--head begin-->
+<header id="uiHead" class="ui-head">
+    <div class="ui-head-in">
+        <div class="ui-head-l">
+            <span class="ui-head-btn1">返回</span>
+        </div>
+        <div class="ui-head-m">
+            <h2 class="ui-head-tit">六合走势图</h2>
+        </div>
+    </div>
+</header>
+<!--head end-->
+<!--彩种导航 start-->
+<div class="ui-navbox">
+    <div class="ui-navbox-in">
+        <ul>
+<li><a class="select" href="?id=2017">2017</a></li>
+<li><a href="?id=2016">2016</a></li>
+<li><a href="?id=2015">2015</a></li>
+<li><a href="?id=2014">2014</a></li>
+        </ul>
+    </div>
+</div>
+<!--彩种导航 end-->
+
+<div class="wrapper">
+    <div class="zous-2col zous-2col-long">
+
+    <div class="zous-2col-r zstable2-main-scroll">
+        <table class="zstable2 zstable2-main zstable2-main-scrollhd zstable2-yil">
+            <colgroup>
+                <col width="40">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+            </colgroup>
+<tr style="background:#efefef;">
+<td width="70">期数</td>
+<td width="40">特码</td>
+<td width="40">五行</td>
+<td>金</td>
+<td>木</td>
+<td>水</td>
+<td>火</td>
+<td>土</td>
+</tr>
+        </table>
+        <table class="zstable2 zstable2-main zstable2-main-scrollbd zstable2-yil">
+            <colgroup>
+                <col width="40">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+                <col width="30">
+            </colgroup>
+<tr style="background:#ffc;" class="bold red">
+<td>出现次数</td>
+<td> </td>
+<td> </td>
+<td>{$counts[0]} 次</td>
+<td>{$counts[1]} 次</td>
+<td>{$counts[2]} 次</td>
+<td>{$counts[3]} 次</td>
+<td>{$counts[4]} 次</td>
+</tr>
+<tr>
+<td class="bold" style="height:40px">预测本期</td>
+<td colspan="2"><font style="font-weight:normal; color:#999999">(请点击属性)</font></td>
+<td class="cu" onClick="SelectNum(this,'Red','金');" title="点击选取">土</td>
+<td class="cu" onClick="SelectNum(this,'Red','木');" title="点击选取">木</td>
+<td class="cu" onClick="SelectNum(this,'Red','水');" title="点击选取">水</td>
+<td class="cu" onClick="SelectNum(this,'Red','火');" title="点击选取">火</td>
+<td class="cu" onClick="SelectNum(this,'Red','土');" title="点击选取">土</td>
+</tr>
+<foreach name="list" item="row">
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#ffffcc'">
+<td><?=$row['title']?>期</td>
+<td style="background:#ffc;"><span class="<?=yx_no_band($row['tit7'],1)?> F"><?=$row['tit7']?></span></td>
+<td class="Blue"><?=$row['tit8']?></td>
+<?php if ($row['tit8']=='金'){?><td class="<?=yx_no_band($row['tit7'],4)?>"><FONT color=#ffffff>金</FONT></td><?php }else{?><td class="hui_color">-</td><?php } ?>
+<?php if ($row['tit8']=='木'){?><td class="<?=yx_no_band($row['tit7'],4)?>"><FONT color=#ffffff>木</FONT></td><?php }else{?><td class="hui_color">-</td><?php } ?>
+<?php if ($row['tit8']=='水'){?><td class="<?=yx_no_band($row['tit7'],4)?>"><FONT color=#ffffff>水</FONT></td><?php }else{?><td class="hui_color">-</td><?php } ?>
+<?php if ($row['tit8']=='火'){?><td class="<?=yx_no_band($row['tit7'],4)?>"><FONT color=#ffffff>火</FONT></td><?php }else{?><td class="hui_color">-</td><?php } ?>
+<?php if ($row['tit8']=='土'){?><td class="<?=yx_no_band($row['tit7'],4)?>"><FONT color=#ffffff>土</FONT></td><?php }else{?><td class="hui_color">-</td><?php } ?>
+</tr>
+</foreach>
+<tr id="forecast">
+<td class="bold" style="height:40px">预测本期</td>
+<td colspan="2"><font style="font-weight:normal; color:#999999">(请点击属性)</font></td>
+<td class="cu" onClick="SelectNum(this,'Red','金');" title="点击选取">土</td>
+<td class="cu" onClick="SelectNum(this,'Red','木');" title="点击选取">木</td>
+<td class="cu" onClick="SelectNum(this,'Red','水');" title="点击选取">水</td>
+<td class="cu" onClick="SelectNum(this,'Red','火');" title="点击选取">火</td>
+<td class="cu" onClick="SelectNum(this,'Red','土');" title="点击选取">土</td>
+</tr>
+<tr id="disnum" style="background:#ffc;" class="bold red">
+<td>出现次数</td>
+<td> </td>
+<td> </td>
+<td>{$counts[0]} 次</td>
+<td>{$counts[1]} 次</td>
+<td>{$counts[2]} 次</td>
+<td>{$counts[3]} 次</td>
+<td>{$counts[4]} 次</td>
+</tr>
+<tr style="height:38px; background:#efefef; font-weight:bold;" align=middle>
+<td>期数</td>
+<td>特码</td>
+<td>波色</td>
+<td>金</td>
+<td>木</td>
+<td>水</td>
+<td>火</td>
+<td>土</td>
+</tr>				
+</table>
+    </div>
+</div>
+</div>
+
+
+<div class="zous-foot-qh-wrap">
+    <div class="zous-foot-qh">
+
+        <span class="on">特码五行走势</span>
+
+    </div>
+</div>
+
+
+<div class="zous-haomb-btn hide"></div>
+
+<!--弹层 开始-->
+<div class="ui-alert-layer hide"></div>
+<div class="zous-haomb on hide">
+
+</div>
+<!--弹层 结束-->
+
+
+
+
+<script type="text/javascript" src="/Index/Public/wap/vendor.js"></script>
+
+
+
+<script type="text/javascript">
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        clickEvent = "tap";
+    } else {
+        clickEvent = "click";
+    }
+
+    $(function () {
+
+        //切换统计的期数
+        $("span[data-code]").on(clickEvent, function () {
+            $(".zous-foot-qh span").removeClass("on");
+            $(this).addClass("on");
+            var code = $(this).attr("data-code");
+            $.get("/chart/ssq/houqu/" + code, function (data) {
+                $(".wrapper").html(data);
+                addScroll();
+            })
+        });
+
+        //投注弹窗
+        $('.zous-haomb-btn').on(clickEvent, function () {
+            $('.ui-alert-layer').removeClass('hide');
+            $('.zous-haomb').removeClass('hide');
+        });
+
+        //头部
+        $(".ui-head-btn1").on("click", function () {
+            history.back();
+        });
+
+        $("li[data-href]").on(clickEvent, function () {
+            var url = $(this).attr("data-href");
+            window.location.href = url + "?_t=" + new Date().getMilliseconds();
+        });
+
+
+        function addScroll(){
+            //左右-上下滚动
+            var o2ColScrollL = $('.zous-2col-l').width(),
+                o2ColScrollHD = $('.zstable2-main-scrollhd').eq(0),
+                o2ColScrollHDinfo = $('.zous-2col-longinfo').find('.zstable2-main-scrollhd').eq(0),
+                o2ColScroll = $('.zstable2-main-scroll'),
+                o2ColScrollinfo = $('.zous-2col-longinfo').find('.zstable2-main-scroll').eq(0),
+                nCurScrollLeft;
+
+            $('.zous-2col-r').width($(window).width() - o2ColScrollL);
+            $(window).on('resize', function () {
+                $('.zous-2col-r').width($(window).width() - o2ColScrollL);
+            });
+
+            $(o2ColScroll).scroll(function () {
+                nCurScrollLeft = $(this).scrollLeft();
+                o2ColScrollHD.css('left', -nCurScrollLeft + o2ColScrollL);
+                o2ColScrollinfo.scrollLeft(nCurScrollLeft);
+            });
+            $(o2ColScrollinfo).scroll(function () {
+                nCurScrollLeft = $(this).scrollLeft();
+                o2ColScrollHD.css('left', -nCurScrollLeft + o2ColScrollL);
+                o2ColScroll.scrollLeft(nCurScrollLeft);
+            });
+        }
+        addScroll();
+    });
+
+</script>
+
+
+</body>
+</html>

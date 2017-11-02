@@ -1,0 +1,288 @@
+	<include file='index:header' />
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									图片采集添加
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-horizontal">
+								<div id="msg">
+								<input id="ClassID"  type="hidden" value="">
+                                	<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 采集项目名称： </label>
+										<div class="col-sm-9">
+											<input type="text" name="biaoti" id="biaoti" class="col-xs-10 col-sm-5" placeholder="请输入采集项目名称" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>采集项目名称，中文</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resone"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 采集编码： </label>
+										<div class="col-sm-9">
+											<select id="bianma" name="bianma" class="col-sm-4">
+											<option>UTF-8</option>
+											<option>GB2312</option>
+											</select>
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>抓取页面编码</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>									
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否下载图片： </label>
+										<div class="col-sm-9">
+											<select id="zhuangtai" name="zhuangtai" class="col-sm-4">
+											<option value="1">下载到本地</option>
+											<option value="0">使用网络链接</option>
+											</select>
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>是否将图片下载到本地</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr1"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>										
+                                    
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 图片所属分类： </label>
+										<div class="col-sm-9">
+											<iframe frameborder=0 id=FrmRight name=right src="__CONTROLLER__/directory1/?NumberID={$_SESSION['pic_class']}" style="HEIGHT:28px;Z-INDEX: 1"></iframe>
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>图片所属分类</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="restwo"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 采集页面路径： </label>
+										<div class="col-sm-9">
+											<input type="text" name="url" id="url" placeholder="请输入采集页面路径"  class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>采集页面路径</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 采集节点范围： </label>
+										<div class="col-sm-9">
+											<input type="text" name="fanwei" id="fanwei" placeholder="请输入采集节点范围规则"   class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>采集列表节点范围标记(jquery 语法) 如：<code>.test li</code></span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 列表地址： </label>
+										<div class="col-sm-9">
+											<input type="text" name="cjurl" id="cjurl" placeholder="列表地址规则"  class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>地址节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 标题： </label>
+										<div class="col-sm-9">
+											<input type="text" name="title" id="title" placeholder="请输入标题规则" class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>地址节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 采集缩略图： </label>
+										<div class="col-sm-9">
+											<input type="text" name="picurl" id="picurl" placeholder="请输入采集缩略图规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 过滤内容规则： </label>
+										<div class="col-sm-9">
+											<input type="text" name="glzd" id="glzd" placeholder="请输入过滤内容规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>	
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 过滤标题规则： </label>
+										<div class="col-sm-9">
+											<input type="text" name="glbt" id="glbt" placeholder="请输入过滤标题规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 作者： </label>
+										<div class="col-sm-9">
+											<input type="text" name="cjmc" id="cjmc" placeholder="发布文章时的作者" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>									
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 内容范围： </label>
+										<div class="col-sm-9">
+											<input type="text" name="nrfw" id="nrfw" placeholder="请输入内容范围规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 内容规则： </label>
+										<div class="col-sm-9">
+											<input type="text" name="nrgz" id="nrgz" placeholder="请输入页面内容规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 内容分页规则： </label>
+										<div class="col-sm-9">
+											<input type="text" name="page" id="page" placeholder="请输入页面内容分页规则" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>									
+									
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<input type="submit"  value="提 交" class="btn btn-info"  onClick="Get_add_Save()"/>
+											&nbsp; &nbsp; &nbsp;
+											<input type="button" value="取 消" class="btn" />
+										</div>
+									</div>
+								</div>
+							</div>	
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+
+<include file='index:footer' />
+
+
+	</body>
+</html>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_add_Save(){
+var title =$("#title").attr("value");
+var url   =$("#url").attr("value");
+var biaoti=$("#biaoti").attr("value");
+var cjmc  =$("#cjmc").attr("value");
+var cjurl =$("#cjurl").attr("value");
+var glzd  =$("#glzd").attr("value");
+var glbt  =$("#glbt").attr("value");
+var nrgz  =$("#nrgz").attr("value");
+var nrfw  =$("#nrfw").attr("value");
+var picurl=$("#picurl").attr("value");
+var fanwei=$("#fanwei").attr("value");
+var page=$("#page").attr("value");
+var zhuangtai=$("#zhuangtai").attr("value");
+var bianma=$("#bianma").attr("value");
+var ClassID =$("#ClassID").attr("value");
+jQuery.ajax({
+url: "__SELF__",
+dataType:"json",
+type:"POST",
+data:{Action:"Add",title:title,url:url,biaoti:biaoti,cjmc:cjmc,ClassID:ClassID,cjurl:cjurl,page:page,glzd:glzd,zhuangtai:zhuangtai,glbt:glbt,nrgz:nrgz,nrfw:nrfw,picurl:picurl,fanwei:fanwei,bianma:bianma},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/pic.html')",1000);//==========执行几秒跳转
+}
+});
+
+}
+</script>

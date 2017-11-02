@@ -1,0 +1,61 @@
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="一起发开奖现场">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="wap-font-scale" content="no">
+<meta name="aplus-touch" content="1">
+<meta name="msapplication-tap-highlight" content="no">
+<title>彩色图库 - 马经历史图库这里是香港六合彩图库大全_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="117kj图库,117kj,马经,曾道人,福利传真,通天报,新报跑狗,香港正版挂牌,雷锋内幕报,平特,六合彩2017,东方心经,六合图库" />
+<meta name="description" content="117kj图库：这里是香港首发最新版图库 - 提供随时查看001-150期全年图纸记录,分有彩色图库、黑白图库、精品网址大全三大块。" />
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="checkCookie()">
+<include file="Wap:header" />
+<table width="100%" border="0">
+<tbody>
+<tr class="header">
+<td colspan="2"><span class="fright"></span><span class="fleft">彩色图库</span></td>
+</tr>
+</tbody>
+</table>
+<form action="/caise/index.php" method="get">
+<input type="hidden" name="formhash" value="182bebcf">
+<div class="search">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<input value="" autocomplete="off" class="input" name="keywords" id="keywords" placeholder="快速找图，输入关键字从请这里搜索">
+</td>
+<td width="66" align="center" class="scbar_btn_td">
+<div><input type="hidden" name="searchsubmit" value="yes"><input type="submit" value="搜索" class="button2" id="scform_submit"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>	
+<div id="mainer">
+<div class="d1">
+<div class="aa lc1">
+<foreach name="list1" item="vo">
+<volist name="vo['voo1']" id="sub1">	
+<foreach name="list" item="vo">	
+		<volist name="vo['voo']" id="sub">
+<li><a href="/caise/{$sub1.id}.html">{$sub1.title}</a></li>
+</volist> 
+</foreach>
+</volist>	
+</foreach>	
+</div>
+</div>
+</div>
+<div class="blank"></div>
+<include file="Wap:footer" />
+</body>
+</html>

@@ -1,0 +1,1 @@
+JsonpReq.completeCall.push_lhc_result({"id":47,"nextid":48,"year":2017,"day":"04月27日","time":"21时30分","week":"星期四","type":5,"info":"","ma":[49,"雞","green",22,"鼠","green",46,"鼠","red",1,"雞","red",21,"牛","green",45,"牛","red",14,"猴","blue"]});

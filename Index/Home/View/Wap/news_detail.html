@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="一起发开奖现场">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="wap-font-scale" content="no">
+<meta name="aplus-touch" content="1">
+<meta name="msapplication-tap-highlight" content="no">
+<TITLE>{$data.title}_手机看开奖结果 － 六合开奖记录直播_<?=Cz_cig('site_name')?></TITLE>
+<meta name="keywords" content="{$data.title},手机报码,手机报码网,手机开奖网址">
+<meta name="description" content="{$data.title}_第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果">
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+<style> 
+.text h1{font-size:1.2em;line-height:2em;color:#F30;padding:1em 0;text-align:center}
+.text .infotext{font-size:0.85em;line-height:2em;border-bottom:1px dotted #DEDEDE;width:100%;text-align:center}
+.text .newstext{line-height:1.75em;color:#333;padding:1em}
+</style>
+
+</head>
+<body onload="checkCookie()">
+<include file="Wap:header" />
+<div id="mainer">
+<table width="100%" border="0">
+<table width="100%" border="0">
+<tbody><tr class="header">
+<td width="100%"><span class="fright"><a href="/news">&gt;&gt;</a></span><span class="fleft"><a href="javascript:history.back(-1)">返回上一页</a></span></td>
+</tr>
+<tr width="100%" class="text">
+ <td width="100%">
+			<!--广告开始-->
+			<foreach name="plug_ad_22" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->	 
+ <h1>{$data.title}</h1>
+ <p class="infotext">时间：{$data.begtime|datetime}</p>
+ <div class="newstext">
+ 			<!--广告开始-->
+			<foreach name="plug_ad_20" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->	
+	<div>{$data.content}</div>
+				<!--广告开始-->
+			<foreach name="plug_ad_21" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->	
+<div>　
+</div>
+</div>
+ <div class="clear"></div>
+ </td>
+</tr>
+</tbody></table>
+</div>
+<div class="blank"></div>
+<include file="Wap:footer" />
+</body>
+</html>

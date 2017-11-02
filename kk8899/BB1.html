@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="refresh" content="10">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>六合彩开奖采集-请勿关闭！</title>
+<style type="text/css">
+<!--
+body,td,th {FONT-SIZE: 14px;color: #555555;FONT: 14px "Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti; padding:0; margin:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,p,th,td{margin:0;padding:0;}
+body {margin-left: 0px;margin-top:0px;margin-right: 0px;margin-bottom:0px;padding-left:0px;text-align:left; padding:0; margin:0; background-color:#ffffff}
+IMG {BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px}
+a,img{border:0;}
+:focus{outline:0 none}
+.ff0{FONT-SIZE: 16px;color:#33CC33; font-weight:bold; text-align:right; padding-right:30px;}
+.ff1{border-bottom:1px solid #Ededed;}
+.ff2{line-height:40px; text-align:left}
+.vv1{float:left;width:70px;height:40px;line-height:40px; text-align:left; font-weight:bold}
+.vv2{float:left;width:218px;height:35px;line-height:35px; text-align:left;border:1px solid #dddddd;}
+.vv3{float:left;width:70px;height:40px;line-height:40px; text-align:left; font-weight:bold; margin-left:40px;}
+.vv4{float:left;width:450px;height:40px;line-height:40px; text-align:left; margin-left:10px;}
+-->
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var maxtime = 10 //一个小时，按秒计算，自己调整!
+function CountDown(){
+if(maxtime>=0){
+minutes = Math.floor(maxtime/60);
+seconds = Math.floor(maxtime%60);
+msg = ""+minutes+"分"+seconds+"秒后 进行采集";
+document.all["timer"].innerHTML=msg;
+--maxtime;
+}
+}
+timer = setInterval("CountDown()",1000);
+//-->
+</SCRIPT>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){init();
+
+
+});
+function init()
+{
+    var data;
+	var status;
+	
+   	//时间
+	$.post("time.asp",{"myck":"1",},function(data,status)
+	{
+		 if(status=="success")
+	{
+		 
+         if(data=="0")
+		 {
+		 setTimeout("init()",10);
+		 }
+         if(data!="0")		 
+         {
+          setTimeout("init()",data);
+         }
+
+	}
+	});
+	//开奖
+	$.post("caiji.php",function(data,status)
+	{
+		 if(status=="success")
+		 {
+            $("#info").html(data);			
+		 }
+	});
+
+}
+</script>
+</head>
+
+<body>
+<div id="timer" style="color:red"></div><span id="info" class="ff2">加载中...</span>
+</body>
+</html>

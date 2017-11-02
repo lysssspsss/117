@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>六合资料_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="<?=Cz_cig('site_keywords')?>" />
+<meta name="description" content="<?=Cz_cig('site_describe')?>" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}/html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style >
+classbutton{
+	width:99.961538461538461538461538461538%;/*960*/
+}
+.classbutton h2{
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 500;
+	height: 30px;
+	color: #444;
+	float: left;
+	clear:both;
+	width:100%;
+}
+.classbutton a{
+	display: inline-block;
+	overflow: hidden;
+	width: 7.0833333333333333333333333333333%;/*68*/
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	text-align: center;
+	color: #1f02fc;
+	font-family: "microsoft yahei";
+	font-weight: 100;
+	word-wrap: break-word;
+	white-space: nowrap;
+	float: left;
+	margin: 4px .52083333333333333333333333333333%;/*5*/
+	border-radius: 2px;
+	background-color: #e0c494;
+	border: 1px solid #D8D8D8;
+	-webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.1);
+	-moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.classbutton a:hover {
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.22);
+	background-color: #3066D6;
+	border-color: #2A5ABE;
+	color: white;
+}
+.classbutton a.on {
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.22);
+	background-color: #3066D6;
+	border-color: #2A5ABE;
+	color: white;
+}
+</style>
+<include file="Index:header" />
+<div class="content clearfix">
+
+
+<style>
+.mcc_content {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 2.5%;
+    width: 100%;
+}
+
+
+.div11 {
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 6px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.div10 {
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+li {
+    list-style: outside none none;
+}
+</style>
+<div id="main" class="main">
+<div class="fleft" style="width:1000px">
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="">资料大全</a></p>
+</div>
+<div class="br bgff">
+<div class="title28_bord"><span class="fright"></span><h4>资料大全</h4></div>
+<div class="mcc_content">
+<h2 class="div11">免费资料大全</h2>
+<ul class="">
+<foreach name="list" item="vo">
+<volist name="vo['voo']" id="sub">        
+<li class="div10">
+<a href="/lists/{$sub.id}.html" class="div11" target="_blank">{$sub.title}</a>
+</li>	
+</volist>
+</foreach>
+</ul>
+</div>
+<div class="blank10"></div>
+</div>
+</div>
+
+<div class="blank10"></div>
+</div>
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Article_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Article_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+<script src="{$Think.const.JS_URL}menu.js"></script> 
+<script src="{$Think.const.JS_URL}layer.min.js"></script> 
+</body>
+</html>

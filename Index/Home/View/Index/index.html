@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title><?=Cz_cig('site_name')?> <?=Cz_cig('site_title')?></title>
+<meta name="viewport" content="width=1080" />
+<meta name="keywords" content="<?=Cz_cig('site_keywords')?>" />
+<meta name="description" content="<?=Cz_cig('site_describe')?>" />
+<style>
+<!--
+
+* { margin: 0; padding: 0;}
+td { height: 25px; font-weight: bold; font-size: 14px; text-align: center; border: solid 1px #d3b484;}
+td.td01 { color: #fff; border: solid 1px #f00; background: #f00;}
+-->
+</style>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}foot.css">
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}/html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+<include file="Index:header" />
+			<foreach name="wap" item="v">
+			<if condition="$v[plug_wap_adtypeid]==1">
+
+<script type="text/javascript">
+function browserRedirect() { 
+var sUserAgent= navigator.userAgent.toLowerCase(); 
+var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
+var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os"; 
+var bIsMidp= sUserAgent.match(/midp/i) == "midp"; 
+var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4"; 
+var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb"; 
+var bIsAndroid= sUserAgent.match(/android/i) == "android"; 
+var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
+var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
+if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
+window.location= '<?=Cz_cig('site_wap')?>m_index.html'; //手机网站地址
+} else { 
+//window.location= '<?=Cz_cig('site_url')?>'; //电脑网站地址
+} 
+} 
+browserRedirect(); 
+</script>
+<script>
+    try
+    {
+        if(self.location == "<?=Cz_cig('site_wap')?>")
+        {
+            top.location.href = "<?=Cz_cig('site_url')?>";
+        }
+    }
+    catch(e){ }
+</script>
+
+			</if>			
+			</foreach>
+
+			
+			
+
+
+			<!--首页-弹窗开始-->
+			<foreach name="plug_ad_24" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+				<div class="lcj_tan" style="display:none">
+					<div class="lcj_guan"><span>{$v.plug_ad_name}</span><button><img src="/Public/tu/hong.png" ></button></div>
+					<div class="lcj_img">
+						<a href="{$v.plug_ad_url}" target="_blank"><img src="__PUBLIC__/{$v.plug_ad_pic}" ></a>
+					</div>
+					<div class="lcj_clo">
+						<div class="lcj_cloa">
+							<button >关闭</button>
+						</div>
+					</div>
+				</div>
+				<div class="lcj_bottom" style="display:none">
+				
+				</div>			
+			<elseif condition="$v[plug_ad_checkid]==2"/>		
+				<div class="lcj_tan" style="display:none">
+					{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+					<div class="lcj_clo">
+						<div class="lcj_cloa">
+							<button >关闭</button>
+						</div>
+					</div>
+				</div>
+				<div class="lcj_bottom" style="display:none">
+				
+				</div>
+			</if>	
+			<script src="/Public/tu/jquery.min.js"></script>
+			 <script src="/Public/tu/lcj.js" type="text/javascript"></script>			
+			</foreach>
+			<!--首页-弹窗结束-->					
+
+
+<div class="width1000">			
+
+			
+			<!--首页-开奖记录下方广告开始-->
+			<foreach name="plug_ad_16" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-开奖记录下方结束-->			
+			<div class="blank10"></div>	
+
+
+<!--开奖结果-->
+<div class="kj-box"><span class="kj-ico"></span>
+			<foreach name="kjfs" item="v">
+			<if condition="$v[plug_kj_adtypeid]==1">
+			<iframe name="I6" src="/kaijiang" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>	
+			<elseif condition="$v[plug_kj_adtypeid]==2"/>
+			<iframe name="I6" src="/kai" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			</if>			
+			</foreach>
+	</div>
+
+
+
+
+<div class="kjjl-box mb10">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td class="kjjl-td1">开奖<br>记录</td>
+        <td class="kjjl-td2">
+<ul>
+<?php  for($i =1976;$i <= $dates; $i++) { ?>
+<li><a href="/Source/kj/<?=$i?>" onclick="javascript:lotteryInfo(<?=$i?>);return false;"><?=$i?>年</a></li>
+<?php } ?>
+
+			<!--AD-开始-->
+			<foreach name="plug_ad_28" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--AD-结束-->
+
+<li>
+						<a style="width: 100px; font-size: 14px; color: #FFFF00; font-weight: bold; margin-left: 5px; background: #000000" title="点击搜索开奖记录《公式规律》" target="_blank" href="/history/?id=2017"><u>搜索开奖公式</u></a></li>
+</ul>
+        </td>
+      </tr>
+    </tbody>
+	</table>
+    </div>
+
+
+
+<div class="content clearfix">
+<div id="main" class="main">
+
+			
+			<!--首页-开奖记录下方广告开始-->
+			<foreach name="plug_ad_1" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-开奖记录下方结束-->
+
+<div class="blank10"></div>	
+<iframe src="Html/tuijian.html" width="100%" height="173" scrolling="no" frameborder="0" target="_blank"></iframe>
+<article class="infos" id="gao">
+
+<!--图库start-->					
+<!--图库start-->	
+
+<div id="tabbox">
+<div id="DBSK"></div>
+<div>
+	<table border="0" width="100%" id="table1" height="50" class="nav123">
+		<tr>
+			<td align="center" width="100%" bgcolor="#000000"><b>
+			<font size="6" color="#FFFF00">117kj开奖</font><font size="6" color="#FF00FF">长期免费公开</font><font size="6" color="#FFFF00">六合彩</font><font size="6" color="#FF00FF">资料.请大家互相转告！</font></b></td>
+		</tr>
+	</table>
+</div>
+<!--解波肖start-->
+			<foreach name="zlkg" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<iframe id="St" src="Html/bizhong_sy.html"  scrolling="no" frameborder="0" style="width: 100%;" onload="this.height=this.contentWindow.document.documentElement.scrollHeight">
+</iframe>
+			</if>			
+			</foreach>	
+
+<iframe src="Html/guapai2.html" width="100%" height="1811" frameborder="0" scrolling="no"></iframe>
+
+
+			<!--首页-广告开始-->
+			<foreach name="plug_ad_13" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-广告结束-->
+			
+<!--解波肖end-->
+			<foreach name="zlkg3" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<div class="qiMore"><a href="/Ziliao/tms" target="_blank">香港秘典玄机 —— 特马诗 →点击查看更多←</a></div>			
+<iframe name="I137" src="Html/tms_sy.html" target="_blank" height="450" width="100%" scrolling="no" align="middle" border="0" frameborder="0"></iframe>
+			</if>			
+			</foreach>	
+
+			<!--首页-广告开始-->
+			<foreach name="plug_ad_14" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-广告结束--> 
+<!--解波肖end-->
+			<foreach name="zlkg4" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<iframe name="I137" src="Html/bbs_sy.html" target="_blank" height="666" width="100%" scrolling="no" align="middle" border="0" frameborder="0"></iframe>
+			</if>			
+			</foreach>	
+			<div class="blank10"></div>	
+			<!--首页-广告开始-->
+			<foreach name="plug_ad_15" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-广告结束-->
+			<foreach name="zlkg5" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<iframe id="St" src="Html/liuxiao_sy.html"  scrolling="no" frameborder="0" style="width: 100%;" onload="this.height=this.contentWindow.document.documentElement.scrollHeight">
+</iframe>
+			</if>			
+			</foreach>
+<iframe name="I137" src="Html/bs.html" target="_blank" height="40" width="100%" scrolling="no" align="middle" border="0" frameborder="0"></iframe>
+			<div class="blank10"></div>		
+			<foreach name="zlkg7" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<iframe id="St" src="Html/yj.html"  scrolling="no" frameborder="0" style="width: 100%;" onload="this.height=this.contentWindow.document.documentElement.scrollHeight">
+</iframe>
+			</if>			
+			</foreach>			
+
+<!--插件start-->
+<div>
+	<table border="0" width="100%" id="table1" height="50" class="nav123">
+		<tr>
+			<td align="center" width="100%" bgcolor="#000000"><b>
+			<font size="6" color="#FFFF00">117kj开奖</font><font size="6" color="#FF00FF">长期免费公开</font><font size="6" color="#FFFF00">六合彩</font><font size="6" color="#FF00FF">资料.请大家互相转告！</font></b></td>
+		</tr>
+	</table>
+</div>
+		<!--<iframe src="Html/quannian.html" width="100%" marginwidth="0" height="318"  scrolling="no" frameborder="0" border="0"></iframe>-->
+
+<!--插件end-->
+<div id="why_dzb">
+	<table border="0" width="100%" id="table2" height="50" class="nav123">
+		<tr>
+			<td align="center" width="100%" bgcolor="#000000"><font face="黑体">
+			<font color="#ffff00" size="6" style="margin: 0; padding: 0">
+			公告：请用三秒钟时间记好 </font>
+			<font color="#00FF00" size="6" style="margin: 0; padding: 0">
+			www.117kj.com</font><font color="#ffff00" size="6" style="margin: 0; padding: 0"> 
+			这里值得您长期关注！</font></font></td>
+		</tr>
+	</table>
+</div>
+</div>			
+</article>
+
+
+<iframe src="/Html/tuku.html" width="1000" height="764" frameborder="0" scrolling="no"></iframe>
+<div class="blank10"></div>	
+			<!--首页-彩色图库下方广告开始-->
+			<foreach name="plug_ad_2" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-彩色图库下方广告结束-->  
+			<div class="blank10"></div>		
+
+
+			<foreach name="zlkg8" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<iframe id="St" src="Html/jingxuan_sy.html"  scrolling="no" frameborder="0" style="width: 100%;" onload="this.height=this.contentWindow.document.documentElement.scrollHeight">
+</iframe>
+			</if>			
+			</foreach>	 			
+
+<!--<iframe name="I137" src="http://www.178kj.cc" target="_blank" height="329" width="100%" scrolling="no" align="middle" border="0" frameborder="0"></iframe>-->
+ 
+
+		
+
+		
+<div class="blank10"></div>			
+<div style="width:1010px">
+<foreach name="list1" item="vo"> 
+<div class="juesha">
+        	<div class="juesha-tit"><span><a href="/lists/<?=$vo['id']?>.html" target="_blank">更多</a></span><?=$vo['title']?></div>
+            <div class="juesha-box">
+            	<ul class="list-news list-ico2">
+                <volist name="vo['voo']" id="sub">  	
+                    <li><a target="_blank" href="/Article/{$sub.id}.html">{$sub.title}</a></li>
+				</volist> 
+                </ul>
+            </div>
+</div>
+</foreach>
+</div>
+
+
+		
+			<!--首页-六合资料下方广告开始-->
+			<foreach name="plug_ad_3" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-六合资料下方广告结束--> 
+<div class="blank10"></div>
+<div class="quann">
+    	<div class="quann-tit">全年资料</div>
+        <div class="quann-box clearfix list-ico3" id="commonNewsList12">
+		<div class="quann-l">
+		<ul class="list-news">
+	<foreach name="list2" item="vo">
+	<volist name="vo['voo']" id="sub"> 	
+    <li><a target="_blank" href="/quannian/{$sub.id}.html">{$sub.title}</a></li>
+    </volist>
+	</foreach>
+		</ul>
+		</div>
+		<div class="quann-m">
+		<ul class="list-news">
+	<foreach name="list4" item="vo">
+	<volist name="vo['voo']" id="sub"> 	
+    <li><a target="_blank" href="/quannian/{$sub.id}.html">{$sub.title}</a></li>
+    </volist>
+	</foreach>
+		</ul>
+		</div>
+		<div class="quann-r">
+		<ul class="list-news">
+	<foreach name="list5" item="vo">
+	<volist name="vo['voo']" id="sub"> 	
+    <li><a target="_blank" href="/quannian/{$sub.id}.html">{$sub.title}</a></li>
+    </volist>
+	</foreach>
+		</ul>
+		</div>
+		</div>
+</div>
+
+
+ 
+<div id="main" class="main">
+
+<aside class="flink1">
+<div class="inner">
+
+<dl>
+<dt id="flink1">
+<img class="leftsj" src="{$Think.const.CSS_URL}/images/r6c6.jpg">
+<img class="rightsj" src="{$Think.const.CSS_URL}/images/r8c7.jpg">
+<img class="tup" src="{$Think.const.CSS_URL}/images/gj.gif">
+<h3>动态走势图</h3>
+</dt>
+<dd>
+<ul class="clearfix">
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=1">号码走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=2">合数走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=3">生肖走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=4">尾数走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=5">九段走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=6">七段走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=7">五行走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=8">五门走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=9">头数走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=10">波色走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=11">波色单双</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=12">波色大小</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=13">半波大小</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=14">大小单双</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=15">号码总和</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=16">平均数值</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=17">除三走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=18">除四走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=19">除五走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=20">除六走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=21">除七走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=22">除八走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=23">除九走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=24">除十走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=25">除十一走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=26">除十二走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=27">周二走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=28">周四走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=29">周六走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=30">单日走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=31">双日走势</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=32">单期号码</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=33">双期号码</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=34">单期尾数</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=35">双期尾数</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=36">单号个数</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=37">大号个数</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=38">最大号码</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=39">最小号码</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/charts/charts_go.html?id=40">极号间隔</a></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt id="flink1">
+<img class="leftsj" src="{$Think.const.CSS_URL}/images/r6c6.jpg">
+<img class="rightsj" src="{$Think.const.CSS_URL}/images/r8c7.jpg">
+<img class="tup" src="{$Think.const.CSS_URL}/images/gj.gif">
+<h3>统计图表</h3>
+</dt>
+<dd>
+<ul class="clearfix">
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table1.html">十二生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table2.html">四肖统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table3.html">阴阳生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table4.html">天地生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table5.html">大小统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table6.html">六肖统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table7.html">三色生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table8.html">男女生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table9.html">五行统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table10.html">单双统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table11.html">五行生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table12.html">单双笔画</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table13.html">傍肖统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table14.html">大尾小尾</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table15.html">合数单双</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table16.html">琴棋书画</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table17.html">家野生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table18.html">朝夕生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table19.html">五门统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table20.html">合数大小</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table21.html">四季统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table22.html">吉凶生肖</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table23.html">上中下波</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table24.html">波色统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table25.html">四方统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table26.html">内围外围</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table27.html">深浅统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table28.html">冷热统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table29.html">波色单双</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table30.html">前落后落</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table31.html">拼搏统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table32.html">爱恨统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table33.html">头数统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table34.html">左右统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table35.html">高低统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table36.html">顺逆统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table38.html">楼上楼下</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table39.html">长短统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table40.html">天玄地机</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table41.html">风雨统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table42.html">黑白统计</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table44.html">行列分布</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table45.html">特殊七星</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table46.html">摇奖机位</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table47.html">江恩旋出</a></li>
+<li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href="/table/table48.html">江恩旋入</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</aside>
+</div>
+<div class="blank10"></div>	
+			<!--首页-特码走势图下方广告开始-->
+			<foreach name="plug_ad_4" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-特码走势图下方广告结束--> 
+<div class="blank10"></div>				
+<iframe src="Html/pic.html" width="100%" height="390" frameborder="0" scrolling="no"></iframe>
+</div>
+<div class="blank10"></div>	
+			<!--首页-动态走势图下方广告开始-->
+			<foreach name="plug_ad_27" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-动态走势图下方广告结束--> 
+
+<div id="main" class="main">
+<div class="blank10"></div>
+<script language="javascript">
+function GetRequest() {
+var url = location.search;
+var theRequest = new Object();
+if (url.indexOf("?") != -1) {
+var str = url.substr(1);
+strs = str.split("&");
+for(var i = 0; i < strs.length; i ++) {
+theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+}
+}
+return theRequest;
+}
+function showResult(){
+var test=GetRequest();
+var qinum=test['qinum'];
+var winnum=test['winnum'];
+var series_type=test['series_type'];
+if ((qinum != null)){qinum=qinum} else{qinum="25"} 
+if ((winnum != null)){winnum=winnum} else{winnum="7"} 
+if ((series_type != null)){series_type=series_type} else{series_type="line"} 
+document.getElementById('qinum').value=qinum;
+document.getElementById('winnum').value=winnum;
+document.getElementById('series_type').value=series_type;
+}
+</script>
+<div class="d">
+<div class="aa lc">
+<div class="y-header"><span class="fright"><a href="__MODULE__/charts/charts_go.html?id=1" target="_blank">查看更仔细的动态走势图</a></span><h4>特码走势图</h4></div>
+<script type="text/javascript" language="JavaScript" src="/charts/chart.js"></script><div id="chart" class="tbox"></div><SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+// U can change this number to check specific version of flash
+var MM_contentVersion = 6;
+var plugin = (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) ?
+navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin : 0;
+if ( plugin ) {
+var words = navigator.plugins["Shockwave Flash"].description.split(" ");
+for (var i = 0; i < words.length; ++i){
+if (isNaN(parseInt(words[i])))
+continue;
+var MM_PluginVersion = words[i];
+}
+var MM_FlashCanPlay = MM_PluginVersion >= MM_contentVersion;
+}
+else if( navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0 &&
+(navigator.appVersion.indexOf("Win") != -1) ) {
+//FS hide this from IE4.5 Mac by splitting the tag
+document.write('<SCR' + 'IPT LANGUAGE=VBScript\> \n');
+document.write('on error resume next \n');
+document.write('MM_FlashCanPlay = ( IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash." & MM_contentVersion)))\n');
+document.write('</SCR' + 'IPT\> \n');
+}
+if ( MM_FlashCanPlay ) {
+var alternateContent = '';document.write(alternateContent);
+}
+else{
+var alternateContent = '此内容需要安装Adobe Flash Player. '+ '<u><a href=http://www.macromedia.com/go/getflash/ target=_blank>下载Adobe Flash Player</a></u>.';
+document.write(alternateContent);
+}
+//-->
+</SCRIPT>
+<noscript>浏览器必须能够运行 JavaScript ，要在Internet Explorer 中启用。</noscript>
+<script type="text/javascript" language="JavaScript">
+ var test=GetRequest();
+ var qinum=test['qinum'];
+ var winnum=test['winnum'];
+ var series_type=test['series_type'];
+if ((qinum != null)){qinum=qinum} else{qinum="25"}
+if ((winnum != null)){winnum=winnum} else{winnum="7"} 
+if ((series_type != null)){series_type=series_type} else{series_type="line"}
+//<![CDATA[
+var chart = new AnyChart('/charts/chart.swf','/charts/preloader.swf');
+chart.width = '994';
+chart.height= '450';
+chart.wMode = 'transparent';
+chart.setXMLFile('/vbsxml/xml_1_'+winnum+'_'+ qinum+'_'+series_type+'.xml');
+chart.write('chart');
+//]]>
+</script>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="blank10"></div>	
+			<!--首页-动态走势图下方广告开始-->
+			<foreach name="plug_ad_5" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-动态走势图下方广告结束--> 
+
+</div>
+
+			<foreach name="zlkg10" item="v">
+			<if condition="$v[plug_zlkg_adtypeid]==1">
+<div id="main" class="main">
+<aside class="flink">
+<div class="inner">
+<dl>
+<dt id="flink1"><h3><span></span>欢迎您参与讨论</h3></dt>
+<dd>
+<div class="clear"></div>
+
+
+			<php>
+					$config=M('config')->where(array('id'=>1))->find();
+
+			</php>
+			{$config.pl_index|htmlspecialchars_decode}
+</dd>
+</dl>
+</div>
+</aside>
+<div class="blank10"></div>	
+			<!--首页-参与讨论下方广告开始-->
+			<foreach name="plug_ad_6" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-参与讨论下方广告结束--> 
+
+</div>
+			</if>			
+			</foreach>	
+
+
+
+
+
+<div id="main" class="main">
+
+<aside class="flink">
+<div class="inner">
+
+
+
+<foreach name="list" item="vo">
+<dl>
+<dt id="flink1">
+<img class="leftsj" src="{$Think.const.CSS_URL}/images/r6c6.jpg">
+<img class="rightsj" src="{$Think.const.CSS_URL}/images/r8c7.jpg">
+<img class="tup" src="{$Think.const.CSS_URL}/images/gj.gif">
+<h3><?=$vo['title']?></h3>
+</dt>
+<dd>
+<ul class="clearfix">
+<volist name="vo['voo']" id="sub">  <li style="border: 1px solid #500a0c; border-radius: 5px; background: #fff;"><a href='{$sub.url}' target="_blank" rel="nofollow">{$sub.title}</a></li></volist>  
+</ul>
+</dd>
+</dl>
+</foreach>
+
+
+
+
+</div>
+</aside>
+</div>
+
+<include file="Index:sx" />
+</div>
+			<!--首页-参与讨论下方广告开始-->
+			<foreach name="plug_ad_7" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<!--漂浮对联广告左边-->
+			<div class='couplet_ad' id='ad_left'> 
+			<a rel="nofollow" href="{$v.plug_ad_url}" target="_blank"><img  src="__PUBLIC__/{$v.plug_ad_pic}" title="{$v.plug_ad_name}" border=0 ></a><a onClick="ad_left();"><img  src="/Index/Public/img/2.gif" width=110 height=20 /></a>
+			</div>
+
+			<!--漂浮对联广告右边-->
+			<div class='couplet_ad' id='ad_right'>
+			<a rel="nofollow" href="{$v.plug_ad_url}" target="_blank"><img  src="__PUBLIC__/{$v.plug_ad_pic}" title="{$v.plug_ad_name}" border=0 ></a><a onClick="ad_right();"><img  src="/Index/Public/img/2.gif" width=110 height=20 /></a>
+			</div>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--首页-参与讨论下方广告结束-->
+</div> 
+<include file="Index:footer" />
+<script src="{$Think.const.JS_URL}menu.js"></script> 
+<script src="{$Think.const.JS_URL}layer.min.js"></script> 
+<script src="{$Think.const.JS_URL}kj.js"></script>
+<script language="javascript">
+function ad_left(){
+document.getElementById('ad_left').style.display="none";
+}
+function ad_right(){
+document.getElementById('ad_right').style.display="none";
+}
+
+</script>
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".index_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".index_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

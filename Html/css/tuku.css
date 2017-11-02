@@ -1,0 +1,202 @@
+﻿*{margin:0; padding:0; outline:0; }
+body {
+ font-family:"宋体";
+font-size:12px;
+color:#333;
+background:url(../iamge/bg.png)
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; list-style-type: none;
+}
+IMG {
+	VERTICAL-ALIGN: middle; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none;
+}
+a {
+	text-decoration: none;
+	color: #0000FF;
+}
+a:hover{
+	text-decoration: underline;
+	color: #FF0000;
+}
+.topnav{background:#F0F0F0; border-bottom:1px solid #FFFFFF; height:30px; line-height:30px}
+.width {
+  MARGIN: 0px auto; WIDTH:1000px;}
+.width2 {
+  MARGIN: 0px auto; WIDTH:1012px;}
+.mg{ margin-top:5px}
+.bd{border:1px solid #CCCCCC; background:#FFFFFF;}
+.bd2{border:1px solid #FF0000;}
+.hg1{clear:both}
+.topbg li{height:38px; line-height:38px; border-bottom:1px dashed #CCCCCC; font-size:13px; margin:0 5px}
+.w1{background: #0080FF; color:#FFFFFF; padding:5px 10px;}
+.w2{background: #FF0000; color:#FFFFFF; padding:5px 10px;}
+.topbg li a{font-weight:bold; margin:0px 8px}
+
+.h_a1 {height:45px;text-align:center;font-size:28px;font-weight:bold; font-family:"黑体"}
+.h_a2 {height:40px;text-align:center;font-size:32px;font-weight:bold;font-family:"黑体"}
+.h_a4 {height:36px;text-align:center;font-size:23px;font-weight:bold;font-family:"华文中宋"; width:25%}
+a.al_lan {text-decoration: none;color:#0066FF;}
+a:hover.al_lan {text-decoration:underline;color:#FF0000; font-size:33px}
+a.al_fen {text-decoration: none;color: #FF00FF;}
+a:hover.al_fen {text-decoration:underline;color:#FF00FF; font-size:25px}
+a.al_blue {text-decoration: none;color:#0000FF;}
+a:hover.al_blue {text-decoration:underline;color: #FF0000; font-size:29px}
+a.al_hei {text-decoration: none;color:#000000;}
+a:hover.al_hei {text-decoration:underline;color: #FF0000; font-size:29px}
+
+.gao li{ height:28px; line-height:28px}
+.nav{background:url(../iamge/navbg.gif) repeat-x; height:75px;}
+.nav .logo{padding-top:5px; float:left;}
+.nav .tuqu{width:730px; height:70px; float:left;list-style:none;text-align:center;}
+.nav .tuqu li{float:left; margin:0 15px; _margin:0 13px; margin-top:20px;text-align:center;}
+.nav .tuqu li a{display:block; text-decoration:none; white-space:nowrap; width:151px ; height:45px}
+.nav .tuqu a.tif {background: url(../iamge/tif.png) no-repeat left top;}
+.nav .tuqu a.jpg {background: url(../iamge/jpg.png) no-repeat left top;}
+.nav .tuqu a.cai {background: url(../iamge/cai.png) no-repeat left top;}
+.nav .tuqu a.tk {background: url(../iamge/tk.png) no-repeat left top;}
+.nav .tuqu b {position:absolute; left:-9999px;}
+.nav .tuqu a:hover, 
+.nav .tuqu li:hover a {
+background-position: left bottom; 
+cursor:pointer; 
+}
+.nav .zs{float:right; width:72px; height:64px; position:relative; z-index:1000; text-align:center; list-style:none; margin-top:-3px}
+.nav .zs a{display:block; text-decoration:none; white-space:nowrap; width:72px; height:64px;}
+.nav .zs a.zhushou {background: url(../iamge/zs.png) no-repeat left top;}
+.nav .zs b {position:absolute; left:-9999px;}
+.nav .zs a:hover, 
+.nav .zs:hover a {
+background-position: left bottom; 
+cursor:pointer; 
+}
+
+
+.tj{height:36px; line-height:36px; padding:1px; background: #fafafa; font-size:14px}
+.tj li{ display:block; float:left; margin-right:13px}
+.tj .tjbg{background:url(../iamge/maico.png) no-repeat right; width:80px; padding-left:10px; color:#FFFFFF; font-weight:bold}
+.tj a{ color:#333333}
+.tj a:hover{ color:#FF0000}
+#w2{background: url(http://www.88tk.com/iamge/jilu.png) no-repeat; color:#FFFFFF; font-size:12px; padding:2px 5px 3px 8px; margin-left:5px}
+#w2 a{color:#FFFFFF; text-decoration:none}
+#w2 a:hover{color:#00FFFF}
+
+.kj{background:url(../iamge/kjbg2.png) repeat-y; height:200px; width:1002px; margin:auto;}
+.kjjg{float:left; width:107px; height:85px; position: absolute; z-index:10000}
+.kj .kj118{float:left; clear:both; height:175px; width:978px; margin:12px;position: absolute;}
+
+.rec td{ font-size:14px; font-weight:bold; height:38px; border-bottom:1px dashed #CCCCCC;}
+.rec2{background:url(../iamge/rec2.gif) no-repeat; width:85px; margin-left:5px; float:left}
+.rec a:hover{ text-decoration:overline underline; font-size:15px}
+
+#table7{font-family:"宋体"}
+#table7 td{height:32px;font-size:18px; ;text-align:center;}
+#table7 A {COLOR:#0000ff;  text-decoration:none}
+#table7 A:hover{TEXT-DECORATION:underline; color:#FF0000}
+
+.caihot{padding:15px 10px; height:315px}
+.caihot .xilie{float:left; width:233px; background:url(../iamge/caihotb.png) no-repeat bottom #d9d9d9; height:320px; margin:0 5px; padding:1px}
+.caihot .xilie dl{height:312px;background:#ececec;border:1px solid #FFFFFF; padding:0px 20px}
+.caihot .xilie dl dt{border-bottom:1px solid #d2d2d2; line-height:25px; margin-top:10px; font-size:20px; font-family:'华文细黑'; font-weight:bold; padding:8px; color:#009900}
+.caihot .xilie dl dt span{ float:right; font-family:"宋体"; font-size:12px; font-weight:100;}
+.caihot .xilie dl dt span a{color: #666}
+.caihot .xilie dl dd{padding:3px 8px;  height:19px; font-size:14px; float:left; width:175px}
+.caihot .xilie dl dd a{ color:#333333}
+.caihot .xilie dl dd a:hover{ color: #FF0000}
+
+.num{display:block; float:left; width:16px; height:15px; margin-right:10px; background: #009900; color:#FFF; text-align:center; font-size:12px; line-height:15px;}
+.num2{display:block; float:left; width:16px; height:15px; margin-right:10px; background: #FD7902; color:#FFF; text-align:center; font-size:12px; line-height:15px;}
+.num3{display:block; width:16px; height:15px;  background: #999999; color:#FFF; text-align:center; font-size:12px; line-height:15px;}
+.caihot .xilie dl dd span{float:right}
+
+.liaohot{padding:15px 10px; height:635px}
+.liao{ font-size:14px; line-height:25px; background:#f6f6f6; margin:auto}
+.liao a{ color:#333333}
+.liao a:hover{ color:#FF0000}
+.con {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; ZOOM: 1; BACKGROUND: #f8f8f8; CLEAR: both; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; margin-top:5px
+}
+h2{
+   font-size:13px; color:#333;}
+h2 span{
+	padding-right: 5px;
+	cursor:pointer;
+	float:right;
+	font-size:12px;
+	font-weight:100}
+h2 a{color:#333}
+.listT1 {
+	PADDING: 3px; LINE-HEIGHT: 20px; padding-top:8px; border-bottom:1px #CCCCCC solid; HEIGHT: 20px; 
+}
+.listT2 {
+	PADDING: 3px; LINE-HEIGHT: 20px; padding-top:8px; border-bottom: #FF0000 3px solid; HEIGHT: 20px; 
+}
+.sxdz{
+FONT-FAMILY: arial,sans-serif,宋体; text-align: center; width:100%; height:70px; padding-top:8px}
+.sxdz li {
+	FONT-SIZE: 10pt; color:#FFF; width:16%; float:left}
+.sx{
+font-size:13px; font-weight:bold; color:#990000}
+.bg_blue{background-color: #0066FF}
+.bg_green{background-color: #009900}
+.bg_red{background-color: red;}
+
+.sxdz2{
+FONT-FAMILY: arial,sans-serif,宋体; text-align: center; width:100%; font-weight:bold}
+.sxdz2 li {
+	FONT-SIZE: 14px; float:left}
+.table4{
+    FONT-FAMILY: arial,sans-serif,宋体; color:#fff; font-size:13px}
+.table4 td{border:none;border-bottom: 1px #ddd dashed; line-height:28px}
+.table4 .font{text-align: center; font-size:14px; font-weight:bold}
+.table5{
+       text-align: center; line-height:28px; font-size:16px;}
+.table5 td{ border-top:none;border-left:none;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd}
+#tdright{border-right-color:#FFFFFF}
+#tdbottom{border-bottom-color:#FFFFFF}
+.yum {
+background-color:#ccc; text-align:center; height:20px; padding-top:5px; margin-top:5px}
+.yum1 {
+text-align:center; line-height:50px; font-size:32px; font-family:Arial Black}
+.yum1 a{ color: #333}
+.yum2 {text-align:center; line-height:50px; font-size:24px; font-family:"Verdana, Arial, Helvetica, sans-serif"; font-weight:bold}
+.STYLE3 {color: #009933}
+.dbsm {
+      height:53px; line-height:23px; padding-top:10px}
+.jesu {
+      margin-top:5px; margin-bottom:5px; text-align:center}
+.bottom{BACKGROUND: #f8f8f8; CLEAR: both; OVERFLOW: hidden; BORDER-TOP: #ccc 1px solid;}
+.bottom a{color:#666666}
+
+.st{font-size: 13px;
+	font-family:Verdana, Arial, Helvetica, sans-serif; padding-left:7px; color:}
+.st a{color: #0000FF; text-decoration:none; font-weight:bold}
+.st a:hover{ color:#FF0000; border-top:1px solid #FF0000; text-decoration:underline}
+
+
+.table_normal { margin-top: 20px; border-collapse: collapse;}
+.table_normal tr {}
+.table_normal tr td { padding: 5px 0 5px 8px; border: solid 1px #ccc;}
+.table_normal tr td:hover { background: #fff799;}
+
+.txt_block { width: 1000px; margin: -30px auto 0 auto;}
+.txt_block .tit { width: 1000px; height: 102px; color: #fff; position: relative; background: url(../images/blue-orange.png) 0 0 no-repeat;}
+.txt_block .tit h1 { height: 60px; line-height: 60px; font-size: 26px; position: absolute; left: 30px; bottom: 0;}
+.txt_block .tit h2 a { height: 42px; line-height: 42px; padding: 0 23px; font-size: 20px; color: #fff; display: block; position: absolute; top: 0; right: 60px;}
+.txt_block .tit h2 a:hover { background: #ffa500;}
+.txt_block .content { padding: 20px 30px; border: solid 2px #3399ff;}
+#footer { padding: 10px 0 20px 0; line-height: 50px; text-align: center; font-size: 22px;}
+#footer a { padding: 0 5px;}
+
+#tabbox{ width:1000px; overflow:hidden; margin:0 auto 10px;}
+.tab_conbox{border: 1px solid #cccccc;border-top: none; background:#FFFFFF}
+.tab_con{ display:none;}
+.tabs{height: 32px;border-bottom:1px solid #cccccc;border-left: 1px solid #cccccc;width: 100%;}
+.tabs li{height:31px;line-height:31px;float:left;border:1px solid #cccccc;border-left:none;margin-bottom: -1px;background: #e0e0e0;overflow: hidden;position: relative;}
+.tabs li a {display: block;padding: 0 20px;border: 1px solid #fff;outline: none;}
+.tabs li a:hover {background: #ccc;}	
+.tabs .thistab,.tabs .thistab a:hover{background: #fff;border-bottom: 1px solid #fff;}
+.tab_con {padding:12px;font-size: 14px; line-height:175%;}
+.zb_textarea {
+height: 100px;
+}

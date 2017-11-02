@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<body>
+<div class="place"><span>位置：</span><ul class="placeul"><li><a href="__MODULE__/config.html">首页</a></li><li><a href="#">黑白管理</a></li></ul></div>
+<div class="formbody">
+
+<form action="__CONTROLLER__/" method="get">
+<table cellspacing="1" cellpadding="0" class="page_table" >
+<tr>
+<td width="21%" height="32" class="td_left">关键词：</td>
+<td width="79%" class="left" style="padding:10px;"><input type="text" name="keywords" id="keywords" class="biankuan"></td>
+</tr>
+
+<tr>
+<td class="td_left">
+</td>
+<td class="left" style="padding:10px;">
+<input type="submit" name="btnQuery" value="确认查询" id="btnQuery" class="chaxun_input" />
+<input type="button" value="黑白添加" onclick="location.href='__CONTROLLER__/info_add.html'"  class="chaxun_input" />
+</td>
+</tr>
+</table>
+</form>
+<div id="msg">
+<form name="form1" method="post" action="">
+<input id="Token"    type="hidden" value="">
+<table cellspacing="1" cellpadding="0" class="page_table" width="100%" style="margin-top:10px;">
+<tr>
+<td width="4%" height="32" align="center" class="table_top">ID</td>
+<td width="40%" align="center" class="table_top">信息名称</td>
+<td width="17%" align="center" class="table_top">所属类别</td>
+<td width="14%" align="center" class="table_top">时间</td>
+<td width="11%" align="center" class="table_top">操作</td>
+</tr>
+<foreach name="list" item="vo">
+<tr bgcolor="ffffff" onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#F5F5F5'">
+<td><input type="checkbox" id="id" value="{$vo.id}" style="margin:3px 0px"></td>
+<td align="center"><a href="/index.php/Home/heibai/detail/id/{$vo.id}.html" data-lightbox="image-set" class="bigimg" title="{$vo.title}" target="_blank">{$vo.title}</a></td>
+<td align="center">{$vo.directory4|czdirectory='heibai','0',###} </td>
+<td align="center">{$vo.begtime|datetime} </td>
+<td align="center">
+<a href="info_edit/Id/{$vo.id}">修改</a> 
+<a href="#" onClick="Get_Ation_Save('infodelete','{$vo.id}')">删除</a></td>
+</tr>
+</foreach>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+<tr>
+<td width="17%" align="left">
+<input type="button" value="全选" onClick="CheckAll()" class="x_input" />
+<input type="button" value="删除" onClick="Get_Del_Save()"  class="x3_input" >
+</td>
+<td width="83%" style="text-align:center;"><div class="pager">{$page}</div></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+<script>
+function CheckAll(value,obj)  {
+var form=document.getElementsByTagName("form")
+for(var i=0;i<form.length;i++){
+for (var j=0;j<form[i].elements.length;j++){
+if(form[i].elements[j].type=="checkbox"){ 
+var e = form[i].elements[j]; 
+if (value=="selectAll"){e.checked=obj.checked}     
+else{e.checked=!e.checked;} 
+}
+}
+}
+}
+</script>
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_add_Save(){
+var site_name    =$("#site_name").attr("value");
+var site_title   =$("#site_title").attr("value");
+var site_url     =$("#site_url").attr("value");
+var site_describe=$("#site_describe").attr("value");
+var site_keywords=$("#site_keywords").attr("value");
+var Token =$("#Token").attr("value");
+jQuery.ajax({
+url: "__CONTROLLER__/RightSave.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Config_Add",site_name:site_name,site_title:site_title,site_url:site_url,site_describe:site_describe,site_keywords:site_keywords},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/index.html')",1000);//==========执行几秒跳转
+}
+});
+}
+
+
+
+//=======================获取删除数据
+function Get_Del_Save(){
+var $check_boxes = $('input[type=checkbox][checked=checked][id!=check_all_box]');  
+if($check_boxes.length<=0){ alert('您未勾选任何数据，请先勾选！');return;}  
+if(confirm('您确定要删除此数据？')){  
+var dropIds = new Array();  
+$check_boxes.each(function(){  
+dropIds.push($(this).val());  
+});
+jQuery.ajax({
+url: "__CONTROLLER__/infodelete.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Alldel",id:dropIds},
+beforeSend: function(){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data){
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/index.html')",1000);//==========执行几秒跳转
+}
+});
+}  
+}
+
+
+//=======================获取其他操作
+function Get_Ation_Save(oo1,oo2){
+if(confirm('您确定要执行此操作？')){   
+jQuery.ajax({
+url: "__CONTROLLER__/infodelete.html",
+dataType:"json",
+type:"POST",
+data:{Action:"del",id:oo2},
+beforeSend: function(){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data){
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/index.html')",1000);//==========执行几秒跳转
+}
+});
+}  
+}
+
+
+</script>

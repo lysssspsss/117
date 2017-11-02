@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>lhc</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="true"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+	<style>
+        html, body {
+            -ms-touch-action: none;
+            background: #FFFFFF;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+		#preloading{
+			z-index: 1000;
+			position: absolute;
+			text-align: center;
+
+		}
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.web.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/dragonBones/dragonBones.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script src="main.min.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+   
+    <div style="margin: auto;width: 100%;height: 100%;" id="videoDiv" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-frame-rate="30"
+         data-content-width="980"
+         data-content-height="630"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-log-filter="" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9">
+    </div>
+
+	<div id="preloading"><img src="resource/assets/loading/preloading.gif" /></div>
+    <script >
+
+        /*字符串替换
+          reallyDo：需要替换的字符串
+          replaceWith：替换值
+          */
+        String.prototype.Replace = function(reallyDo, replaceWith) {
+            var str = this;
+            var e = new RegExp(reallyDo, "g");
+            var words = str.replace(e, replaceWith);
+            return words;
+        };
+
+        function GetUrlParameters (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            
+            if (r != null) return r[2]; return null;
+        }
+
+        var videoData = {};
+
+        var kjjg = [];
+        var period=GetUrlParameters("period");
+        
+        var numbers=GetUrlParameters("numbers");
+        var bs=GetUrlParameters("bs");
+        var sx=decodeURI(GetUrlParameters("sx"));
+        var wx=decodeURI(GetUrlParameters("wx"));
+		if(numbers!=null){
+        for (var i = 0; i < numbers.split(',').length; i++) {
+            kjjg.push(parseInt(numbers.split(',')[i]));
+            kjjg.push(sx.split(',')[i]);
+            kjjg.push(bs.split(',')[i]);
+            kjjg.push(wx.split(',')[i]);
+        }
+        
+            
+        videoData["id"] = period;
+        videoData["ma"] = kjjg;
+		//console.log(videoData.ma);
+		//Config.HISTORY_AWARD={"id":period,"ma":["35","猴","red","木","1","马","red","金","47","猴","blue","土","12","羊","red", "木", "4", "兔", "blue", "木", "14", "蛇", "blue", "金", "33", "狗", "green", "水"]}					 
+		Config.HISTORY_AWARD=videoData;}//{"id":"147","ma":["43","鼠","green","木","36","羊","blue","火","37","马","blue","火","25","马","blue","土","30","牛","red","金","02","蛇","red","水","22","鸡","green","金"]};
+		Config.isShowVersion=false;//是否显示版本号信息
+		egret.runEgret();
+        setTimeout(function(){           
+            document.getElementsByTagName("canvas")[0].style.width = "980";
+            document.getElementsByTagName("canvas")[0].style.height = "630";
+            
+            document.getElementById("preloading").style.display = "none";
+        },100);
+         
+    </script>
+</body>
+</html>

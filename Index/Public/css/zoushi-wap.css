@@ -1,0 +1,63 @@
+@charset "utf-8";
+.zstable{ width:100%; background:#fff; margin:0 auto;}
+.zstable th,
+.zstable td{ border:1px solid #ddd; font-family:Arial; cursor:default;}
+.zstable td{ height:32px; text-align:center; vertical-align:middle;}
+.search{ width:100%;}
+.search td{ height:20px; padding:8px 0;}
+#topbar{ display:none; width:100%; padding-top:0; background:#fff; position:fixed; top:0; _position:absolute; _top:expression(eval(document.documentElement.scrollTop));}
+.sc{ background:url(/../img/118.png) 0 2px no-repeat; padding-left:15px;}
+#sj{ background:url(../img/118.png) 0 -107px no-repeat; padding-left:15px; margin-left:15px;}
+.kj{ background:url(../img/bg.png); height:403px;}
+.current a{ color:#f60;}
+.zs_nav{ height:80px; background:#f9f9f9; border-bottom:1px solid #ddd; text-align:center;}
+.zs_nav li{ float:left; width:142px; line-height:40px; font-size:14px;}
+.zs_nav li a{ border:1px dashed #ccc; padding:5px 8px;}
+.zs_nav li a:hover{background: #FF6600; color:#FFFFFF; text-decoration:none;}
+.zs_nav .cur a{ background:#f60; color:#fff;}
+.years{ font-size:13px; font-weight:bold; font-family:Tahoma;}
+.years li{ float:left; padding:2px 23px 2px 0;}
+.bottom{ border-top:1px solid #ccc; height:60px; text-align:center; margin-top:20px;}
+.bottom p{padding:8px 0}
+.input{ WIDTH:68px; HEIGHT:18px; border:1px solid #ddd; padding-left:2px; vertical-align:middle;}
+.zt10 {	FONT-SIZE:9px;}
+.head {	BACKGROUND:#fff094;}
+.cxcs {	BACKGROUND:#00ff00;}
+.bold {	FONT-WEIGHT: bold;}
+.red { COLOR: #ff0000}
+.Red { COLOR: #ff0000}
+.Blue { COLOR: #0000ff}
+.Green { COLOR: #00cc00}
+.white { BACKGROUND: #fefaeb}
+.yellow { BACKGROUND: #ffffff}
+.enfont { FONT-FAMILY: Arial}
+.hui_color { COLOR: #ccc}
+.cu{cursor:pointer}
+.Red_boll {	FONT-FAMILY: Arial; BACKGROUND: url(../img/Red.gif) #ffffff no-repeat center 50%; COLOR: #ffffff; FONT-WEIGHT: bold}
+.Blue_boll { FONT-FAMILY: Arial; BACKGROUND: url(../img/Blue.gif) #ffffff no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-WEIGHT: bold}
+.Green_boll { FONT-FAMILY: Arial; BACKGROUND: url(../img/Green.gif) #ffffff no-repeat center 50%; COLOR: #ffffff; FONT-WEIGHT: bold}
+.F{color:#FFF;font-weight:bold; font-size:12px}
+.B{background: #FFFF99}
+.Green_bg{background-color:green; padding:3px}
+.Red_bg{background-color:red; padding:3px}
+.Blue_bg{background-color:blue; padding:3px}
+.Green_bg1{background-color:green; padding:1px}
+.Red_bg1{background-color:red; padding:1px}
+.Blue_bg1{background-color:blue; padding:1px}
+.GreenX{FONT-FAMILY: Arial;BACKGROUND: url(../img/GreenX.png) #ffffff no-repeat center 50%; COLOR: #ffffff;}
+.RedX{FONT-FAMILY: Arial;BACKGROUND: url(../img/RedX.png) #ffffff no-repeat center 50%; COLOR: #ffffff;}
+.BlueX{FONT-FAMILY: Arial;BACKGROUND: url(../img/BlueX.png) #ffffff no-repeat center 50%; COLOR: #ffffff;}
+.SelectNumRedX { LINE-HEIGHT: 23px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/RedX.png) #ffffff no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.SelectNumBlueX { LINE-HEIGHT: 23px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/BlueX.png) #ffffff no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.SelectNumGreenX { LINE-HEIGHT: 23px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/GreenX.png) #ffffff no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.hui { FONT-FAMILY: Arial; BACKGROUND: url(../img/hui.png) #ffffff no-repeat center 50%; FONT-SIZE: 12px;}
+.Red_boll1 { FONT-FAMILY: Arial; BACKGROUND: url(../img/Red.gif) #fff no-repeat center 50%; COLOR: #ffffff; FONT-WEIGHT: bold}
+.Blue_boll1 { FONT-FAMILY: Arial; BACKGROUND: url(../img/Blue.gif) #fff no-repeat center 50%; COLOR: #ffffff; FONT-WEIGHT: bold}
+.Green_boll1 { FONT-FAMILY: Arial; BACKGROUND: url(../img/Green.gif) #fff no-repeat center 50%; COLOR: #ffffff; FONT-WEIGHT: bold}
+.jy{ color:#fff; background:#0066FF; padding:3px}
+.RedX_boll1 { FONT-FAMILY: Arial; BACKGROUND: url(../img/RedX.gif) #fff no-repeat center 50%; COLOR: #ffffff; FONT-SIZE: 12px}
+.BlueX_boll1 { FONT-FAMILY: Arial; BACKGROUND: url(../img/BlueX.gif) #F6F6F6 no-repeat center; COLOR: #ffffff;  FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.GreenX_boll1 {	FONT-FAMILY: Arial; BACKGROUND: url(../img/GreenX.gif) #fefaeb no-repeat center 50%; COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bold}
+.SelectNumRed {	LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/Red.gif) no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.SelectNumBlue { LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/Blue.gif) no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.SelectNumGreen { LINE-HEIGHT: 24px; MARGIN: 0px; WIDTH: 100%; FONT-FAMILY: Arial; BACKGROUND: url(../img/Green.gif) no-repeat center 50%; HEIGHT: 24px; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold}

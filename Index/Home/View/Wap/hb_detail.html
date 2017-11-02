@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>{$data.title}_2017全年图纸记录_<?=Cz_cig('site_name')?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="keywords" content="  {$data.title}" />
+<meta name="description" content="  {$data.title},2017全年记录。随时查看，看图的人都选择这里！" />
+<meta name="viewport" content="user-scalable=no, width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link href="/index/Public/static/newpmmb/css/main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script type="text/javascript" src="/index/Public/static/newpmmb/js/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/index/Public/static/newpmmb/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/index/Public/static/newpmmb/js/superslide.js"></script>
+</head>
+<body oncontextmenu="javascript:self.event.returnValue=false;" onselectstart="javascript:return false;">
+<include file="Wap:header1" />        
+        <div class="theme">
+        	<dl>
+            	<dt><h1 class="ellipsis" title="  {$data.title}">  {$data.title}</h1></dt>
+                <dd class="menu1"><a id="bigpic" href="javascript:void(0);">放大原图</a></dd>
+				<dd class="menu2"><a href="javascript:void(0);" onClick="addFavorite(location.href,document.title);">收藏本页</a>
+                <dd class="menu3"><a id="allmenu" href="javascript:void(0);" onClick="javascript:slideToggle(this, '#lists', 100, '展开全部期数', '收起全部期数');">展开全部期数</a></dd>
+
+</dd>
+                <dd class="menu4"><a href="javascript:void(0);"  onclick="addFavorite(this.href, '全年图库');return false;">收藏本站</a>
+
+
+</dd>
+            </dl>
+            <div id="lists" class="lists">
+            	<span></span>
+                <ul class="clearfix">
+<include file="qs:qi2" /> 
+</ul>
+            </div>
+        </div>
+			<!--广告开始-->
+			<foreach name="plug_ad_20" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->	        
+        <div class="focusImgs">
+        	<span class="barleft"></span><span class="barright"></span>
+            <div class="focus">
+                <a class="navPrev fleft"></a>
+                <div id="fbtn" class="bd fleft">
+                    <nav><ul>
+<include file="qs:qi" /> 
+</ul></nav>
+                </div>
+                <a class="navNext fright"></a>
+            </div>
+            <article id="content" class="content">
+            	<div id="fpic">
+                    <ul class="focus_pic">
+<include file="qs:qi1h" /> 
+</ul>
+                    <div id="imghover" class="imghover">
+                    	<a id="prev" class="prev" href="javascript:void(0);" title="点击查看[上一期]" onClick="javascript:focusImgs2('prev');"></a>
+           				<a id="next" class="next" href="javascript:void(0);" title="点击查看[下一期]" onClick="javascript:focusImgs2('next');"></a>
+                    </div>
+					
+                </div>
+				<footer><a 1href=''>浏览量：{$data.hits} 次</a></footer>
+            </article>
+        </div>
+    </div>
+			<!--广告开始-->
+			<foreach name="plug_ad_21" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="100%" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->		
+</div>
+ 
+
+ 
+<div class="pb">
+
+</div>
+
+<include file="Wap:footer1" /> 
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>琴棋书画统计走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">  属性说明：将12生肖分为琴棋书画四组。<li >1、琴=雞,兔,蛇</li><li >2、棋=鼠,牛,狗</li><li >3、书=馬,龍,虎</li><li >4、画=羊,猴,豬</li></div><div class="table"><table  border="1" width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0"><tr><td ></td><td ></td><td >基</td><td >本</td><td >号</td><td >肖</td><td ></td><td ></td><td class="bg">正</td><td class="bg">一</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >二</td><td >肖</td><td ></td><td class="bg">正</td><td class="bg">三</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >四</td><td >肖</td><td ></td><td class="bg">正</td><td class="bg">五</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >六</td><td >肖</td><td ></td><td class="bg">特</td><td class="bg"></td><td class="bg"></td><td class="bg">肖</td><td></td><td>生</td><td>肖</td><td></td><td>排</td><td>位</td><td></td></tr><tr ><td >期数</td><td >一</td><td >二</td><td >三</td><td >四</td><td >五</td><td >六</td><td >特</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>一</td><td >二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>特</td></tr>
+<foreach name="list" item="vo">
+<tr>
+<td >{$vo['title']}期 </td>
+<td class="{$vo['tit1']|cz_band_txt}">{$vo['tit1']}</td>
+<td class="{$vo['tit2']|cz_band_txt}">{$vo['tit2']}</td>
+<td class="{$vo['tit3']|cz_band_txt}">{$vo['tit3']}</td>
+<td class="{$vo['tit4']|cz_band_txt}">{$vo['tit4']}</td>
+<td class="{$vo['tit5']|cz_band_txt}">{$vo['tit5']}</td>
+<td class="{$vo['tit6']|cz_band_txt}">{$vo['tit6']}</td>
+<td class="{$vo['tit7']|cz_band_txt}">{$vo['tit7']}</td>
+<?php
+if (in_array($vo['tit01'], array("雞","兔","蛇"))){
+$nums1=$nums1+1;
+?>
+<td class="r">琴</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit01'], array("鼠","牛","狗"))){
+$nums2=$nums2+1;
+?>
+<td class="bg"></td>
+<td class="o">棋</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit01'], array("馬","龍","虎"))){
+$nums3=$nums3+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="m">书</td>
+<td class="bg"></td>
+<?php
+}else{
+$nums4=$nums4+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="b">画</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit02'], array("雞","兔","蛇"))){
+$nums5=$nums5+1;
+?>
+<td class="r">琴</td>
+<td></td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit02'], array("鼠","牛","狗"))){
+$nums6=$nums6+1;
+?>
+<td></td>
+<td class="o">棋</td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit02'], array("馬","龍","虎"))){
+$nums7=$nums7+1;
+?>
+<td></td>
+<td></td>
+<td class="m">书</td>
+<td ></td>
+<?php
+}else{
+$nums8=$nums8+1;
+?>
+<td></td>
+<td></td>
+<td></td>
+<td class="b">画</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit03'], array("雞","兔","蛇"))){
+$nums9=$nums9+1;
+?>
+<td class="r">琴</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit03'], array("鼠","牛","狗"))){
+$nums10=$nums10+1;
+?>
+<td class="bg"></td>
+<td class="o">棋</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit03'], array("馬","龍","虎"))){
+$nums11=$nums11+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="m">书</td>
+<td class="bg"></td>
+<?php
+}else{
+$nums12=$nums12+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="b">画</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit04'], array("雞","兔","蛇"))){
+$nums13=$nums13+1;
+?>
+<td class="r">琴</td>
+<td></td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit04'], array("鼠","牛","狗"))){
+$nums14=$nums14+1;
+?>
+<td ></td>
+<td class="o">棋</td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit04'], array("馬","龍","虎"))){
+$nums15=$nums15+1;
+?>
+<td></td>
+<td></td>
+<td class="m">书</td>
+<td></td>
+<?php
+}else{
+$nums16=$nums16+1;
+?>
+<td></td>
+<td></td>
+<td></td>
+<td class="b">画</td>
+<?php } ?>
+
+
+<?php
+if (in_array($vo['tit05'], array("雞","兔","蛇"))){
+$nums17=$nums17+1;
+?>
+<td class="r">琴</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit05'], array("鼠","牛","狗"))){
+$nums18=$nums18+1;
+?>
+<td class="bg"></td>
+<td class="o">棋</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit05'], array("馬","龍","虎"))){
+$nums19=$nums19+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="m">书</td>
+<td class="bg"></td>
+<?php
+}else{
+$nums20=$nums20+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="b">画</td>
+<?php } ?>
+
+
+<?php
+if (in_array($vo['tit06'], array("雞","兔","蛇"))){
+$nums21=$nums21+1;
+?>
+<td class="r">琴</td>
+<td></td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit06'], array("鼠","牛","狗"))){
+$nums22=$nums22+1;
+?>
+<td></td>
+<td class="o">棋</td>
+<td></td>
+<td></td>
+<?php
+}elseif (in_array($vo['tit06'], array("馬","龍","虎"))){
+$nums23=$nums23+1;
+?>
+<td></td>
+<td></td>
+<td class="m">书</td>
+<td></td>
+<?php
+}else{
+$nums24=$nums24+1;
+?>
+<td></td>
+<td></td>
+<td></td>
+<td class="b">画</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit07'], array("雞","兔","蛇"))){
+$nums25=$nums25+1;
+?>
+<td class="r">琴</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit07'], array("鼠","牛","狗"))){
+$nums26=$nums26+1;
+?>
+<td class="bg"></td>
+<td class="o">棋</td>
+<td class="bg"></td>
+<td class="bg"></td>
+<?php
+}elseif (in_array($vo['tit07'], array("馬","龍","虎"))){
+$nums27=$nums27+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="m">书</td>
+<td class="bg"></td>
+<?php
+}else{
+$nums28=$nums28+1;
+?>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="bg"></td>
+<td class="b">画</td>
+<?php } ?>
+
+<td>{$vo['tit01']}</td>
+<td>{$vo['tit02']}</td>
+<td>{$vo['tit03']}</td>
+<td>{$vo['tit04']}</td>
+<td>{$vo['tit05']}</td>
+<td>{$vo['tit06']}</td>
+<td>{$vo['tit07']}</td>
+</tr>
+</foreach>
+<tr><td ></td><td ></td><td >基</td><td >本</td><td >号</td><td >肖</td><td ></td><td ></td><td class="bg">正</td><td class="bg">一</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >二</td><td >肖</td><td ></td><td class="bg">正</td><td class="bg">三</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >四</td><td >肖</td><td ></td><td class="bg">正</td><td class="bg">五</td><td class="bg">肖</td><td class="bg"></td><td >正</td><td >六</td><td >肖</td><td ></td><td class="bg">特</td><td class="bg"></td><td class="bg"></td><td class="bg">肖</td><td>一</td><td >二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>特</td></tr><tr ><td >期数</td><td >一</td><td >二</td><td >三</td><td >四</td><td >五</td><td >六</td><td >特</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td>琴</td><td>棋</td><td>书</td><td>画</td><td class="bg">琴</td><td class="bg">棋</td><td class="bg">书</td><td class="bg">画</td><td></td><td>生</td><td>肖</td><td></td><td>排</td><td>位</td><td></td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td >累</td><td >计</td><td >次</td><td >数</td>
+<td class="bg"><?=$nums1?></td>
+<td class="bg"><?=$nums2?></td>
+<td class="bg"><?=$nums3?></td>
+<td class="bg"><?=$nums4?></td>
+<td><?=$nums5?></td>
+<td><?=$nums6?></td>
+<td><?=$nums7?></td>
+<td><?=$nums8?></td>
+<td class="bg"><?=$nums9?></td>
+<td class="bg"><?=$nums10?></td>
+<td class="bg"><?=$nums11?></td>
+<td class="bg"><?=$nums12?></td>
+<td><?=$nums13?></td>
+<td><?=$nums14?></td>
+<td><?=$nums15?></td>
+<td><?=$nums16?></td>
+<td class="bg"><?=$nums17?></td>
+<td class="bg"><?=$nums18?></td>
+<td class="bg"><?=$nums19?></td>
+<td class="bg"><?=$nums20?></td>
+<td><?=$nums21?></td>
+<td><?=$nums22?></td>
+<td><?=$nums23?></td>
+<td><?=$nums24?></td>
+<td class="bg"><?=$nums25?></td>
+<td class="bg"><?=$nums26?></td>
+<td class="bg"><?=$nums27?></td>
+<td class="bg"><?=$nums28?></td>
+
+
+</tr></table></div>
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

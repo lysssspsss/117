@@ -1,0 +1,199 @@
+	<include file='index:header' />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									修改内幕4肖4码
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('#nmx_edit').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#qihao').val())){
+			layer.alert('期号不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#qihao').focus(); 
+			});
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="nmx_edit" id="nmx_edit" method="post" action="__URL__/nmx_runedit">
+								<input type="hidden" name="id" id="id" value="{$nmx.id}" />
+	
+<table width="100%" height="38" id="table400905487" bordercolor="#0b2312" bordercolorlight="#0b2312" bordercolordark="#0b2312" style="border-image: none; color: rgb(0, 0, 0); font-size: 10pt; cursor: default; -ms-word-wrap: break-word; word-wrap: break-word; border: 1px dotted rgb(153, 204, 255); margin: 0px; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px" border="1" cellspacing="1">
+	<tbody style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+		<tr style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<td width="80%" height="36" align="middle" style="color: rgb(0, 0, 0); font-family: 宋体; font-size: 10pt; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px" bgcolor="#ffdfff" bordercolor="#C0C0C0">
+			<font color="#ff0000" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<b style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<font color="#00ff0e" size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; ">
+<font color="#008000" size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+			<span style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px" lang="EN-US">
+			<font style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<b style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<font size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<font size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<span lang="EN-US" style="word-wrap: break-word; margin: 0px; padding: 0px">
+			<strong style="word-wrap: break-word; margin: 0; padding: 0">
+			<span lang="en-us" style="word-wrap: break-word; margin: 0; padding: 0; background-position: 0% 0%">
+			<font face="微软雅黑" style="font-size: 16pt; word-wrap: break-word; margin: 0; padding: 0">
+			<input type="text" style="width:5%" name="qihao" id="qihao" value="{$nmx.qihao}" />期:</font></span></strong></span></font></span></font></b></font>
+			<font color="#ff0000" style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word">
+			<b style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word">
+			<font color="#00ff0e" size="5" style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word">
+			<span style="margin:0px; padding:0px; font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word">
+			<font size="3" style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word" color="#008000">
+			<span lang="EN-US" style="margin:0px; padding:0px; word-wrap: break-word">
+			<strong style="margin:0px; padding:0px; word-wrap: break-word">
+			<span lang="en-us" style="margin:0px; padding:0px; word-wrap: break-word; background-position: 0% 0%">
+			<font color="#FF0000" face="微软雅黑" style="margin:0px; padding:0px; font-size: 16pt; word-wrap: break-word">内幕❶肖❶码:</font>
+			</span>
+			</strong>
+			</span>
+			</font>
+			</span>
+			</font>
+			</b>
+			</font>
+			<font style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<b style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<font size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><font size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><span lang="EN-US" style="word-wrap: break-word; margin: 0px; padding: 0px"><strong style="word-wrap: break-word; margin: 0; padding: 0"><span lang="en-us" style="word-wrap: break-word; margin: 0; padding: 0; background-position: 0% 0%"><font face="微软雅黑" style="font-size: 16pt; word-wrap: break-word; margin: 0; padding: 0">:<font color="#0000FF" style="word-wrap: break-word; margin: 0px; padding: 0px">&lt;</font></font></span></strong></span></font></span></font></b></font>
+			<font color="#ff0000" style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word">
+			<b style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word">
+			<span style="margin:0px; padding:0px; font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word">
+			<font size="3" style="margin:0px; padding:0px; -ms-word-wrap: break-word; word-wrap: break-word" color="#008000">
+			<span lang="EN-US" style="margin:0px; padding:0px; word-wrap: break-word">
+			<strong style="margin:0px; padding:0px; word-wrap: break-word">
+			<span lang="en-us" style="margin:0px; padding:0px; word-wrap: break-word; background-position: 0% 0%">
+			<font color="#0000FF" style="margin:0px; padding:0px; word-wrap: break-word; font-size:16pt" face="微软雅黑">
+			
+			<input type="text" style="width:30%" name="nmx" id="nmx" value="{$nmx.nmx}" />
+			
+			</font>
+			
+			</span>
+			</strong>
+			</span>
+			</font>
+			</span>
+			</b>
+			</font>
+			<font style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><b style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><font size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><font size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px"><span lang="EN-US" style="word-wrap: break-word; margin: 0px; padding: 0px"><strong style="word-wrap: break-word; margin: 0; padding: 0"><span lang="en-us" style="word-wrap: break-word; margin: 0; padding: 0; background-position: 0% 0%"><font face="微软雅黑" style="font-size: 16pt; word-wrap: break-word; margin: 0; padding: 0"><font color="#0000FF" style="word-wrap: break-word; margin: 0px; padding: 0px">&gt;</font>请大胆下注！</font></span></strong></span></font></span></font></b></font></span></font></span></font></b></font></td>
+
+			<td width="22%" height="36" align="middle" style="color: rgb(0, 0, 0); font-family: 宋体; font-size: 10pt; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px" bgcolor="#ffdfff" bordercolor="#C0C0C0">
+			<font color="#ff0000" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<b style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<font color="#00ff0e" size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+<span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; ">
+<font color="#008000" size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; ">
+			<span style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px" lang="EN-US">
+			<font color="#ff0000" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<b style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<font color="#00ff0e" size="5" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<span style="font-weight: 700; text-decoration: none; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<font color="#008000" size="3" style="-ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			<span lang="EN-US" style="word-wrap: break-word; margin: 0px; padding: 0px">
+			<font color="#ff0000" face="微软雅黑" size="6" style="font-size: 16pt; -ms-word-wrap: break-word; word-wrap: break-word; margin: 0px; padding: 0px">
+			开<input type="text" style="width:15%" name="jg" id="jg" value="{$nmx.jg}" /><input type="text" style="width:15%" name="haoma" id="haoma" value="{$nmx.haoma}" /></font></span></font></span></font></b></font></span></font></span></font></b></font></td>
+			
+			
+		</tr>
+</tbody></table>
+	
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+	<include file='index:footer' />
+
+		</div><!-- /.main-container -->
+
+    		<!--下拉样式以及JS-->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/chosen.css" />
+		<script src="{$Think.const.JS_URL}/assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				if(!ace.vars['touch']) {
+					$('.chosen-select').chosen({allow_single_deselect:true}); 
+					$(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+						$('.chosen-select').each(function() {
+							 var $this = $(this);
+							 $this.next().css({'width': $this.parent().width()});
+						})
+					}).trigger('resize.chosen');
+			
+				}
+			});
+		</script>
+	</body>
+</html>

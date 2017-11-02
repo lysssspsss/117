@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>拼搏统计走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">  属性说明：将49个号码分为拼,博两组。 <li>1、拼=4,5,6,12,13,14,15,16,21,22,23,24,25,26,27,28,29,34,35,36,37,38,44,45,46</li><li >2、博=1,2,3,7,8,9,10,11,17,18,19,20,30,31,32,33,39,40,41,42,43,47,48,49</li></div><div class="table"><table  border="1" width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>平</td><td>码</td><td>比</td><td>值</td><td>拼</td><td>:</td><td>搏</td><td>所有号码</td></tr><tr ><td>期数</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一肖</td><td>二肖</td><td>三肖</td><td>四肖</td><td>五肖</td><td>六肖</td><td>特肖</td><td>6:0</td><td>5:1</td><td>4:2</td><td>3:3</td><td>2:4</td><td>1:5</td><td>0:6</td><td>拼:搏</td></tr><foreach name="list" item="vo">
+
+<?php
+
+if (in_array($vo['tit1'], array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+if (in_array($vo['tit2'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+if (in_array($vo['tit3'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+if (in_array($vo['tit4'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+if (in_array($vo['tit5'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+if (in_array($vo['tit6'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$pingy=$pingy+1;
+$zongy=$pingy;
+}else{
+$pingb=$pingb+1;
+$zongb=$pingb;
+}
+
+if (in_array($vo['tit7'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$zongy=$pingy+1;
+}else{
+$zongb=$pingb+1;
+}
+
+
+?>
+
+<tr>
+<td >{$vo['title']}期 </td>
+<td class="{$vo['tit1']|cz_band_txt}">{$vo['tit1']}</td>
+<td class="{$vo['tit2']|cz_band_txt}">{$vo['tit2']}</td>
+<td class="{$vo['tit3']|cz_band_txt}">{$vo['tit3']}</td>
+<td class="{$vo['tit4']|cz_band_txt}">{$vo['tit4']}</td>
+<td class="{$vo['tit5']|cz_band_txt}">{$vo['tit5']}</td>
+<td class="{$vo['tit6']|cz_band_txt}">{$vo['tit6']}</td>
+<td class="{$vo['tit7']|cz_band_txt}">{$vo['tit7']}</td>
+<?php
+if (in_array($vo['tit1'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums1=$nums1+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums01=$nums01+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit2'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums2=$nums2+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums02=$nums02+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit3'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums3=$nums3+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums03=$nums03+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit4'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums4=$nums4+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums04=$nums04+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit5'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums5=$nums5+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums05=$nums05+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+
+<?php
+if (in_array($vo['tit6'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums6=$nums6+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums06=$nums06+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+<?php
+if (in_array($vo['tit7'],array("04","05","06","12","13","14","15","16","21","22","23","24","25","26","27","28","29","34","35","36","37","38","44","45","46"))){
+$nums7=$nums7+1;
+?>
+<td class="abg">拼</td>
+<?php }else{
+$nums07=$nums07+1;
+?>
+<td class="bbg">博</td>
+<?php } ?>
+
+
+<td class="bg"><?=$vo['tit01']?></td>
+<td class="bg"><?=$vo['tit02']?></td>
+<td class="bg"><?=$vo['tit03']?></td>
+<td class="bg"><?=$vo['tit04']?></td>
+<td class="bg"><?=$vo['tit05']?></td>
+<td class="bg"><?=$vo['tit06']?></td>
+<td class="cbg"><?=$vo['tit07']?></td>
+<?php if ($pingy==6){
+$nums8=$nums8+1;
+?>
+<td class='bg'>6:0</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==5){
+$nums9=$nums9+1;
+?>
+<td class='bg'>5:1</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==4){
+$nums10=$nums10+1;
+?>
+<td class='bg'>4:2</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==3){
+$nums11=$nums11+1;
+?>
+<td class='bg'>3:3</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==2){
+$nums12=$nums12+1;
+?>
+<td class='bg'>2:4</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==1){
+$nums13=$nums13+1;
+?>
+<td class='bg'>1:5</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+
+<?php if ($pingy==0){
+$nums14=$nums14+1;
+?>
+<td class='bg'>0:6</td>
+<?php }else{?>
+<td class='cpy'></td>
+<?php } ?>
+<td><?=$zongy?> : <?=$zongb?></td>
+</tr>
+<?php
+$pingy=0;
+$pingb=0;
+$zongy=0;
+$zongb=0;
+?>
+</foreach>
+
+<tr ><td>期数</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一肖</td><td>二肖</td><td>三肖</td><td>四肖</td><td>五肖</td><td>六肖</td><td>特肖</td>
+<td>6:0</td><td>5:1</td><td>4:2</td><td>3:3</td><td>2:4</td><td>1:5</td><td>0:6</td>
+
+<td>拼:博</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>统计</td><td>拼:博</td><td><?=$nums1?>:<?=$nums01?></td>
+<td><?=$nums2?>:<?=$nums02?></td>
+<td><?=$nums3?>:<?=$nums03?></td>
+<td><?=$nums4?>:<?=$nums04?></td>
+<td><?=$nums5?>:<?=$nums05?></td>
+<td><?=$nums6?>:<?=$nums06?></td>
+<td><?=$nums7?>:<?=$nums07?></td><td>比</td><td>值</td><td>累</td><td>计</td><td>次</td><td>数</td><td>:</td>
+
+<td><?=$nums8?></td>
+<td><?=$nums9?></td>
+<td><?=$nums10?></td>
+<td><?=$nums11?></td>
+<td><?=$nums12?></td>
+<td><?=$nums13?></td>
+<td><?=$nums14?></td>
+<td>所有号码</td></tr></table></div>
+<!--主体拼容结束-->
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="renderer" content="webkit" />
+<title>采集在线</title>
+<meta name="keywords" content="采集,测试" />
+<meta name="description" content="采集在线测试"  />
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<script src="{$Think.const.JS_URL}jquery.2.js?v=20150818" type="text/javascript"></script>
+<script type="text/javascript" src="{$Think.const.JS_URL}compatibility.js"></script>
+<!--[if lte IE 8]>
+	<script type="text/javascript" src="{$Think.const.JS_URL}respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="place"><span>位置：</span><ul class="placeul"><li><a href="__MODULE__/config.html">首页</a></li><li><a href="__CONTROLLER__/">采集管理</a></li><li>{$data.biaoti}</li><li>执行采集</li></ul></div>
+<div class="formbody">
+	
+<div class="aw-container-wrap">
+	<div class="container aw-custom-page">
+		<div class="row">
+			<div class="col-sm-12">
+<link href="{$Think.const.CSS_URL}bootstrap1.min.css" rel="stylesheet">   
+<script src="{$Think.const.JS_URL}bootstrap.min.js"></script> 
+    <script type="text/javascript">
+    $(function() {
+        var loading = '';
+        $('form').submit(function(event) {
+            loading?$("#content").html(loading):loading=$("#content").html();
+            $('#myModal').modal({
+                show: true
+            });
+            var fdata = $(this).serialize();
+            $.ajax({
+                url: '__CONTROLLER__/zxbbscj/id/{$data.id}',
+                type: 'GET',
+                dataType: 'html',
+                data: fdata,
+            })
+                .done(function(data) {
+                    $("#content").html(data);
+                })
+                .fail(function() {
+                    $("#content").html("出错了");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+
+            return false;
+        });
+        $("#makeQueryTest").click(function() {
+          var f, str;
+          $("#showQueryTest").modal({
+            show: true
+          });
+          str = '{';
+          f = function(str) {
+            if ($.trim(str) === "") {
+              return " ";
+            } else {
+              return str;
+            }
+          };
+          $(".form input[type=text]").each(function(index, el) {
+            return str += f($(this).val()) + "|";
+          });
+          str += $(".form :selected").val() + "}";
+          $("#QTstr").val(str);
+          return $("#QTstr").click(function() {
+            return $(this).select();
+          });
+        });
+    });
+    </script>
+
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <form class="form">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success form-control">开始采集 > {$data.biaoti}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">采集结果</h4>
+                </div>
+                <div class="modal-body" id="content">
+                    <pan class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            采集中请稍等。。。。
+                            <span class="sr-only">45% Complete</span>
+                        </div>
+                    </pan>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+		</div>
+	</div>
+</div>	
+</div>	
+</body>
+</html>

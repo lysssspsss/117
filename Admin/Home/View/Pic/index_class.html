@@ -1,0 +1,141 @@
+<include file='index:header' />
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+		<div class="main-container" id="main-container">
+
+
+<include file='index:left' />
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+					
+							<div class="row maintop">
+								<div class="col-xs-12 col-sm-8">
+
+<form action="__CONTROLLER__/" method="get">
+
+<input type="button" value="添加栏目" onclick="location.href='__CONTROLLER__/index_class_add.html?Id={$NumberID}'"  class="btn btn-xs btn-danger" />
+
+</form>
+
+								</div>
+
+								
+								
+							</div>						
+
+							<div class="row">
+							    <div class="col-xs-12">
+										<div>
+<div class="formbody">
+<form name="form1" method="post" action="__CONTROLLER__/Action.html">
+<table cellspacing="1" cellpadding="0" class="page_table" width="100%" style="margin-top:1px;">
+<tr>
+<td width="5%" height="32" align="center" class="table_top">选择</td>
+<td width="10%" align="center" class="table_top">编号</td>
+<td width="30%" align="center" class="table_top">目录名称</td>
+<td width="14%" align="center" class="table_top">排序</td>
+<td width="6%" align="center" class="table_top">状态</td>
+<td width="13%" align="center" class="table_top">添加目录</td>
+<td width="12%" align="center" class="table_top">查看下级</td>
+<td width="10%" align="center" class="table_top">操作</td>
+</tr>
+<foreach name="list" item="vo">
+<tr bgcolor="ffffff" onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#F5F5F5'">
+<td><input name="DID[]" type="checkbox" id="DID[]" value="{$vo.id}" style="margin:3px 0px"></td>
+<td height="32" align="center" style="padding-left:10px;">{$vo.numberid}</td>
+<td align="left" style="padding-left:10px;">{$vo.title}</td>
+<td align="left" style="padding-left:10px;">
+<div class="dirction">
+<php>
+if($Startid==$vo['sorting']){
+echo '<a class="move top1" href="javascript:void(0)" title="已经是第一条数据了"></a>';
+}else{
+echo '<a class="move top"  href="__CONTROLLER__/class_sorting/Point/1/id/'.$vo[sorting].'/sid/'.$Startid.'/numberid/'.$NumberID.'" title="置顶"></a>';
+}
+</php>
+<php>
+if($Startid==$vo['sorting']){
+echo '<a class="move up1" href="javascript:void(0)" title="已经是第一条数据了"></a>';
+}else{
+$uid=getsorting('cz_pic_class','up',$vo[sorting],'1',$vo[lagid],$vo[numberid]);  
+
+echo '<a class="move up"  href="__CONTROLLER__/class_sorting/Point/2/id/'.$vo[sorting].'/sid/'.$uid.'/numberid/'.$NumberID.'" title="往上移动"></a>';
+}
+</php>
+<php>
+if($Endid==$vo['sorting']){
+echo '<a class="move down1" href="javascript:void(0)" title="已经是最后条数据了"></a>';
+}else{
+$uid=getsorting('cz_pic_class','down',$vo[sorting],'1',$vo[lagid],$vo[numberid]);  
+echo '<a class="move down"  href="__CONTROLLER__/class_sorting/Point/3/id/'.$vo[sorting].'/sid/'.$uid.'/numberid/'.$NumberID.'" title="往下移动"></a>';
+}
+</php>
+<php>
+if($Endid==$vo['sorting']){
+echo '<a class="move bottom1" href="javascript:void(0)" title="已经是最后条数据了"></a>';
+}else{
+echo '<a class="move bottom"  href="__CONTROLLER__/class_sorting/Point/4/id/'.$vo[sorting].'/sid/'.$Endid.'/numberid/'.$NumberID.'" title="置底"></a>';
+}
+</php>
+</div>
+</td>
+<td align="center">
+<php>
+if($vo['locks']==0){
+echo '<a class="red" href="?Action=close&SId='.$vo['id'].'" title="已开启"><div><p class="btn btn-minier btn-yellow">开启</p></div></a>';
+}else{
+echo '<a class="red" href="?Action=open&SId='.$vo['id'].'" title="已禁用"><div><p class="btn btn-minier btn-danger">禁用</p></div></a>';
+}
+</php>
+</td>
+<td align="center"><a href="__CONTROLLER__/index_class_add.html?Id={$vo['numberid']}">添加下级目录</a></td>
+<td align="center"><a href="__CONTROLLER__/index_class.html?Id={$vo['numberid']}">查看下级目录</a></td>
+<td align="center">
+<a href="__CONTROLLER__/index_class_edit.html?Id={$vo['id']}">编辑</a>
+</td>
+</tr>
+</foreach>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="48%" align="left" style="padding-top:15px; padding-bottom:15px;">
+<input type="button" value="全选" onClick="CheckAll()" class="x_input">
+<input type="submit" name="Del" id="Del" value="删除" class="x3_input" onClick="Javascript:return confirm('确定要删除吗？');" >
+<input type="submit" name="Del" id="Del" value="开通" class="x2_input">
+<input type="submit" name="Del" id="Del" value="禁用" class="x2_input">
+</td>
+<td width="52%" style="text-align:center;">{$page}</td>
+</tr>
+</table>
+</form>
+</div>
+							    		</div>
+									</div>
+								</div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+</div>			
+<include file='index:footer' />		
+</div>
+<script>
+function CheckAll(value,obj)  {
+var form=document.getElementsByTagName("form")
+for(var i=0;i<form.length;i++){
+for (var j=0;j<form[i].elements.length;j++){
+if(form[i].elements[j].type=="checkbox"){ 
+var e = form[i].elements[j]; 
+if (value=="selectAll"){e.checked=obj.checked}     
+else{e.checked=!e.checked;} 
+}
+}
+}
+}
+</script>
+	</body>
+</html>	

@@ -1,0 +1,8 @@
+			<php>
+					$tuku_cj=M('tuku_cj')->where(array('id'=>1))->find();
+
+			</php>
+
+<foreach name="list" item="vo">					
+<volist name="vo['voo']" id="sub"><li><img src="/static/pmmb/image/blank.png" _src="{$tuku_cj.site_url}col/{$sub.title}/{$data.content}.jpg" onload="javascript:formatImg(this, document.getElementById('fpic').offsetWidth);" onerror="this.src='/static/pmmb/image/nofind.gif'"/></li></volist> 
+</foreach>

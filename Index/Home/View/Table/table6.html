@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>六肖统计走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">  属性说明：将12生肖分为六组。 <li >1、一子肖=鼠,牛</li> <li >2、二子肖=龍,雞</li> <li >3、三子肖=虎,豬</li> <li >4、四子肖=蛇,猴</li> <li >5、五子肖=兔,狗</li> <li >6、六子肖=馬,羊</li></div><div class="table"><table  border="1" width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0"><tr><td></td><td></td><td>基</td><td>本</td><td>号</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">一</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>二</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">三</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>四</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">五</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>六</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">特</td><td class="bg"></td><td class="bg"></td><td class="bg">肖</td><td class="bg"></td></tr><tr ><td>期数</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>特</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td></tr>
+
+<foreach name="list" item="vo">
+<tr>
+<td >{$vo['title']}期</td>
+<td class="{$vo['tit1']|cz_band_txt}">{$vo['tit1']}</td>
+<td class="{$vo['tit2']|cz_band_txt}">{$vo['tit2']}</td>
+<td class="{$vo['tit3']|cz_band_txt}">{$vo['tit3']}</td>
+<td class="{$vo['tit4']|cz_band_txt}">{$vo['tit4']}</td>
+<td class="{$vo['tit5']|cz_band_txt}">{$vo['tit5']}</td>
+<td class="{$vo['tit6']|cz_band_txt}">{$vo['tit6']}</td>
+<td class="{$vo['tit7']|cz_band_txt}">{$vo['tit7']}</td>
+<?php if (in_array($vo['tit01'], array("鼠","牛"))){
+$nums1=$nums1+1;
+?>
+<td class="r"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit01'], array("龍","雞"))){
+$nums2=$nums2+1;
+?>
+<td class="b"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit01'], array("虎","豬"))){
+$nums3=$nums3+1;
+?>
+<td class="g"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit01'], array("蛇","猴"))){
+$nums4=$nums4+1;
+?>
+<td class="m"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit01'], array("兔","狗"))){
+$nums5=$nums5+1;
+?>
+<td class="n"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit01'], array("馬","羊"))){
+$nums6=$nums6+1;
+?>
+<td class="o"><?=$vo['tit01']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+
+<?php if (in_array($vo['tit02'], array("鼠","牛"))){
+$nums7=$nums7+1;
+?>
+<td class="r"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit02'], array("龍","雞"))){
+$nums8=$nums8+1;
+?>
+<td class="b"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit02'], array("虎","豬"))){
+$nums9=$nums9+1;
+?>
+<td class="g"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit02'], array("蛇","猴"))){
+$nums10=$nums10+1;
+?>
+<td class="m"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit02'], array("兔","狗"))){
+$nums11=$nums11+1;
+?>
+<td class="n"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit02'], array("馬","羊"))){
+$nums12=$nums12+1;
+?>
+<td class="o"><?=$vo['tit02']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+
+
+<?php if (in_array($vo['tit03'], array("鼠","牛"))){
+$nums13=$nums13+1;
+?>
+<td class="r"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit03'], array("龍","雞"))){
+$nums14=$nums14+1;
+?>
+<td class="b"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit03'], array("虎","豬"))){
+$nums15=$nums15+1;
+?>
+<td class="g"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit03'], array("蛇","猴"))){
+$nums16=$nums16+1;
+?>
+<td class="m"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit03'], array("兔","狗"))){
+$nums17=$nums17+1;
+?>
+<td class="n"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit03'], array("馬","羊"))){
+$nums18=$nums18+1;
+?>
+<td class="o"><?=$vo['tit03']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+
+<?php if (in_array($vo['tit04'], array("鼠","牛"))){
+$nums19=$nums19+1;
+?>
+<td class="r"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit04'], array("龍","雞"))){
+$nums20=$nums20+1;
+?>
+<td class="b"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit04'], array("虎","豬"))){
+$nums21=$nums21+1;
+?>
+<td class="g"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit04'], array("蛇","猴"))){
+$nums22=$nums22+1;
+?>
+<td class="m"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit04'], array("兔","狗"))){
+$nums23=$nums23+1;
+?>
+<td class="n"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit04'], array("馬","羊"))){
+$nums24=$nums24+1;
+?>
+<td class="o"><?=$vo['tit04']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit05'], array("鼠","牛"))){
+$nums25=$nums25+1;
+?>
+<td class="r"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit05'], array("龍","雞"))){
+$nums26=$nums26+1;
+?>
+<td class="b"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit05'], array("虎","豬"))){
+$nums27=$nums27+1;
+?>
+<td class="g"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit05'], array("蛇","猴"))){
+$nums28=$nums28+1;
+?>
+<td class="m"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit05'], array("兔","狗"))){
+$nums29=$nums29+1;
+?>
+<td class="n"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit05'], array("馬","羊"))){
+$nums30=$nums30+1;
+?>
+<td class="o"><?=$vo['tit05']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit06'], array("鼠","牛"))){
+$nums31=$nums31+1;
+?>
+<td class="r"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit06'], array("龍","雞"))){
+$nums32=$nums32+1;
+?>
+<td class="b"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit06'], array("虎","豬"))){
+$nums33=$nums33+1;
+?>
+<td class="g"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit06'], array("蛇","猴"))){
+$nums34=$nums34+1;
+?>
+<td class="m"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit06'], array("兔","狗"))){
+$nums35=$nums35+1;
+?>
+<td class="n"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit06'], array("馬","羊"))){
+$nums36=$nums36+1;
+?>
+<td class="o"><?=$vo['tit06']?></td>
+<?php }else{?>
+<td style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit07'], array("鼠","牛"))){
+$nums37=$nums37+1;
+?>
+<td class="r"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit07'], array("龍","雞"))){
+$nums38=$nums38+1;
+?>
+<td class="b"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit07'], array("虎","豬"))){
+$nums39=$nums39+1;
+?>
+<td class="g"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+<?php if (in_array($vo['tit07'], array("蛇","猴"))){
+$nums40=$nums40+1;
+?>
+<td class="m"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit07'], array("兔","狗"))){
+$nums41=$nums41+1;
+?>
+<td class="n"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+
+<?php if (in_array($vo['tit07'], array("馬","羊"))){
+$nums42=$nums42+1;
+?>
+<td class="o"><?=$vo['tit07']?></td>
+<?php }else{?>
+<td class="bg" style="color:#cccccc;"></td>
+<?php }?>
+</tr>
+</foreach>
+
+
+<tr><td></td><td></td><td>基</td><td>本</td><td>号</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">一</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>二</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">三</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>四</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">正</td><td class="bg">五</td><td class="bg">肖</td><td class="bg"></td><td class="bg"></td><td></td><td>正</td><td>六</td><td>肖</td><td></td><td></td><td class="bg"></td><td class="bg">特</td><td class="bg"></td><td class="bg"></td><td class="bg">肖</td><td class="bg"></td></tr><tr ><td>期数</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>特</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td class="bg">一</td><td class="bg">二</td><td class="bg">三</td><td class="bg">四</td><td class="bg">五</td><td class="bg">六</td></tr><tr><td></td><td></td><td></td><td></td><td>累</td><td>计</td><td>次</td><td>数</td>
+<td class="bg"><?=$nums1?></td>
+<td class="bg"><?=$nums2?></td>
+<td class="bg"><?=$nums3?></td>
+<td class="bg"><?=$nums4?></td>
+<td class="bg"><?=$nums5?></td>
+<td class="bg"><?=$nums6?></td>
+<td><?=$nums7?></td>
+<td><?=$nums8?></td>
+<td><?=$nums9?></td>
+<td><?=$nums10?></td>
+<td><?=$nums11?></td>
+<td><?=$nums12?></td>
+<td class="bg"><?=$nums13?></td>
+<td class="bg"><?=$nums14?></td>
+<td class="bg"><?=$nums15?></td>
+<td class="bg"><?=$nums16?></td>
+<td class="bg"><?=$nums17?></td>
+<td class="bg"><?=$nums18?></td>
+<td><?=$nums19?></td>
+<td><?=$nums20?></td>
+<td><?=$nums21?></td>
+<td><?=$nums22?></td>
+<td><?=$nums23?></td>
+<td><?=$nums24?></td>
+<td class="bg"><?=$nums25?></td>
+<td class="bg"><?=$nums26?></td>
+<td class="bg"><?=$nums27?></td>
+<td class="bg"><?=$nums28?></td>
+<td class="bg"><?=$nums29?></td>
+<td class="bg"><?=$nums30?></td>
+<td><?=$nums31?></td>
+<td><?=$nums32?></td>
+<td><?=$nums33?></td>
+<td><?=$nums34?></td>
+<td><?=$nums35?></td>
+<td><?=$nums36?></td>
+<td class="bg"><?=$nums37?></td>
+<td class="bg"><?=$nums38?></td>
+<td class="bg"><?=$nums39?></td>
+<td class="bg"><?=$nums40?></td>
+<td class="bg"><?=$nums41?></td>
+<td class="bg"><?=$nums42?></td>
+
+</tr></table></div>
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

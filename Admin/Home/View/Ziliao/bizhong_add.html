@@ -1,0 +1,278 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									添加必中资料
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('#bizhong_runadd').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#qihao').val())){
+			layer.alert('期号不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#qihao').focus(); 
+			});
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="bizhong_runadd" id="bizhong_runadd" method="post" action="__URL__/bizhong_runadd">
+
+	<table border="1" width="100%" id="table400906151" style="border-collapse: collapse">
+	<tbody>
+	<tr>
+		<td align="center" bgcolor="#FFFF00">
+
+			<table style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-COLLAPSE: collapse; COLOR: buttontext; FONT-SIZE: 12px; CURSOR: default; PADDING-TOP: 0px" id="table400907329" border="1" cellspacing="0" bordercolor="#414141" cellpadding="0" width="100%" bgcolor="#000000" height="283">
+			<tbody style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" bgcolor="#00ff00" rowspan="8" width="40">
+					<table style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: buttontext; FONT-SIZE: 12px; CURSOR: default; PADDING-TOP: 0px" id="table400907330" border="0" cellspacing="0" cellpadding="0" width="100%" height="250">
+					<tbody style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<p align="center">
+								<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">天</font></b>
+							</p>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">天</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">好</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">心</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="40" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">情</font></b>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" bgcolor="#ff0000" height="45" colspan="2">
+					<p align="center">
+						<b style="margin: 0px; padding: 0px">
+						<font style="margin:0px; padding:0px; FONT-SIZE: 20pt" color="#ffffff" face="微软雅黑">第<input type="text" style="width:6%" name="qihao" id="qihao" value="" />期:香港马会大公开;准确率绝对100%借钱拿高利贷也要大胆下注</font></b>
+					</p>
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" bgcolor="#00ff00" rowspan="8" width="40">
+					<table style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: buttontext; FONT-SIZE: 12px; CURSOR: default; PADDING-TOP: 0px" id="table400907331" border="0" cellspacing="0" cellpadding="0" width="100%" height="250">
+					<tbody style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<p align="center">
+								<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">期</font></b>
+							</p>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">期</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">中</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="39" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">大</font></b>
+						</td>
+					</tr>
+					<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+						<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="40" align="middle">
+							<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#ff0000" face="微软雅黑">奖</font></b>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					{$vo.qihao}期:必中㈥肖:
+					</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="liuxiao" id="liuxiao" value="" />
+					</font></span></font></b></font>
+					
+					
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					必中⑨码:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="jiuma" id="jiuma" value="" /></font></span></font></b></font>
+					
+
+					</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					{$vo.qihao}期:必中㈢肖:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="sanxiao" id="sanxiao" value="" /></font></span></font></b></font>
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					必中⑧码:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="bama" id="bama" value="" /></font></span></font></b></font>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					{$vo.qihao}期:必中㈡肖:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="erxiao" id="erxiao" value="" /></font></span></font></b></font>
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					必中⑤码:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="wuma" id="wuma" value="" /></font></span></font></b></font>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					{$vo.qihao}期:必中㈠肖:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="yixiao" id="yixiao" value="" /></font></span></font></b></font>
+				</td>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="45" width="438">
+					<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 18pt; PADDING-TOP: 0px" color="#00ff00" face="微软雅黑">
+					必中③码:</font></b><span style="word-wrap: break-word; padding: 0px; margin: 0px; font-weight: 700; text-decoration: none;"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px;"><blink style="word-wrap: break-word; padding: 0px; margin: 0px;"><font style="margin:0px; padding:0px; word-wrap: break-word"><b style="word-wrap: break-word; padding: 0px; margin: 0px; text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Simsun; font-style: normal; font-variant: normal; word-spacing: 0px; white-space: normal; widows: 1; -webkit-text-stroke-width: 0px; orphans:auto; text-align:start; background-color:rgb(0, 0, 0)"><font color="#FF0000" size="5" face="微软雅黑" style="word-wrap: break-word; padding: 0px; margin: 0px; "><span style="word-wrap: break-word; padding: 0px; margin: 0px;"><font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+					<input type="text" style="width:70%" name="sanma" id="sanma" value="" /></font></span></font></b></font>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="55" colspan="2" align="middle">
+					<span style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LETTER-SPACING: -1pt; PADDING-TOP: 0px"><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#00ffff" face="微软雅黑">
+					{$vo.qihao}期:内部一肖一码:(</font><font style="padding:0px; MARGIN: 0px; " color="#FF0000" face="微软雅黑" size="7">  <input type="text" style="width:10%" name="yima" id="yima" value="" /></font><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#00ffff" face="微软雅黑">)下注30万.信心100%!</font></b></span>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" height="55" colspan="2" align="middle">
+					<span style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LETTER-SPACING: -1pt; PADDING-TOP: 0px"><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#00ffff" face="微软雅黑">
+					开奖结果:(</font><font style="padding:0px; MARGIN: 0px; " color="#FF0000" face="微软雅黑" size="7">特码肖<input type="text" style="width:10%" name="jg" id="jg" value="？？" />  特码: <input type="text" style="width:10%" name="haoma" id="haoma" value="？？" /></font><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 22pt; PADDING-TOP: 0px" color="#00ffff" face="微软雅黑">)下注30万.信心100%!</font></b></span>
+				</td>
+			</tr>
+			<tr style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px" bgcolor="#ffff00" height="46" colspan="2" align="middle">
+					<b style="margin: 0px; padding: 0px">
+					<font style="margin:0px; padding:0px; FONT-SIZE: 22pt" color="#ff0000" face="微软雅黑">(请谨记本站网址www.117kj.com，以防广告到期找不到)</font></b>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+
+		</td>
+	</tr>
+	</tbody>
+	</table>
+
+									
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+	<include file='index:footer' />
+
+		</div><!-- /.main-container -->
+
+    		<!--下拉样式以及JS-->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/chosen.css" />
+		<script src="{$Think.const.JS_URL}/assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				if(!ace.vars['touch']) {
+					$('.chosen-select').chosen({allow_single_deselect:true}); 
+					$(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+						$('.chosen-select').each(function() {
+							 var $this = $(this);
+							 $this.next().css({'width': $this.parent().width()});
+						})
+					}).trigger('resize.chosen');
+			
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>万年日历_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="万年日历_" />
+<meta name="description" content="万年日历_<?=Cz_cig('site_name')?>" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}public_v2.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}style_v2.css" rel="stylesheet" type="text/css" />
+<link href="http://js.yptjs.com/kj/rili/css/public_v2.css?v=0611" rel="stylesheet" type="text/css" />
+<link href="http://js.yptjs.com/kj/rili/css/style_v2.css?v=1217" rel="stylesheet" type="text/css" />
+
+
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script type="text/javascript">
+var _contextPath = "";
+var yearInfo = [1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040, 2041, 2042, 2043, 2044, 2045, 2046, 2047, 2048, 2049];
+</script>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<include file="Index:header" />
+
+<div class="wrapper">
+
+<!-- Header begin -->
+
+<!-- Header end -->
+<div id="wrap">
+<!-- option Set begin -->
+
+<!-- option Set end -->
+<div class="mian clearfix">
+<div class="content-c" id="riliContent" style="display: none;">
+<!-- 主要日历模块 -->
+<div class="calendar " id="calendar_box">
+<div class="calendar_th" id="date_show">
+<ul class="clearfix">
+<li class="weekend">星期日</li>
+<li>星期一</li>
+<li>星期二</li>
+<li>星期三</li>
+<li>星期四</li>
+<li>星期五</li>
+<li class="weekend">星期六</li>
+</ul>
+</div>
+<div class="calendar_td">
+<ol class="clearfix"><li id="GD0" onclick="mOvr(0)" week="sun" class="weekend"><div id="SD0" class="solar">1</div><span id="LD0" class="lunar">十三</span></li><li id="GD1" onclick="mOvr(1)" class=""><div id="SD1" class="solar">2</div><span id="LD1" class="lunar">十四</span></li><li id="GD2" onclick="mOvr(2)" class=""><div id="SD2" class="solar">3</div><span id="LD2" class="lunar">十五</span></li><li id="GD3" onclick="mOvr(3)" class="today"><div id="SD3" class="solar">4</div><span id="LD3" class="lunar"><font color="#0058b2">立春</font></span><span class="status">今</span></li><li id="GD4" onclick="mOvr(4)" class=""><div id="SD4" class="solar">5</div><span id="LD4" class="lunar">十七</span></li><li id="GD5" onclick="mOvr(5)" class=""><div id="SD5" class="solar">6</div><span id="LD5" class="lunar">十八</span></li><li id="GD6" onclick="mOvr(6)" class="weekend"><div id="SD6" class="solar">7</div><span id="LD6" class="lunar">十九</span></li><li id="GD7" onclick="mOvr(7)" week="sun" class="weekend"><div id="SD7" class="solar">8</div><span id="LD7" class="lunar">二十</span></li><li id="GD8" onclick="mOvr(8)" class=""><div id="SD8" class="solar">9</div><span id="LD8" class="lunar">廿一</span></li><li id="GD9" onclick="mOvr(9)" class=""><div id="SD9" class="solar">10</div><span id="LD9" class="lunar">廿二</span></li><li id="GD10" onclick="mOvr(10)" class=""><div id="SD10" class="solar">11</div><span id="LD10" class="lunar"><font color="#d02f12">北方小年</font></span></li><li id="GD11" onclick="mOvr(11)" class=""><div id="SD11" class="solar">12</div><span id="LD11" class="lunar"><font color="#d02f12">南方小年</font></span></li><li id="GD12" onclick="mOvr(12)" class=""><div id="SD12" class="solar">13</div><span id="LD12" class="lunar">廿五</span></li><li id="GD13" onclick="mOvr(13)" class="weekend"><div id="SD13" class="solar">14</div><span id="LD13" class="lunar"><font color="#009900">情人节</font></span></li><li id="GD14" onclick="mOvr(14)" week="sun" class="weekend"><div id="SD14" class="solar">15</div><span id="LD14" class="lunar">廿七</span></li><li id="GD15" onclick="mOvr(15)" class=""><div id="SD15" class="solar">16</div><span id="LD15" class="lunar">廿八</span></li><li id="GD16" onclick="mOvr(16)" class=""><div id="SD16" class="solar">17</div><span id="LD16" class="lunar">廿九</span></li><li id="GD17" onclick="mOvr(17)" class=""><div id="SD17" class="solar">18</div><span id="LD17" class="lunar">三十</span></li><li id="GD18" onclick="mOvr(18)" class=""><div id="SD18" class="solar">19</div><span id="LD18" class="lunar"><font color="#d02f12">春节</font></span></li><li id="GD19" onclick="mOvr(19)" class=""><div id="SD19" class="solar">20</div><span id="LD19" class="lunar">初二</span></li><li id="GD20" onclick="mOvr(20)" class="weekend"><div id="SD20" class="solar">21</div><span id="LD20" class="lunar">初三</span></li><li id="GD21" onclick="mOvr(21)" week="sun" class="weekend"><div id="SD21" class="solar">22</div><span id="LD21" class="lunar">初四</span></li><li id="GD22" onclick="mOvr(22)" class=""><div id="SD22" class="solar">23</div><span id="LD22" class="lunar">初五</span></li><li id="GD23" onclick="mOvr(23)" class=""><div id="SD23" class="solar">24</div><span id="LD23" class="lunar">初六</span></li><li id="GD24" onclick="mOvr(24)" class=""><div id="SD24" class="solar">25</div><span id="LD24" class="lunar">初七</span></li><li id="GD25" onclick="mOvr(25)" class=""><div id="SD25" class="solar">26</div><span id="LD25" class="lunar">初八</span></li><li id="GD26" onclick="mOvr(26)" class=""><div id="SD26" class="solar">27</div><span id="LD26" class="lunar">初九</span></li><li id="GD27" onclick="mOvr(27)" class="weekend"><div id="SD27" class="solar">28</div><span id="LD27" class="lunar">初十 </span></li><li class="weekend" week="sun" style="display:none" id="GD28" onclick="mOvr(28)"><div id="SD28" class="solar"></div><span id="LD28" class="lunar"></span></li><li style="display:none" id="GD29" onclick="mOvr(29)"><div id="SD29" class="solar"></div><span id="LD29" class="lunar"></span></li><li style="display:none" id="GD30" onclick="mOvr(30)"><div id="SD30" class="solar"></div><span id="LD30" class="lunar"></span></li><li style="display:none" id="GD31" onclick="mOvr(31)"><div id="SD31" class="solar"></div><span id="LD31" class="lunar"></span></li><li style="display:none" id="GD32" onclick="mOvr(32)"><div id="SD32" class="solar"></div><span id="LD32" class="lunar"></span></li><li style="display:none" id="GD33" onclick="mOvr(33)"><div id="SD33" class="solar"></div><span id="LD33" class="lunar"></span></li><li class="weekend" style="display:none" id="GD34" onclick="mOvr(34)"><div id="SD34" class="solar"></div><span id="LD34" class="lunar"></span></li><li class="weekend" week="sun" style="display:none" id="GD35" onclick="mOvr(35)"><div id="SD35" class="solar"></div><span id="LD35" class="lunar"></span></li><li style="display:none" id="GD36" onclick="mOvr(36)"><div id="SD36" class="solar"></div><span id="LD36" class="lunar"></span></li><li style="display:none" id="GD37" onclick="mOvr(37)"><div id="SD37" class="solar"></div><span id="LD37" class="lunar"></span></li><li style="display:none" id="GD38" onclick="mOvr(38)"><div id="SD38" class="solar"></div><span id="LD38" class="lunar"></span></li><li style="display:none" id="GD39" onclick="mOvr(39)"><div id="SD39" class="solar"></div><span id="LD39" class="lunar"></span></li><li style="display:none" id="GD40" onclick="mOvr(40)"><div id="SD40" class="solar"></div><span id="LD40" class="lunar"></span></li><li class="weekend" style="display:none" id="GD41" onclick="mOvr(41)"><div id="SD41" class="solar"></div><span id="LD41" class="lunar"></span></li>
+<script type="text/javascript">
+var myDate = new Date();
+var numList = new Array();
+var year = myDate.getFullYear();
+var month = myDate.getMonth();
+var day = myDate.getDate();
+var firstDay = new Date(year,month,1);
+var lastDay = new Date(year,month+1,0);
+var start = firstDay.getDay();
+var end = lastDay.getDay();
+var dayNum = lastDay.getDate();
+
+</script>
+</ol>
+</div>
+<div class="date_tips" id="date_tips">
+<span class="cRed">红字</span>
+表示农历传统节日，
+<span class="cGreen">绿字</span>
+表示公众 / 国际节日，
+<span class="cBlue">蓝字</span>
+表示24节气日
+</div>
+</div>
+<!-- 主要日历模块 end-->
+</div>
+<div class="subar almanac" style="display: none;" id="almanacContent">
+<div class="almanac-hd" id="info_all">
+<h3>2015年 2月4日 星期三 06周</h3>
+</div>
+<div class="date-base snake">
+<span class="tday" id="info_today">4</span>
+<span class="nday" id="info_nong"><b>【马年】</b>腊月十六</span>
+<span id="info_chang" class="ganzhi">乙未年 戊寅月 辛亥日</span>
+<span class="jieri" id="info_letter">
+<div id="festival" class="festival">立春</div>
+</span>
+</div>
+<div class="today_almanac">
+<div class="yiji">
+<div id="yi" class="yi"><div class="icon"></div>
+<a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">相亲</a><a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">约会</a><a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">交易</a><a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">置业</a><a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">合伙</a>
+</div>
+<div id="ji" class="ji"><div class="icon"></div>
+<a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">勾陈（黑道）收日，忌安葬</a>
+</div>
+<div id="chong" class="chong"><div class="icon"></div>
+<a target="_blank" href="/jrhl.htm?date=2015-02-04#cx">冲（乙巳）蛇&nbsp;&nbsp;&nbsp;煞西</a>
+</div>
+</div>
+</div>
+<div class="today_god">
+<a id="cai" target="_blank" href="/jrhl.htm?date=2015-02-04#cx">财神：正东</a><a id="xi" target="_blank" href="/jrhl.htm?date=2015-02-04#cx">喜神：西南</a><a id="fu" target="_blank" href="/jrhl.htm?date=2015-02-04#cx">福神：西南</a>
+</div>
+<div class="today_event" id="more_box">
+<ul class="clearfix">
+<li id="shortPeriod" style="display:none;width: 238px !important;font-size:12px; border-bottom:1px dashed #dadada; line-height:20px; padding-top:0px; font-family:'宋体'; color:#FF6600; font-weight:bold">
+	【第014期开奖结果】
+</li>
+<li id="lotteryNums" style="display:none;width: 238px !important;">
+	<table width="100%" border="0" class="jl">
+	  <tr>
+	    <td><div class="p"><div id="num1" class="hm greenBoClass">32</div><div id="num1ShengXiao" class="sx">猪</div></div></td>
+		<td><div class="p"><div id="num2" class="hm blueBoClass">37</div><div id="num2ShengXiao" class="sx">马</div></div></td>
+		<td><div class="p"><div id="num3" class="hm redBoClass">19</div><div id="num3ShengXiao" class="sx">鼠</div></div></td>
+		<td><div class="p"><div id="num4" class="hm blueBoClass">25</div><div id="num4ShengXiao" class="sx">马</div></div></td>
+		<td><div class="p"><div id="num5" class="hm greenBoClass">33</div><div id="num5ShengXiao" class="sx">狗</div></div></td>
+		<td><div class="p"><div id="num6" class="hm blueBoClass">10</div><div id="num6ShengXiao" class="sx">鸡</div></div></td>
+		<td><font color="#BBBBBB">特</font></td>
+		<td><div class="p"><div id="num7" class="hm greenBoClass">27</div><div id="num7ShengXiao" class="sx">龙</div></div></td>
+	  </tr>
+	</table>
+</li>
+<li id="nextInfo" style="display:none;width: 238px !important;font-size:12px; border-bottom:1px dashed #dadada; line-height:50px; padding-top:20px; font-family:'宋体'; color:#009900; font-weight:bold">
+		【第015期开奖时间 02月05日 星期四】
+</li>
+</ul>
+</div>
+</div>
+</div> 
+
+</div>
+<!-- footer begin -->
+<include file="Index:footer" />
+<script src="http://js.yptjs.com/kj/pmmb/js/menu.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="http://js.yptjs.com/kj/pmmb/js/ie6png.js" type="text/javascript"></script>
+<script type="text/javascript">DD_belatedPNG.fix('.header .mainnav li.max, .header .mainnav li.max h3, .ads .hd li.tit');</script>
+<![endif]-->
+
+
+
+<!-- footer end -->
+</div>
+
+<script type="text/javascript">
+var fd=1;
+var realY = 2017,
+ realM = 02,
+ realD = 05;
+</script>
+<script id="script_jquery" src="http://js.yptjs.com/kj/rili/js/jquery-1.js"></script>
+<script id="script_all" src="http://js.yptjs.com/kj/rili/js/calendar.js?v=0126"></script>
+<script>
+window.onload=function(){ 
+$.ajax({
+type : 'get',
+url : '/time.html?t='+Math.random(),
+success:function(t){
+time = parseInt(t)+3;
+setInterval(function() {
+set(time);
+time = Number(time);
+time += 1000;
+},1000);
+}
+});
+$("#riliContent").show();
+$("#almanacContent").show();
+};
+
+function set(time){
+var week = '日一二三四五六';
+var beijingTimeZone = 8;
+var timeOffset = ((-1 * (new Date()).getTimezoneOffset()) - (beijingTimeZone * 60)) * 60000;
+var now = new Date(time - timeOffset);
+document.getElementById('bjtime').innerHTML = p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds());
+}
+function p(s) {
+return s < 10 ? '0' + s : s;
+}
+var time = 0;
+</script>
+
+
+</body>
+</html>

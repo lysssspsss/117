@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>六合彩开奖记录搜索_查找历史开奖结果，可快速找到一肖一码中特等公式规律_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="六合彩开奖记录,历史开奖结果" />
+<meta name="description" content="<?=Cz_cig('site_keywords')?>" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<div class="content clearfix" style="padding-top:0;">
+<div id="main" class="main">
+<div class="infos padding-b1">
+<div class="inner">
+<div class="bd">
+<table>
+<tr>
+<th style="width:66px">搅珠日期</th>
+<th class="mini bg-high2">期数</th>
+<th class="max">平码（六个正码）</th>
+<th class="mini bg-high2">特码</th>
+<th style="width:29px">生肖</th>
+<th style="width:29px">单双</th>
+<th style="width:29px">波色</th>
+<th style="width:29px">大小</th>
+<th style="width:29px">五行</th>
+<th style="width:29px">特头</th>
+<th style="width:29px">尾数</th>
+<th class="min">合单双</th>
+<th style="width:29px">家野</th>
+<th style="width:29px">门数</th>
+<th style="width:29px">段位</th>
+<th style="width:29px">阴阳</th>
+<th style="width:29px">天地</th>
+<th style="width:29px">吉凶</th>
+<th style="width:29px">黑白</th>
+<th style="width:29px">色肖</th>
+<th style="width:29px">笔画</th>
+<th style="width:29px">男女</th>
+<th class="mid">总和单双</th>
+</tr>
+<foreach name="list" item="vo">
+<tr class="infolist">
+<td class="no num"><?=date("Y-m-d",$vo['begtime'])?></td>
+<td class="no bg-high2"><?=$vo['title']?></td>
+<td>
+
+<div class="sortDown clearfix">
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit1'],5)?> "><?=$vo['tit1']?></div>
+<div class="sx "><?=$vo['tit01']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit2'],5)?> "><?=$vo['tit2']?></div>
+<div class="sx "><?=$vo['tit02']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit3'],5)?> "><?=$vo['tit3']?></div>
+<div class="sx "><?=$vo['tit03']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit4'],5)?> "><?=$vo['tit4']?></div>
+<div class="sx "><?=$vo['tit04']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit5'],5)?> "><?=$vo['tit5']?></div>
+<div class="sx "><?=$vo['tit05']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit6'],5)?>"><?=$vo['tit6']?></div>
+<div class="sx "><?=$vo['tit06']?></div>
+</div>
+</div>
+</td>
+<td class="bg-high2">
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit7'],5)?> "><?=$vo['tit7']?></div>
+<div class="sx "><?=$vo['tit07']?></div>
+
+</td>
+<td  class=""><?=$vo['tit07']?></td>
+<td class="<?=yx_Other_class($vo['tit7'],1,0)?> "><?=yx_Other_class($vo['tit7'],2,0)?> </td>
+<td  class="<?=yx_no_band($vo['tit7'],8)?>"><?=$vo['bands']?></td>
+<td class="<?=yx_Other_class($vo['tit7'],1,1)?>"><?=yx_Other_class($vo['tit7'],2,1)?></td>
+<td class="<?=yx_wuxing_class(cz_lhc_xiao(3,$vo['tit7']))?> "><?=cz_lhc_xiao(3,$vo['tit7'])?></td>
+<td class="tou<?=substr($vo['tit7'],0,1)?>Class "><?=substr($vo['tit7'],0,1)?>头</td>
+<td class=""><?=substr($vo['tit7'],1,1)?>尾</td>
+<td class="">
+<?php
+$heshu=substr($vo['tit7'],0,1)+substr($vo['tit7'],1,1);
+if ($heshu<=9){
+$heshus="0".$heshu;
+}else{
+$heshus=$heshu;
+}
+if ($heshu % 2 ==0){
+echo $heshus."和双";
+}else{
+echo $heshus."和单";
+}
+?>
+</td>
+<td class="<?=yx_Other_class($vo['tit11'],1,1)?> "><?=$vo['tit11']?></td>
+<td class="menshu<?=cz_lhc_xiao(11,$vo['tit7'])?>Class "><?=cz_lhc_xiao(11,$vo['tit7'])?>门</td>
+<td class="duanwei<?=cz_lhc_xiao(9,$vo['tit7'])?>Class "><?=cz_lhc_xiao(9,$vo['tit7'])?>段</td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(21,$vo['tit07']))?>"><?=cz_lhc_xiao(21,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(22,$vo['tit07']))?>"><?=cz_lhc_xiao(22,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(23,$vo['tit07']))?>"><?=cz_lhc_xiao(23,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(20,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(24,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(25,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(26,$vo['tit07'])?></td>
+<td>
+<?php
+$zonger=$vo['tit1']+$vo['tit2']+$vo['tit3']+$vo['tit4']+$vo['tit5']+$vo['tit6']+$vo['tit7'];
+if ($zonger<=175){
+$show="(".$zonger.")≤175";
+}else{
+$show="(".$zonger.")≥176";
+}
+if ($zonger % 2 ==0){
+echo $show."<span class='shuangClass'>双</span>";
+}else{
+echo $show."<span class='danClass'>单</span>";
+}
+?>
+</td></tr>
+</foreach>
+</table>
+
+<div class="pager">{$page}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

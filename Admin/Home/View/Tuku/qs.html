@@ -1,0 +1,222 @@
+<include file='index:header' />
+<style>
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+</style>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+		<div class="main-container" id="main-container">
+
+
+<include file='index:left' />
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+					
+					
+
+							<div class="row maintop">
+								<div class="col-xs-12 col-sm-8">
+
+<form action="__CONTROLLER__/" method="get">
+
+<input type="button" value="添加图库期数" onclick="location.href='__CONTROLLER__/qs_info_add.html'"  class="btn btn-xs btn-danger" />
+
+</form>
+
+								</div>
+
+								
+								
+							</div>
+<form class="form-search form-horizontal" action="__CONTROLLER__/" method="get">
+							<div class="row maintop">	
+							<div class="col-xs-12 col-sm-3 btn-sespan">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<i class="ace-icon fa fa-check"></i>
+									</span>
+									<input type="text" name="keywords" id="keywords" class="form-control search-query admin_sea" value="" placeholder="输入需查询的关键字">
+									<span class="input-group-btn">
+									<input type="submit" name="btnQuery" value="搜索" id="btnQuery" class="btn btn-xs btm-input btn-purple" />	
+									</span>
+								</div>
+							</div>
+								
+							  <div class="input-group-btn">
+								<a href="__CONTROLLER__/qs.html">
+								<button type="button" class="btn btn-xs all-btn btn-purple">
+									<span class="ace-icon fa fa-globe icon-on-right bigger-110"></span>
+									显示全部
+								</button>
+								</a>
+							  </div>
+								
+								
+							</div>
+							</form>		
+
+							<div class="row">
+							    <div class="col-xs-12">
+										<div>									
+<div id="msg">
+<form name="form1" method="post" action="">
+<input id="Token"    type="hidden" value="">
+<div class="table-responsive">
+<table width="100%" class="table table-striped table-bordered table-hover">
+<thead>
+<tr>
+<th width="5%" class="center">
+<label class="pos-rel">
+<input type="checkbox" class="ace" onclick='CheckAll()' value="全选"/>
+<span class="lbl"></span>
+</label>
+</th>
+<th width="30%">图库期数</th>
+<th width="20%">所属栏目</th>
+<th width="20%">发布时间</th>
+<th width="7%" style="border-right:#CCC solid 1px;">操作</th>
+</tr>
+</thead>
+<tbody>
+<foreach name="list" item="vo">
+<tr bgcolor="ffffff" onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#F5F5F5'">
+<td align="center">
+<label class="pos-rel">
+<input name='n_id[]' id="id" class="ace"  type='checkbox' value='{$vo.id}'>
+<span class="lbl"></span>
+</label>
+</td>
+<td align="center">{$vo.title}</td>
+<td align="center">{$vo.directory4|czdirectory='qs','0',###} </td>
+<td align="center">{$vo.begtime|datetime} </td>
+<td align="center">
+<a href="__CONTROLLER__/qs_info_edit/Id/{$vo.id}">修改</a> 
+<a href="#" onClick="Get_Ation_Save('infodelete','{$vo.id}')">删除</a></td>
+</tr>
+</foreach>
+<tr>
+<td align="left"><input type="button" value="删除" onClick="Get_Del_Save()"  class="btn btn-white btn-yellow btn-sm" ></td>
+<td colspan="8" align="right">{$page}</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</div>
+							    		</div>
+									</div>
+								</div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+</div>			
+<include file='index:footer' />		
+</div>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+<script>
+function CheckAll(value,obj)  {
+var form=document.getElementsByTagName("form")
+for(var i=0;i<form.length;i++){
+for (var j=0;j<form[i].elements.length;j++){
+if(form[i].elements[j].type=="checkbox"){ 
+var e = form[i].elements[j]; 
+if (value=="selectAll"){e.checked=obj.checked}     
+else{e.checked=!e.checked;} 
+}
+}
+}
+}
+</script>
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_add_Save(){
+var site_name    =$("#site_name").attr("value");
+var site_title   =$("#site_title").attr("value");
+var site_url     =$("#site_url").attr("value");
+var site_describe=$("#site_describe").attr("value");
+var site_keywords=$("#site_keywords").attr("value");
+var Token =$("#Token").attr("value");
+jQuery.ajax({
+url: "__CONTROLLER__/RightSave.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Config_Add",site_name:site_name,site_title:site_title,site_url:site_url,site_describe:site_describe,site_keywords:site_keywords},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/qs.html')",1000);//==========执行几秒跳转
+}
+});
+}
+
+
+
+//=======================获取删除数据
+function Get_Del_Save(){
+var $check_boxes = $('input[type=checkbox][checked=checked][id!=check_all_box]');  
+if($check_boxes.length<=0){ alert('您未勾选任何数据，请先勾选！');return;}  
+if(confirm('您确定要删除此数据？')){  
+var dropIds = new Array();  
+$check_boxes.each(function(){  
+dropIds.push($(this).val());  
+});
+jQuery.ajax({
+url: "__CONTROLLER__/qs_infodelete.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Alldel",id:dropIds},
+beforeSend: function(){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data){
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/qs.html')",1000);//==========执行几秒跳转
+}
+});
+}  
+}
+
+
+//=======================获取其他操作
+function Get_Ation_Save(oo1,oo2){
+if(confirm('您确定要执行此操作？')){   
+jQuery.ajax({
+url: "__CONTROLLER__/qs_infodelete.html",
+dataType:"json",
+type:"POST",
+data:{Action:"del",id:oo2},
+beforeSend: function(){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data){
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/qs.html')",1000);//==========执行几秒跳转
+}
+});
+}  
+}
+
+
+</script>
+	</body>
+</html>	

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-type" content="text ml; charset=utf-8">
+<title>六合彩开奖日期 － 六合开奖记录直播</title>
+<meta name="keywords" content="一起发开奖现场,手机报码,手机报码网,手机开奖网址" />
+<meta name="description" content="一起发开奖现场第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果" />
+<meta name="viewport" content="user-scalable=no, width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+<body onload="checkCookie()">
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+<include file="Wap:header" />	
+
+ <div id="mainer">
+<table width="100%" border="0">
+<tbody>
+<tr class="header">
+<td colspan="2"><span class="fright"></span><span class="fleft">六合彩开奖日期</span></td>
+</tr>
+</tbody>
+</table>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<?php
+  $mid=$_GET["d"];
+		$url="http://www.178kj.cc/rq11.html";		
+		$contents = file_get_contents($url);
+		$contents = str_replace('</style>','</style><link type="text/css" rel="stylesheet" href="/Index/Public/wap/rq.css"/>',$contents);						
+	echo $contents;
+?>
+
+</div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<div class="blank"></div>
+<include file="Wap:footer" />
+</body>
+</html>

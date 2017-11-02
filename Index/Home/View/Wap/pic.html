@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="一起发开奖现场">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="wap-font-scale" content="no">
+<meta name="aplus-touch" content="1">
+<meta name="msapplication-tap-highlight" content="no">
+<title>性感美女_美女写真_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="性感美女,美女写真,六合美女" />
+<meta name="description" content="性感美女_美女写真_<?=Cz_cig('site_name')?>" />
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="checkCookie()">
+<include file="Wap:header" />	
+<div id="mainer">
+<table width="100%" border="0">
+<tbody>
+<tr class="header">
+<td colspan="2"><span class="fright"></span><span class="fleft">性感美女</span></td>
+</tr>
+</tbody>
+</table>
+<div class="listmain">
+	  <ul id="container">
+<foreach name="list" item="vo">
+<volist name="vo['voo']" id="sub">	  
+		<li>
+		  <div class="libox"><a href="/pic_detail/id/{$sub.id}.html"><img style="display: inline;" alt="{$sub.title}" src="{$sub.picurl}" height="280"><span>{$sub.title}</span></a></div>
+		</li>
+</volist> 
+</foreach>		
+	  </ul>
+	</div>
+<div class="list_page"><ul>{$page}</ul></div>	
+</div>
+<div class="blank"></div>
+<include file="Wap:footer" />
+</body>
+</html>

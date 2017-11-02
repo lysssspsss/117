@@ -1,0 +1,229 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									站点设置
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('textarea.limited').maxlength({
+		'feedback' : '.charsLeft', 
+	});
+	  
+	$('textarea.limitedone').maxlength({
+		'feedback' : '.charsLeftone', 
+	});
+	
+	$('#config').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#site_name').val())){
+			$('#resone').attr("class", "middle highmsg");//ID为resone 重新class赋值
+			$('#resone').html('网站名称不能为空').show();//id为resone 赋值html值
+			$('#site_name').focus(); 
+			return false;
+		}
+		
+		if( '' == $.trim($('#site_url').val())){
+			$('#restwo').attr("class", "middle highmsg");//ID为resone 重新class赋值
+			$('#resone').html('').show();//id为resone 赋值html值
+			$('#restwo').html('网址不能为空').show();//id为resone 赋值html值
+			$('#site_url').focus(); 
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href="{:U('sys/sys')}";
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="config" id="config" method="post" action="{:U('runsys')}">
+                                <input type="hidden" name="id" value="{$config.id}" />
+                                	<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 站点名称 </label>
+										<div class="col-sm-9">
+											<input type="text" name="site_name" id="site_name" value="{$config.site_name}" class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>不要超出20个字，否则错位。</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resone"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+                                    
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 站点网址 </label>
+										<div class="col-sm-9">
+											<input type="text" name="site_url" id="site_url" value="{$config.site_url}"  class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>必须加上http://  结尾要加上\ &nbsp; 如：http://www.178kj.cc/</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="restwo"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>						
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 手机版地址 </label>
+										<div class="col-sm-9">
+											<input type="text" name="site_wap" id="site_wap" value="{$config.site_wap}"  class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>必须加上http://  结尾要加上\ &nbsp; 如：http://m.178kj.cc/</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 首页SEO标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="site_title" id="site_title" value="{$config.site_title}"  class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resthr"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>										
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 首页SEO关键字 </label>
+										<div class="col-sm-9">
+                                            <textarea  name="site_keywords" cols="20" class="col-xs-10 col-sm-7 limited"  id="form-field-9"  maxlength="100">{$config.site_keywords}</textarea>
+                                            <input type="hidden" name="maxlength" value="100" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												还可以输入 <span class="middle charsLeft"></span> 个字符,以英文 , 号隔开
+											</span>
+									  </div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 首页SEO描述 </label>
+										<div class="col-sm-9">
+											 <textarea  name="site_describe" cols="20" class="col-xs-10 col-sm-7 limitedone"   id="form-field-10"  maxlength="200">{$config.site_describe}</textarea>
+                                            <input type="hidden" name="maxlengthone" value="200" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												还可以输入 <span class="middle charsLeftone"></span> 个字符
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 联系QQ </label>
+										<div class="col-sm-9">
+											<textarea  name="site_qq" id="site_qq" cols="20" class="col-xs-10 col-sm-7 limited"  id="site_qq">{$config.site_qq}</textarea>
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>底部联系QQ</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resone"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>								
+						
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 底部页脚copyright </label>
+										<div class="col-sm-9">
+                                            <textarea  name="site_copyright" cols="20" class="col-xs-10 col-sm-7 limited"  id="form-field-9">{$config.site_copyright}</textarea>
+                                            <input type="hidden" name="maxlength" value="300" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												支持html代码
+											</span>
+									  </div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 网站统计代码 </label>
+										<div class="col-sm-9">
+											 <textarea  name="javascript" cols="20" class="col-xs-10 col-sm-7 limitedone"   id="form-field-10">{$config.javascript}</textarea>
+                                            <input type="hidden" name="maxlengthone" value="200" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												加载底部的统计代码
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 手机端统计代码 </label>
+										<div class="col-sm-9">
+											 <textarea  name="wap_tj" cols="20" class="col-xs-10 col-sm-7 limitedone"   id="form-field-10">{$config.wap_tj}</textarea>
+                                            <input type="hidden" name="maxlengthone" value="200" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												手机端的统计代码
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>										
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+
+<include file='index:footer' />
+
+
+	</body>
+</html>

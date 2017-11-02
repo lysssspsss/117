@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+<body>
+<div class="place">
+<span>位置：</span>
+<ul class="placeul">
+<li><a href="__MODULE__/config.html">首页</a></li>
+<li><a href="__CONTROLLER__/index_class.html">栏目管理</a></li>
+<li><a href="#">栏目添加</a></li>
+</ul>
+</div>
+<div class="formbody">
+<div id="msg">
+<input type="hidden" id="RootID" value="{$RootID}">
+<input type="hidden" id="PartID" value="{$PartID}">
+<input type="hidden" id="LagID"  value="{$LagID}"> 
+<table cellspacing="1" cellpadding="0" class="page_table">
+<tr>
+<td width="7%" height="35" align="right" class="td_left">识别号：</td>
+<td width="93%" align="left"><input id="NumberID" type="text" value="{$JJ}" class="biankuan"/>  </td>
+</tr>
+<tr>
+<td height="35" align="right" class="td_left">栏目名称：</td>
+<td align="left"><input type="text" id="title" class="biankuan"></td>
+</tr>
+
+<tr>
+<td height="35" align="right" class="td_left">排序：</td>
+<td align="left"><input type="text" id="sorting" value="{$J}" class="biankuan"  onKeyPress="return regInput(this,/^[0-9]*$/, String.fromCharCode(event.keyCode))"> </td>
+</tr>
+<tr>
+<td height="35" align="right">&nbsp;</td>
+<td align="left">
+<input type="button" value="提交" class="tijiao_input" onClick="Get_add_Save()"/>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_add_Save(){
+var RootID=$("#RootID").attr("value");
+var PartID=$("#PartID").attr("value");
+var LagID =$("#LagID").attr("value");
+var NumberID =$("#NumberID").attr("value");
+var title =$("#title").attr("value");
+var sorting=$("#sorting").attr("value");
+jQuery.ajax({
+url: "__CONTROLLER__/index_class_add_save.html",
+dataType:"json",
+type:"POST",
+data:{Action:"Class_Add",title:title,RootID:RootID,PartID:PartID,LagID:LagID,sorting:sorting,NumberID:NumberID},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/index_class_add.html?Id="+data.url+"')",1000);
+}
+});
+
+}
+</script>

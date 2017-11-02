@@ -1,0 +1,41 @@
+			<php>
+					$config=M('config')->where(array('id'=>1))->find();
+
+			</php>
+
+
+<footer>
+ <p class="footer_copy">&copy; {$config.site_name} 版权所有</p>    
+ <p class="footer_copy">香港特别行政区六合彩彩票发行管理中心唯一指定网络信息发布媒体</p>
+        <p>{$config.wap_tj|htmlspecialchars_decode|stripslashes}</p>
+</footer>
+
+<div class="gotop backtop" style="display:none;"></div>
+<script type="text/javascript">
+//返回顶部
+$(document).ready(function(){
+	$(window).scroll(function () {
+		var scrollHeight = $(document).height();
+		var scrollTop = $(window).scrollTop();
+		var $windowHeight = $(window).innerHeight();
+		scrollTop > 75 ? $(".gotop").fadeIn(200).css("display","block") : $(".gotop").fadeOut(200).css({"background-image":"url(/Index/Public/wap/iconfont-fanhuidingbu_up.png)"});
+	});
+	$('.backtop').click(function (e) {
+		$(".gotop").css({"background-image":"url(/Index/Public/wap/iconfont-fanhuidingbu.png)"});
+		e.preventDefault();
+		$('html,body').animate({ scrollTop:0});
+	});
+});
+</script>
+
+<div class="top_bar">
+  <nav>
+    <ul id="top_menu" class="top_menu">
+    <li><a href="/m_index.html"><img src="/Index/Public/wap/plugmenu1.png"><label>首页</label></a></li>
+	<li><a href="/kj"><img src="/Index/Public/wap/plugmenu2.png"><label>开奖</label></a></li>    
+	<li class="home"><a href="/"></a></li>
+	<li><a href="/caise"><img src="/Index/Public/wap/plugmenu3.png"><label>图库</label></a></li>
+	<li><a href="/zst"><img src="/Index/Public/wap/plugmenu4.png"><label>图表</label></a></li>    
+	</ul>
+  </nav>
+</div>

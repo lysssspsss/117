@@ -1,0 +1,71 @@
+后台地址：http://你的网址/admin.php
+
+账号：admin
+密码：5201314
+
+--------------------------
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+
+
+
+
+
+需要手动更新的栏目：
+
+后台的特码资料这里面的6个资料选项是需要手动更新的.
+
+每期在后台手动添加资料.
+
+
+
+
+每次在后台修改完东西，或者发布内容后，请到 后台  生成HTML缓存里生成html
+
+
+网站logo修改：  
+
+网站logo    路径    \Index\Public\css\images\logo.png
+
+图库页面logo    路径    \Index\Public\css\images\logo_t.png
+
+logo手机    路径    \Index\Public\css\images\logo-wap.png
+
+图库水印地址    路径     \Index\Public\css\images\tuku_logo.png
+
+手机版logo     路径   \Index\Public\wap\logo.png
+
+------------
+
+网站全局模板文件修改：
+
+网站首页：\Index\Home\View\index\index.html
+
+顶部文件：\Index\Home\View\index\header.html
+
+底部文件：\Index\Home\View\index\footer.html
+
+手机版文件  \Index\Home\View\wap\index.html
+
+
+------------------------
+
+
+
+我们接受任何栏目样式的定制和开发！需要的联系我们.
+
+QQ：4501870
+

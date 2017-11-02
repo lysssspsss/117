@@ -1,0 +1,52 @@
+<include file='index:header' />
+<script language="JavaScript">
+  function openwin()
+  {
+  
+window.open ("__CONTROLLER__/zxkj", "newwindow", "height=490, width=500, top=170, left=400, toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
+  }
+</script>
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+<include file='index:left' />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									采集开奖记录
+								</small>
+							</h1>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+						<div class="col-xs-12 col-sm-12 rule-top alert alert-info top10">
+						<button type="button" class="close" data-dismiss="alert">
+							<i class="ace-icon fa fa-times"></i>
+						</button>
+						注意:开奖记录只采集当期的记录,如果你当期之前还有期数还没有完成的,请先手动添加。
+						</div>
+						<a class="btn btn-success" onClick="openwin()" >开始采集开奖记录</a>
+                        	</div>
+                        </div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+		</div><!-- /.main-container -->
+
+	<script type="text/javascript" src="__PUBLIC__/assets/js/region.js"></script>
+<include file='index:footer' />		
+
+		</div><!-- /.main-container -->
+	</body>
+</html>

@@ -1,0 +1,70 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0;}
+body{ font-family: Arial,"SimSun"; font-size:12px; color:#000; background: #f2fbde;}
+a:hover img,img{ border:none;}
+ul{ list-style:none;}
+input,button,select,textarea{outline:none;font-family: Arial,"SimSun"; font-size:12px;color: #000;}
+table input,table button,table select,table textarea{ vertical-align:middle;}
+textarea{resize:none}
+table{ border-collapse:collapse;}
+a{ text-decoration:none; color:#000;}
+a:hover{ text-decoration: underline; color: #b70002;}
+/*-------------------------结束公用样式--------------------------*/
+.clearfix:after{content:".";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}
+.clearfix{*zoom:1}
+.clear{clear:both;width:0px;height:0px;font-size:0px;overflow:hidden}
+.v_mid{vertical-align:middle; _vertical-align:baseline;}
+
+#body { width: 100%; background: url(../images/118zl_top.gif) top center no-repeat;}
+
+.nav_118zl { width: 1000px; margin: 0 auto; padding-top: 30px; height: 96px; position: relative;}
+.nav_118zl table tr td { text-align: center; font-family: "Microsoft YaHei";}
+.nav_118zl table tr td a { height: 28px; line-height: 28px; font-size: 14px; display: inline-block; color: #b70002; border-bottom: solid 5px #f2fbde;}
+.nav_118zl table tr td a:hover { text-decoration: none; border-bottom: solid 5px #b70002;}
+.nav_118zl table tr.trtr td { height: 25px; line-height: 25px; padding-top: 0; padding-bottom: 20px; color: #9a7d4a; text-transform: uppercase; font-size: 10px; border-top: solid 1px #c6ac7e; font-family: "Times New Roman", Times, serif;}
+.nav_118zl table tr.trtr td a { height: 20px; line-height: 20px; font-size: 12px; border-bottom: 0; color: #9a7d4a;}
+.nav_118zl table tr.trtr td a span{transform:scale(0.875); display: block;}
+.nav_118zl table tr.trtr td a:hover { color: #9a7d4a; text-decoration: none;}
+
+.nav_118zl .sc_118zl { width: 57px; height: 56px; position: absolute; top: 8px; right: 0;}
+.nav_118zl .pgy { width: 220px; height: 126px; position: absolute; top: 0; left: 440px;}
+
+.line_118zl { width: 1020px; height: 12px; background: url(../images/118zl_line.gif) top center no-repeat;}
+
+.main_118zl { width: 1020px; margin: 74px auto 0 auto; padding: 0 7px; background: url(../images/118zl_bg.gif) top center repeat-y;}
+.gz_118zl {}
+.gzcc_118zl { width: 365px; height: 363px; overflow-y: scroll;}
+.gzcc_118zl h2 { height: 30px; line-height: 30px; font-size: 12px; color: #fff; font-weight: bold; padding-left: 10px; background: #b70002;}
+.gzcc_118zl ul {}
+.gzcc_118zl ul li { height: 29px; line-height: 29px; padding-left: 15px; border-bottom: dashed 1px #d6d4ab; background: url(../images/118zl_arrow.gif) 5px center no-repeat;}
+.gzcc_118zl ul {}
+.gzpic_118zl { width: 244px;}
+.gzpic_118zl img { width: 244px; height: 363px;}
+
+.tuwen_118zl {}
+.tuwenTit { height: 33px; line-height: 33px; padding: 0 10px; color: #fff; background: #b70002;}
+.tuwenTit span { float: right;}
+.tuwenTable { margin-bottom: 8px; border-collapse: separate;}
+.tuwenTable td {  border: solid 1px #bbbfb1;}
+.tuwenTable td a { height: 25px; line-height: 25px; padding-left: 25px; display: block; background: url(../images/arrow_brown.gif) 10px center no-repeat;	}
+.tuwenTable td a:hover,
+.tuwenTable.tuwenTable2 a:hover,
+.tuwenTable.tuwenTable3 a:hover { color: #fff; text-decoration: none; background: #b70002;}
+.tuwenTable.tuwenTable2 td a { height: 25px; padding-left: 40px; background: url(../images/arrow_red.gif) 10px center no-repeat;}
+.tuwenTable.tuwenTable3 td a { height: 25px; padding-left: 25px; background: url(../images/118zl_arrow.gif) 10px center no-repeat;}
+
+.qnsyx {}
+.qnsyxTit { height: 33px; line-height: 33px; padding: 0 10px; color: #fff; background: #b70002;}
+.qnsyxTit a { color: #fff; float: right;}
+.qnsyx table {}
+.qnsyx table td { height: 30px; line-height: 30px; font-size: 14px; text-align: center; border: solid 1px #bfc597; background: #ececd2;}
+.qnsyx table td font { font-weight: bold;}
+
+.zqcj { height: 364px; overflow-y: scroll;}
+.zqcj table { border-collapse: separate;}
+.zqcj table td { height: 30px; line-height: 30px; text-align: center; font-size: 14px; font-weight: bold; border: solid 1px #dad9ad;}
+.zqcj table td.zqcjRed { width: 20%; color: #fff; font-weight: normal; background: #b70002;}
+
+.foot_118zl { padding: 20px 0; line-height: 1.6em; text-align: center;}

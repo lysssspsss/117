@@ -1,0 +1,130 @@
+<link href="{$Think.const.CSS_URL}ak7_cc.css" rel="stylesheet" type="text/css" />
+<div id="top">
+	<div class="top clearfix">
+    	<div class="top-l" id="nowDate201707081607"></div>
+        <div class="top-r">
+			<!--AD-开始-->
+			<foreach name="plug_ad_29" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="1000" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--AD-结束-->		
+		</div>
+    </div>
+</div>
+<script>
+function getNowDate201707081607() {
+ var date = new Date();
+ var sign1 = "-";
+ var sign2 = ":";
+ var year = date.getFullYear() // 年
+ var month = date.getMonth() + 1; // 月
+ var day  = date.getDate(); // 日
+ var hour = date.getHours(); // 时
+ var minutes = date.getMinutes(); // 分
+ var seconds = date.getSeconds() //秒
+ var weekArr = [ '星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+ var week = weekArr[date.getDay()];
+ // 给一位数数据前面加 “0”
+ if (month >= 1 && month <= 9) {
+  month = "0" + month;
+ }
+ if (day >= 0 && day <= 9) {
+  day = "0" + day;
+ }
+ if (hour >= 0 && hour <= 9) {
+  hour = "0" + hour;
+ }
+ if (minutes >= 0 && minutes <= 9) {
+  minutes = "0" + minutes;
+ }
+ if (seconds >= 0 && seconds <= 9) {
+  seconds = "0" + seconds;
+ }
+ var currentdate = year + sign1 + month + sign1 + day + " " + hour + sign2 + minutes + sign2 + seconds + " " + week;
+ $("#nowDate201707081607").html("今天是："+currentdate);
+}
+getNowDate201707081607();
+window.setInterval("getNowDate201707081607()",1000);
+</script>
+
+
+
+<?php
+$dates=date("Y");
+?>
+
+
+<div class="logo-bar">
+  <div class="logo"><a href="/"></a></div>
+    <div class="logo-wap"><a href="<?=Cz_cig('site_wap')?>index.php"></a></div>
+    <div class="top-search">
+<style>
+.top-search td { margin: 0; padding: 0; font-size: 13px;}
+.top-search td { vertical-align: middle;}
+.top-search td img { vertical-align: middle;}
+.top-search input[type="text"] { float: left; width: 240px; height: 26px; line-height: 26px; margin-left: 10px; margin-right: 10px; padding: 0 5px; border: solid 1px #aaa; background: #fff;}
+.top-search input[type="radio"] { margin-right: 5px; margin-left: 10px;}
+.top-search input[type="submit"] {
+  width: 75px;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background-color: #da2f33;
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+}
+.top-search input[type="submit"]:hover { background: #c40106;}
+</style>
+<!--百度搜索代码start-->
+
+<!--百度搜索代码end-->    
+    </div>
+</div>
+
+<div id="nav">
+	<div class="nav-nav">
+    	<ul class="clearfix">
+        	<li><a class="index_nav nav_li" href="/">网站首页</a></li>
+        	<li><a class="History_nav nav_li" href="{:U('Home/History')}?id=<?=$dates?>">开奖记录</a></li>			
+        	<li><a class="Article_nav nav_li" href="/Article">资料大全</a></li>
+        	<li><a class="Kjzb_nav nav_li" href="{:U('Home/Kjzb')}">开奖直播</a></li>
+        	<li><a class="Table_nav nav_li" href="{:U('Home/Table/table1')}">统计图表</a></li>
+        	<li><a class="charts_go_nav nav_li" href="{:U('Home/Charts')}/charts_go.html?id=1">动态走势</a></li>
+			<li><a class="Charts_nav nav_li" href="{:U('Home/Charts/index')}">图表走势</a></li>
+        	<li><a class="Tuku_nav nav_li" href="{:U('Home/Tuku')}">六合图库</a></li>
+        	<li><a class="Pic_nav nav_li" href="{:U('Home/Pic')}">性感美女</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="hot-bar">
+	<dl>
+    	<dt>热门图纸：</dt>
+        <dd><a target="_blank" href="/Tuku/4790.html">跑狗图</a></dd>
+        <dd><a target="_blank" href="/Tuku/4776.html">香港挂牌</a></dd>
+        <dd><a target="_blank" href="/Tuku/4785.html">管家婆</a></dd>
+        <dd><a target="_blank" href="/Tuku/5365.html">马经图</a></dd>
+        <dd><a target="_blank" href="/Tuku/4980.html">苹果报</a></dd>
+        <dd><a target="_blank" href="/Tuku/4766.html">藏宝图</a></dd>
+        <dd><a target="_blank" href="/Tuku/4796.html">白小姐</a></dd>
+        <dd><a target="_blank" href="/Tuku/4834.html">曾道人</a></dd>
+        <dd><a target="_blank" href="/Tuku/4810.html">黄大仙</a></dd>
+    </dl>
+	<dl>
+    	<dt>统计图表：</dt>  
+        <dd><a href="{:U('Home/Table/table1')}">生肖统计</a></dd>
+        <dd><a href="{:U('Home/Table/table9')}">五行统计</a></dd>
+        <dd><a href="{:U('Home/Table/table24')}">波色统计</a></dd>
+        <dd><a href="{:U('Home/Table/table5')}">大小统计</a></dd>
+        <dd><a href="{:U('Home/Table/table10')}">单双统计</a></dd>      
+    </dl>
+</div>

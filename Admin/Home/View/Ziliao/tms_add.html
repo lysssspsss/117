@@ -1,0 +1,227 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									添加特码诗
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('#tms_runadd').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#qihao').val())){
+			layer.alert('期号不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#qihao').focus(); 
+			});
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="tms_runadd" id="tms_runadd" method="post" action="__URL__/tms_runadd">
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="2" bgcolor="#FFFFFF" id="table18456" height="92" style="font-size: 12px; color: buttontext; cursor: default; border: 1px solid rgb(202, 121, 0); margin-left: 0px; margin-right: 0px; margin-top: 5px; margin-bottom: 0px; padding: 0px">
+	<tbody style="margin: 0px; padding: 0px">
+	
+		<tr style="margin: 0px; padding: 0px">
+			<td width="108" rowspan="2" id="td3477" style="font-size: 12px; font-style: normal; color: rgb(0, 0, 0); font-family: 宋体; border: 1px solid rgb(240, 145, 0); margin: 0px; padding: 3px">
+			<table width="102" border="0" cellspacing="0" cellpadding="0" align="center" id="table18457" height="73" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+				<tbody style="margin: 0px; padding: 0px">
+					<tr style="margin: 0px; padding: 0px">
+						<td width="102" height="37" style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+						<div align="center" style="margin: 0px; padding: 0px">
+							<font size="6" style="margin: 0px; padding: 0px">
+							<span style="margin: 0px; padding: 0px">
+							<font style="margin: 0px; padding: 0px">
+							<input type="text" name="qihao" id="qihao" value="期号" class="col-xs-10 col-sm-5" />
+							<font color="#6699CC" style="margin: 0px; padding: 0px">期</font></span></font>
+						</div>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			</td>
+			<td width="609" id="td3478" height="47" style="font-size: 12px; font-style: normal; color: rgb(0, 0, 0); font-family: 宋体; border: 1px solid rgb(240, 145, 0); margin: 0px; padding: 3px">
+			<p align="left"><b><font size="4">【一起发特码诗】-≤<font color="#0000FF"><input type="text" style="width:65%" name="temashi" id="temashi" value="资料更新中...." /></font>≥-</font></b></td>
+			<td width="127" rowspan="2" id="td3479" style="font-size: 12px; font-style: normal; color: rgb(0, 0, 0); font-family: 宋体; border: 1px solid rgb(240, 145, 0); margin: 0px; padding: 3px">
+			<table width="127" border="0" cellspacing="0" cellpadding="0" id="table18458" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+				<tbody style="margin: 0px; padding: 0px">
+					<tr style="margin: 0px; padding: 0px">
+						<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+						<div align="center" class="style326" style="font-size: x-small; margin: 0px; padding: 0px">
+							特 碼－－波色</div>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			<table width="90" border="0" cellspacing="0" cellpadding="0" id="table18459" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+				<tbody style="margin: 0px; padding: 0px">
+					<tr style="margin: 0px; padding: 0px">
+						<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+						<table width="63" border="0" cellspacing="0" cellpadding="0" id="table18460" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+							<tbody style="margin: 0px; padding: 0px">
+								<tr style="margin: 0px; padding: 0px">
+									<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+									<div align="center" style="margin: 0px; padding: 0px">
+										<font size="6" color="#FF0000"><b><input type="text" style="width:40px;" name="tema" id="tema" value="00" /></b></font>
+									</div>
+									</td>
+								</tr>
+							</tbody>	
+						</table>
+						</td>
+						<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+						<table width="65" border="0" cellspacing="0" cellpadding="0" id="table18461" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+							<tbody style="margin: 0px; padding: 0px">
+								<tr style="margin: 0px; padding: 0px">
+									<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+									<div align="center" style="margin: 0px; padding: 0px">
+										<font size="6"><b><input type="text" style="width:40px;" name="bose" id="bose" value="波" /></b></font>
+									</div>
+									</td>
+								</tr>
+							</tbody>	
+						</table>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			</td>
+			<td width="40" rowspan="2" id="td3480" style="font-size: 12px; font-style: normal; color: rgb(0, 0, 0); font-family: 宋体; border: 1px solid rgb(240, 145, 0); margin: 0px; padding: 3px">
+			<table width="40" border="0" cellspacing="0" cellpadding="0" align="center" id="table18462" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+				<tbody style="margin: 0px; padding: 0px">
+					<tr style="margin: 0px; padding: 0px">
+						<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+						<div align="center" class="style326" style="font-size: x-small; margin: 0px; padding: 0px">
+							生 肖</div>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			<table width="40" border="0" align="center" cellpadding="0" cellspacing="0" id="table18463" height="62" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+				<tbody style="margin: 0px; padding: 0px">
+					<tr style="margin: 0px; padding: 0px">
+						<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px" width="40">
+						<table width="40" border="0" cellspacing="0" cellpadding="0" id="table18464" style="font-size: 12px; color: buttontext; cursor: default; margin: 0px; padding: 0px">
+							<tbody style="margin: 0px; padding: 0px">
+								<tr style="margin: 0px; padding: 0px">
+									<td style="font-size: 16px; font-style: normal; color: rgb(0, 0, 0); font-family: arial, sans-serif, 宋体; margin: 0px; padding: 0px">
+									<div align="center" style="margin: 0px; padding: 0px">
+										<strong><font size="6"><input type="text" style="width:40px;" name="shengxiao" id="shengxiao" value="肖" /></font></strong>
+										</div>
+									</td>
+								</tr>
+							</tbody>	
+						</table>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			</td>		
+		</tr>
+		<tr style="margin: 0px; padding: 0px">
+			<td width="636" id="td3481" style="font-size: 12px; font-style: normal; color: rgb(0, 0, 0); font-family: 宋体; border: 1px solid rgb(240, 145, 0); margin: 0px; padding: 3px" height="38">
+			<p align="left" style="margin: 0px; padding: 0px">
+			<font face="微软雅黑">
+			<b><font size="4" color="#0000FF">特码诗</font></b></font>：<b><font color="#FF0000" style="font-size: 9pt">解：</font></b><font color="#FF0000"><b><input type="text" style="width:75%" name="jieshi" id="jieshi" value="资料更新中...." /></b>
+			</font>
+			</td>
+		</tr>	
+	
+</tbody>
+</table>
+									
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+	<include file='index:footer' />
+
+		</div><!-- /.main-container -->
+
+    		<!--下拉样式以及JS-->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/chosen.css" />
+		<script src="{$Think.const.JS_URL}/assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				if(!ace.vars['touch']) {
+					$('.chosen-select').chosen({allow_single_deselect:true}); 
+					$(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+						$('.chosen-select').each(function() {
+							 var $this = $(this);
+							 $this.next().css({'width': $this.parent().width()});
+						})
+					}).trigger('resize.chosen');
+			
+				}
+			});
+		</script>
+	</body>
+</html>

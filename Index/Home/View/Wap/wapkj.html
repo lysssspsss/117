@@ -1,0 +1,164 @@
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="一起发开奖现场">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="wap-font-scale" content="no">
+<meta name="aplus-touch" content="1">
+<meta name="msapplication-tap-highlight" content="no">
+<title>手机看开奖结果 － 六合开奖记录直播</title>
+<meta name="keywords" content="一起发开奖现场,手机报码,手机报码网,手机开奖网址" />
+<meta name="description" content="一起发开奖现场第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果" />
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="checkCookie()">
+
+<div class="ng-scope">
+	<div class="go6h_webContentColorBg_f6">
+
+
+			<div class="go6h_openBonus">			
+				<div class="go6h_resultTitle">
+					<span class="go6h_resultTitleCenter">
+					<span class="go6h_resultTitle_leftFont01">最新开奖：</span>
+					<span class="go6h_resultTitle_leftFont02">
+					<span>2017年 第</span>
+					<i class="go6h_orangeFont" id="q">000</i><span>  期</span></span><a class="go6h_resultTitle_btn" href="/kj"></a></span>
+				</div>
+				<div class="go6h_resultBall_List">
+					<div class="go6h_num">
+						<span class="" id="w1"><p id="m1"></p></span><span class="go6h_sqBlock" id="m1x"></span>
+					</div>
+					<div class="go6h_num">
+						<span class="" id="w2"><p id="m2"></p></span><span class="go6h_sqBlock" id="m2x"></span>
+					</div>
+					<div class="go6h_num">
+						<span class="" id="w3"><p id="m3"></p></span><span class="go6h_sqBlock" id="m3x"></span>
+					</div>
+					<div class="go6h_num">
+						<span class="" id="w4"><p id="m4"></p></span><span class="go6h_sqBlock" id="m4x"></span>
+					</div>
+					<div class="go6h_num">
+						<span class="" id="w5"><p id="m5"></p></span><span class="go6h_sqBlock" id="m5x"></span>
+					</div>
+					<div class="go6h_num">
+						<span class="" id="w6"><p id="m6"></p></span><span class="go6h_sqBlock" id="m6x"></span>
+					</div>
+					<div class="go6h_add">
+					</div>
+					<div class="go6h_num go6h_delMargin">
+						<span class="" id="w7"><p id="s1"></p></span><span class="go6h_sqBlock" id="s1x"></span>
+					</div>
+					<a class="go6h_rightJtou" href="/history.html?id=2017"></a>
+				</div>
+			</div>
+			<div class="go6h_nextOpenBonus">
+				<span class="go6h_nextFont"><span>下期开奖时间：</span><i class="go6h_nextRedFont">2017年<span id="nextMonth"></span>月<span id="nextDay"></span>日 <span id="nextQiShu"></span>期</i></span>
+			</div>
+
+
+
+	
+	</div>
+</div>
+<div id="tmpinfo" style="display:none;"></div>
+
+<script language="javascript"> 
+
+function reload(secs)
+{  
+var hand_reload=getCookie('hand_reload');
+var ischecked=document.getElementById("reloadCheckbox");
+if(!ischecked.checked||hand_reload=="yes"){
+ischecked.checked=false;
+var view=document.getElementById("remainingTime");
+view.innerHTML="当前处于手动刷新模式";
+return
+}
+var view=document.getElementById("remainingTime");
+view.innerHTML=secs+"秒后刷新页面";
+if(secs>0){
+secs=secs-1;
+setTimeout("reload("+secs+")",1000);  
+}else{
+location.reload();
+}
+}
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+
+function getCookie(c_name)
+{
+if(document.cookie.length>0)
+{
+c_start=document.cookie.indexOf(c_name + "=")
+if (c_start!=-1)
+{ 
+c_start=c_start + c_name.length+1 
+c_end=document.cookie.indexOf(";",c_start)
+if (c_end==-1) c_end=document.cookie.length
+return unescape(document.cookie.substring(c_start,c_end))
+}
+}
+return ""
+}
+
+function checkCookie()
+{
+secs=getCookie('secs')
+if(secs!=null && secs!="")
+{ 
+document.getElementById("reloadTime").value=secs;
+reload(secs);
+}
+}
+
+function setTime()
+{   setCookie('hand_reload','no',365);
+secs=document.getElementById("reloadTime").value;
+setCookie('secs',secs,365);
+location.reload();
+}
+
+function changeType(){
+var ischecked=document.getElementById("reloadCheckbox")
+if(ischecked.checked){
+setCookie('hand_reload','no',365);
+location.reload();
+}
+}
+function reload_hand(){
+setCookie('hand_reload','yes',365);
+location.reload();	
+}
+</script>
+	<script src="/Index/Public/wap/src/jquery.min.js" type="text/javascript"></script>
+<script src="/Index/Public/wap/jQuery-jcMarquee.js" type="text/javascript"></script> 
+<script> 
+$(function(){ 
+    $('#Marquee_x').jcMarquee({ 'marquee':'x','margin_right':'10px','speed':20 }); 
+}); 
+</script> 	
+	<script src="/Index/Public/wap/src/js/lightslider.js"></script> 
+    <script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+
+		});
+    </script> 
+
+<script src="/Index/Public/JavaScript/bmjs-wap.js" type="text/javascript"></script>
+</body>
+</html>

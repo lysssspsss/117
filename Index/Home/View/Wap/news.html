@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="一起发开奖现场">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="wap-font-scale" content="no">
+<meta name="aplus-touch" content="1">
+<meta name="msapplication-tap-highlight" content="no">
+<TITLE>手机看开奖结果 － 六合开奖记录直播</TITLE>
+<meta name="keywords" content="手机报码,手机报码网,手机开奖网址">
+<meta name="description" content="第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果">
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="checkCookie()">
+<include file="Wap:header" />
+<div class="allzl-list">
+<foreach name="list" item="vo">
+<volist name="vo['voo']" id="sub">        
+		<li><a href="/lists/m_{$sub.id}.html">{$sub.title}</a></li>	
+</volist>
+</foreach>
+</div>
+<div class="blank"></div>
+<include file="Wap:footer" />
+</body>
+</html>

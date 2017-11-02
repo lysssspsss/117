@@ -1,0 +1,235 @@
+<include file='index:header' />
+<style>
+/* = 表格（默认有斑马条纹）
+------------------------------------------ */
+.data-table {
+	margin: 10px 0;
+}
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-table caption {
+    height: 30px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.data-table thead th,
+.data-table tbody td {
+    padding:8px;
+    height: 19px;
+    line-height: 19px;
+    font-weight: 400;
+}
+.data-table thead th {
+    text-align: left;
+    color:#fff;
+    background-color: #353535;
+}
+.data-table tbody tr {
+	background-color: #fefefe;
+	color: #686868;
+}
+.data-table tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+#top-alert {
+    display: block;
+    top: 5px;
+    left: 20px;
+    right: 20px;
+    z-index: 3000;
+	margin-top: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+    overflow: hidden;
+    font-size: 16px;
+}
+#top-alert .close{
+    right:35px;
+    position: fixed;
+    top:75px;
+}
+.arrow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	vertical-align: middle;
+	border: 4px dashed transparent;
+}
+.arrow-down {
+	border-top-style: solid;
+	border-top-color: #000;
+	border-bottom-width: 0;
+}
+.arrow-up {
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	border-top-width: 0;
+}
+.arrow-left {
+	border-right-style: solid;
+	border-right-color: #000;
+	border-left-width: 0;
+}
+.arrow-right {
+	border-left-style: solid;
+	border-left-color: #000;
+	border-right-width: 0;
+}
+
+/* 提醒框 */
+.alert {
+	color: #c09853;
+	font-weight: bold;
+	border: 1px solid #fbeed5;
+	background-color: #fcf8e3;
+}
+.alert .close {
+    float: right;
+    position: relative;
+    top: -2px;
+    right: -21px;
+    font: bold 20px/20px arial; 
+	color: #c09853;
+    opacity: 0.4;
+}
+.alert .close:hover {
+	opacity: 0.6;
+}
+button.close {
+    padding: 0;
+    cursor: pointer;
+    border: 0 none;
+	background: none;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.alert-info {
+	background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    color: #3A87AD;
+}
+.alert-error {
+	color: white;
+	border-color: #eed3d7;
+	background-color: #FF6666;
+}
+.alert-success {
+    color: #468847;
+    background-color: #CCFF99;
+    border-color: #eed3d7;
+}
+.main-title {
+    padding-bottom: 20px;
+    *zoom: 1;
+}
+.main-title:before,
+.main-title:after {
+    display: table;
+    content: "";
+}
+.main-title:after {
+    clear: both;
+}
+.main-title h2 {
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: #445566;
+}
+.main-title .tools {
+    float: right;
+    margin-top: 5px;
+}
+.main-title .ca {
+    display: inline-block;
+    margin: 0 10px;
+    width: 5px;
+    height: 10px;
+    background: url(../images/subnav_current.png) no-repeat center center;
+}
+</style>
+
+     <!--[if lt IE 9]>
+    <script type="text/javascript" src="{$Think.const.JS_URL}/assets/Admin/js/jquery-1.10.2.min.js"></script>
+    <![endif]--><!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="{$Think.const.JS_URL}/assets/Admin/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS_URL}/assets/Admin/js/jquery.mousewheel.js"></script>
+    <!--<![endif]-->
+		<div class="main-container" id="main-container">
+
+
+<include file='index:left' />
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+					
+
+							<div class="row">
+							    <div class="col-xs-12">
+										<div>
+        <div id="top-alert" class="fixed alert alert-error" style="display: none;">
+            <button class="close fixed" style="margin-top: 4px;">&times;</button>
+            <div class="alert-content">这是内容</div>
+        </div>
+	
+    <!-- 应用列表 -->
+    <div class="data-table table-striped">
+        <table>
+            <thead>
+                <tr>
+                    <th width="200">备份名称</th>
+                    <th width="80">卷数</th>
+                    <th width="80">压缩</th>
+                    <th width="80">数据大小</th>
+                    <th width="200">备份时间</th>
+                    <th>状态</th>
+                    <th width="120">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <volist name="list" id="data">
+                    <tr>
+                        <td>{$data.time|date='Ymd-His',###}</td>
+                        <td>{$data.part}</td>
+                        <td>{$data.compress}</td>
+                        <td>{$data.size|format_bytes}</td>
+                        <td>{$key}</td>
+                        <td>-</td>
+                        <td class="action">
+								<a class="db-import" href="/Data/{$data.time|date='Ymd-His',###}-{$data.part}.sql.{$data.compress}" title="下载">
+									<i class="ace-icon fa fa-cloud-download bigger-130"></i>
+								</a>
+                        </td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>
+    </div>
+    <!-- /应用列表 -->
+		
+		
+							    		</div>
+									</div>
+								</div>
+<include file='index:header_nav' />
+
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+<include file='index:footer' />		
+</div>
+	</body>
+</html>	

@@ -1,0 +1,86 @@
+<include file='index:header' />
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+		<div class="main-container" id="main-container">
+
+
+<include file='index:left' />
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+					
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									缓存清理
+								</small>
+							</h1>
+						</div>
+
+		
+
+							<div class="row">
+							    <div class="col-xs-12">
+										<div>
+<div class="formbody">
+<table cellspacing="1" cellpadding="0" class="page_table">
+<tbody>
+<tr>
+<td width="21%" height="32" class="td_left">前台缓存清理</td>
+<td width="79%" class="left" style="padding:10px;">
+<input type="button" value="前台缓存清理" id="runtime" class="btn btn-success" />
+</td>
+</tr>
+
+<tr>
+<td class="td_left">后台缓存清理</td>
+<td class="left" style="padding:10px;">
+<input type="button" value="后台缓存清理" id="cache1" class="btn btn-info" />
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+							    		</div>
+									</div>
+								</div>
+
+<include file='index:header_nav' />
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+</div>			
+<include file='index:footer' />		
+</div>
+<script type="text/javascript">
+$(function(){
+$('#runtime').click(function(){
+if(confirm("确认要清除前台缓存？")){
+var $type=$('#type').val();
+var $mess=$('#mess');
+$.post('__CONTROLLER__/runtime',{type:$type},function(data){
+alert("前台缓存清理成功");
+});
+}else{
+return false;
+}
+});
+$('#cache1').click(function(){
+if(confirm("确认要清除后台缓存？")){
+var $type=$('#type').val();
+var $mess=$('#mess');
+$.post('__MODULE__/Administrator/runtime',{type:$type},function(data){
+alert("后台缓存清理成功");
+});
+}else{
+return false;
+}
+});
+});
+</script>
+	</body>
+</html>	

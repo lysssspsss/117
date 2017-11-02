@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>六肖中特_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="六肖中特_" />
+<meta name="description" content="<?=Cz_cig('site_describe')?>" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body topmargin=0 bgcolor=FFFFFF text=000000 link=#0000FF vlink=#800080 alink=#FF0000 background="../tu/bg1.gif">
+<STYLE type=text/css>
+
+.bgff00{
+	background: #FFFFCC;
+}
+div.pager {FONT-SIZE: 0.85em; MARGIN:3px 0px; padding:5px; FONT-FAMILY: Tahoma,Helvetica,sans-serif; TEXT-ALIGN: center; float:right;}
+div.pager A {border:#ccdbe4 1px solid; COLOR: #0061de; MARGIN-RIGHT: 3px; padding:5px 8px;}
+div.pager A:hover {border:#ccdbe4 1px solid; padding:5px 8px; background:#3666d4; color:#FFF}
+div.pager A:active {border:#2b55af 1px solid;FONT-WEIGHT: bold; padding:5px 8px;color:#FFF;}
+.current {border:#2b55af 1px solid;FONT-WEIGHT: bold; padding:5px 8px; margin-right:3px;BACKGROUND-COLOR: #3666d4;color:#FFF;}
+<!--
+
+body {margin:0;padding:0;}
+body,td {font-size:12px;color: #000000;}
+* { word-wrap: break-word; }
+-->
+</STYLE>
+
+<include file="Index:header" />
+<div class="content clearfix">
+
+
+
+
+
+<div id="main" class="main">
+
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="">六肖中特</a></p>
+</div>
+<div class="br bgff00">
+<div class="title28_bord"><span class="fright"></span><h4>六肖中特</h4></div>
+<div align="center">
+<table id="table4278" style="font-size: 10pt; color: #000000; margin: 0px; padding: 0px; border-collapse:collapse" bordercolor="#E1FFFF" cellspacing="1" cellpadding="0" width="100%" border="0">
+<foreach name="list1" item="vo">
+<volist name="vo['voo1']" id="sub1">	
+<foreach name="list" item="vo">	
+		<volist name="vo['voo']" id="sub">
+<tr>
+    <td width="142" height="28" style="font-size: 12px; color: #000000" align="left" bgcolor="#FFFFCC"><font style="font-size: 10pt"> 
+	六合*高手帖<img src="../tu/i.gif" border="0"></font><span style="margin: 0px; padding: 0px"><b style="margin: 0; padding: 0"><font style="font-size: 9pt; margin: 0; padding: 0"> <img border="0" src="../tu/jing.gif" style="margin: 0; padding: 0"></font></b></span></td>
+    <td height="28" style="font-size: 12px; color: #000000" align="right" bgcolor="#FFFFCC"><p align="left"> <a target="_blank" href="{:U('Home/Bbs/detail',array('id'=>$sub1['id']))}.html"><font style="FONT-SIZE: 10pt; font-weight:700" color="#000000"> 
+
+
+
+<php>
+$curl=$sub1['curl'];
+$picurl=$sub1['picurl'];
+$title=str_replace($picurl,"<font color='$curl'>$picurl</font>",$sub1['title']);
+</php>
+
+			
+{$sub.title}期{$title}	
+	
+
+	
+	
+	</font></a></p></td>
+    <td width="128" height="28" style="font-size: 12px; color: #000000" align="left" bgcolor="#FFFFCC"><font style="font-size: 10pt">发表者:<font color="#FF0000">{$sub1.zuozhe}</font></font></td>
+</tr>
+</volist> 
+</foreach>
+</volist>	
+</foreach>
+</table>
+</div>
+<div class="blank10"></div>
+<div class="pager">{$page}</div>
+<div class="blank10"></div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<include file="Index:footer" />
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>

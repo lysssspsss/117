@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="middle"> 
+<select name="ClassID" onChange="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}" >
+<option value="" selected>请选择分类...</option>
+<php>
+$Dao  = M();
+$list  = $Dao->query("select * from `cz_bbs_class`  where LagID=0");
+foreach ($list as $val){
+if ($NumberID1==$val[numberid]){
+echo '<option value="__CONTROLLER__/directory2.html?NumberID='.$val[numberid].'" selected>'.$val[title].'</option>';
+}else{
+echo '<option value="__CONTROLLER__/directory2.html?NumberID='.$val[numberid].'">'.$val[title].'</option>';
+}
+}
+</php>
+</select>
+
+<php>
+if (len>=4){
+$total= count($Dao->query("select * from `cz_bbs_class`  where LagID=1 and NumberID='$NumberID1'"));
+if ($total>0){
+echo '<select name="ClassID"  onChange="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!="") {window.location=jmpURL;} else {this.selectedIndex=0 ;}" >';
+echo '<option value="" selected>请选择分类...</option>';
+
+$list  = $Dao->query("select * from `cz_bbs_class`  where LagID=0");
+foreach ($list as $val){
+if ($NumberID1==$val[numberid]){
+echo '<option value="__CONTROLLER__/directory2.html?NumberID='.$val[numberid].'" selected>'.$val[title].'</option>';
+}else{
+echo '<option value="__CONTROLLER__/directory2.html?NumberID='.$val[numberid].'">'.$val[title].'</option>';
+}
+}
+echo "</select>";
+}
+}
+</php>
+</td>
+</tr>
+</table>
+</body>
+</html>
+<script language="JavaScript">
+var id = '{$NumberID}';
+//window.parent.document.myform.Class.value = id;			
+window.parent.document.getElementById("ClassID").value=id;
+</script>

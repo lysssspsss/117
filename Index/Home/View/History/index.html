@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>六合彩开奖记录搜索_查找历史开奖结果，可快速找到一肖一码中特等公式规律_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="六合彩开奖记录,历史开奖结果" />
+<meta name="description" content="<?=Cz_cig('site_keywords')?>" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<include file="Index:header" />
+<div class="menu">
+<div class="inner main">
+<dl>
+<dt>选择<br />年份</dt>
+<dd>
+<ul>
+<?php  for($i =1977; $i <= $dates; $i++) { ?>
+<li><a href="?id=<?=$i?>"><?=$i?></a></li>
+<?php } ?>
+<li><a href="/Source/kj/<?=$dates?>/sx.html" target="_blank"><span style="background:#fefe00; color:#fe0000;">生肖属性</span></a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<form id="historySearchForm" action="" name="form1" method="post">
+<input type="hidden" id="page" name="page" value="1"/>
+<input type="hidden" id="pageSize" name="pageSize" value="<?=$pageSize?>"/>
+<input type="hidden" id="numIndex" name="numIndex" value="3"/>
+<div id="highterm" class="highterm">
+<div class="inner1 main">
+<h2>搜索开奖记录<small>历史开奖结果，最简单、最实用、最准确的公式规律。<font color="#FF6600">（哇！5年同期必出的一码一肖中特规律，你找到了吗？？）</font></small></h2>
+<ul>
+<li class="xianshi">
+<label>显示类型：</label>
+<input name="numNameCondition" class="<?php if ($numIndex=='0'){?>condition<?php }?>" value="显示全部"  onClick="historySearch('',1,30,0)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='1'){?>condition<?php }?>" value="平一"  onClick="historySearch('',1,30,1)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='2'){?>condition<?php }?>" value="平二"  onClick="historySearch('',1,30,2)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='3'){?>condition<?php }?>"value="平三"  onClick="historySearch('',1,30,3)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='4'){?>condition<?php }?>" value="平四"  onClick="historySearch('',1,30,4)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='5'){?>condition<?php }?>" value="平五"  onClick="historySearch('',1,30,5)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='6'){?>condition<?php }?>" value="平六"  onClick="historySearch('',1,30,6)"/>
+<input name="numNameCondition" class="<?php if ($numIndex=='7'){?>condition<?php }?>" value="特码"  onClick="historySearch('',1,30,7)"/>
+</li>
+<li>
+<label>时间期数：</label>
+<select id="yearCondition" name="yearCondition" class="">
+<option id="yearCondition" value="">选择年份</option>
+<?php  for($i =$dates; $i >= 1976; $i--) { ?>
+<option id="yearCondition<?=$i?>" value="<?=$i?>"><?=$i?></option>
+<?php }?>
+</select>
+<input type="text" id="shortDateCondition" name="shortDateCondition" class="Wdate txt " onFocus="javascript:if(this.value=='选择日期'){this.value='';}" onClick="javascript:WdatePicker({dateFmt:'MM-dd'});" value="" />                
+<select id="shortPeriodCondition" name="shortPeriodCondition" class="">
+<option value="">选择期数</option>
+<?php  for($i =1; $i <= 200; $i++){
+$var=sprintf("%03d",$i)	//生成3位数，不足前面补0   
+?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<i><font color="#FF0000">*</font>选择日期，试试输入："09.28"</i>
+</li>
+<li>
+<label>选择号码：</label>
+<select id="numCondition" name="numCondition" class="">
+<option value="">所有平码</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num1Condition" name="num1Condition" class="">
+<option value="">选择平一</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num2Condition" name="num2Condition" class="">
+<option value="">选择平二</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num3Condition" name="num3Condition" class="">
+<option value="">选择平三</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num4Condition" name="num4Condition" class="">
+<option value="">选择平四</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num5Condition" name="num5Condition" class="">
+<option value="">选择平五</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num6Condition" name="num6Condition" class="">
+<option value="">选择平六</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="num7Condition" name="num7Condition" class="">
+<option value="">选择特码</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+</li>
+<li>
+<label>选择生肖：</label>
+<select id="numShengXiaoCondition" name="numShengXiaoCondition" class="">
+<option value="">所有平肖</option>
+<option value='鼠'>鼠</option>
+<option value='牛'>牛</option>
+<option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num1ShengXiaoCondition" name="num1ShengXiaoCondition" class="">
+<option value="">平一生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num2ShengXiaoCondition" name="num2ShengXiaoCondition" class="">
+<option value="">平二生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num3ShengXiaoCondition" name="num3ShengXiaoCondition" class="">
+<option value="">平三生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num4ShengXiaoCondition" name="num4ShengXiaoCondition" class="">
+<option value="">平四生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num5ShengXiaoCondition" name="num5ShengXiaoCondition" class="">
+<option value="">平五生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num6ShengXiaoCondition" name="num6ShengXiaoCondition" class="">
+<option value="">平六生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="num7ShengXiaoCondition" name="num7ShengXiaoCondition" class="">
+<option value="">特码生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+<select id="shengXiaoCondition" name="shengXiaoCondition" class="">
+<option value="">平特生肖</option>
+<option value='鼠'>鼠</option><option value='牛'>牛</option><option value='虎'>虎</option><option value='兔'>兔</option><option value='龍'>龍</option><option value='蛇'>蛇</option><option value='馬'>馬</option><option value='羊'>羊</option><option value='猴'>猴</option><option value='雞'>雞</option><option value='狗'>狗</option><option value='豬'>豬</option>
+</select>
+</li>
+<li style="display:none">
+<label>选择号码：</label>
+<select id="nums1Condition" name="nums1Condition" class="">
+<option value="">选择码一</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums2Condition" name="nums2Condition" class="">
+<option value="">选择码二</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums3Condition" name="nums3Condition" class="">
+<option value="">选择码三</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums4Condition" name="nums4Condition" class="">
+<option value="">选择码四</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums5Condition" name="nums5Condition" class="">
+<option value="">选择码五</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums6Condition" name="nums6Condition" class="">
+<option value="">选择码六</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<select id="nums7Condition" name="nums7Condition" class="">
+<option value="">选择码七</option>
+<?php  for($i =1; $i <= 49; $i++){
+$var=sprintf("%02d",$i)	//生成2位数，不足前面补0 ?>
+<option value='<?=$var?>'><?=$var?></option>
+<?php } ?>
+</select>
+<i><font color="#FF0000">*</font>不按排序，随机的开奖号码</i>
+</li>
+<li class="max">
+<label>其它属性：</label>
+<select id="danShuangCondition" name="danShuangCondition" class="">
+<option value="">所有单双</option>
+<option value='单'>单</option><option value='双'>双</option>
+</select>
+<select id="boSeCondition" name="boSeCondition" class="">
+<option value="">所有波色</option>
+<option value='紅'>紅</option><option value='藍'>藍</option><option value='綠'>綠</option>
+</select>
+<select id="daXiaoCondition" name="daXiaoCondition" class="">
+<option value="">所有大小</option>
+<option value='大'>大</option><option value='小'>小</option>
+</select>
+<select id="wuXingCondition" name="wuXingCondition" class="">
+<option value="">所有五行</option>
+<option value='金'>金</option><option value='木'>木</option><option value='水'>水</option><option value='火'>火</option><option value='土'>土</option>
+</select>
+<select id="touNumCondition" name="touNumCondition" class="">
+<option value="">所有特头</option>
+<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option>﻿﻿﻿﻿﻿﻿﻿﻿
+</select>
+<select id="weiNumCondition" name="weiNumCondition" class="">
+<option value="">所有尾数</option>
+<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option>
+</select>
+<select id="heShuCondition" name="heShuCondition" class="">
+<option value="">所有合数</option>
+<option value='单'>合单</option><option value='双'>合双</option><option value='01'>合01</option><option value='02'>合02</option><option value='03'>合03</option><option value='04'>合04</option><option value='05'>合05</option><option value='06'>合06</option><option value='07'>合07</option><option value='08'>合08</option><option value='09'>合09</option><option value='10'>合10</option><option value='11'>合11</option><option value='12'>合12</option><option value='13'>合13</option>
+</select>
+<select id="jiaYeCondition" name="jiaYeCondition" class="">
+<option value="">所有家野</option>
+<option value='家禽'>家禽</option><option value='野兽'>野兽</option>
+</select>
+<select id="menShuCondition" name="menShuCondition" class="">
+<option value="">所有门数</option>
+<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option>
+</select>
+<br /><label>　　　　　</label>
+<select id="duanWeiCondition" name="duanWeiCondition" class="">
+<option value="">所有段位</option>
+<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option>
+</select>
+<select id="yinYangCondition" name="yinYangCondition" class="">
+<option value="">所有阴阳</option>
+<option value='阴'>阴</option><option value='阳'>阳</option>
+</select>
+<select id="tianDiCondition" name="tianDiCondition" class="">
+<option value="">所有天地</option>
+<option value='天'>天</option><option value='地'>地</option>
+</select>
+<select id="jiXiongCondition" name="jiXiongCondition" class="">
+<option value="">所有吉凶</option>
+<option value='吉'>吉</option><option value='凶'>凶</option>
+</select>
+<select id="heiBaiCondition" name="heiBaiCondition" class="">
+<option value="">所有黑白</option>
+<option value='黑'>黑</option><option value='白'>白</option>
+</select>
+<select id="seXiaoCondition" name="seXiaoCondition" class="">
+<option value="">所有色肖</option>
+<option value='紅肖'>紅肖</option><option value='藍肖'>藍肖</option><option value='綠肖'>綠肖</option>
+</select>
+<select id="biHuaCondition" name="biHuaCondition" class="">
+<option value="">所有笔画</option>
+<option value='单笔'>单笔</option><option value='双笔'>双笔</option>
+</select>
+<select id="nanNvCondition" name="nanNvCondition" class="">
+<option value="">所有男女</option>
+<option value='男'>男</option><option value='女'>女</option>
+</select>
+</li>
+<li style="display:none;">
+<label>查看选中：</label>
+<select id="beforePeriodCondition" name="beforePeriodCondition" class="">
+<option value="">前的单期</option>
+<option value='-1'>前第1期</option><option value='-2'>前第2期</option><option value='-3'>前第3期</option><option value='-4'>前第4期</option><option value='-5'>前第5期</option><option value='-6'>前第6期</option><option value='-7'>前第7期</option><option value='-8'>前第8期</option><option value='-9'>前第9期</option><option value='-10'>前第10期</option><option value='-11'>前第11期</option><option value='-12'>前第12期</option><option value='-13'>前第13期</option><option value='-14'>前第14期</option><option value='-15'>前第15期</option><option value='-16'>前第16期</option><option value='-17'>前第17期</option><option value='-18'>前第18期</option><option value='-19'>前第19期</option><option value='-20'>前第20期</option><option value='-21'>前第21期</option><option value='-22'>前第22期</option><option value='-23'>前第23期</option><option value='-24'>前第24期</option><option value='-25'>前第25期</option><option value='-26'>前第26期</option><option value='-27'>前第27期</option><option value='-28'>前第28期</option><option value='-29'>前第29期</option><option value='-30'>前第30期</option><option value='-31'>前第31期</option><option value='-32'>前第32期</option><option value='-33'>前第33期</option><option value='-34'>前第34期</option><option value='-35'>前第35期</option><option value='-36'>前第36期</option><option value='-37'>前第37期</option><option value='-38'>前第38期</option><option value='-39'>前第39期</option><option value='-40'>前第40期</option><option value='-41'>前第41期</option><option value='-42'>前第42期</option><option value='-43'>前第43期</option><option value='-44'>前第44期</option><option value='-45'>前第45期</option><option value='-46'>前第46期</option><option value='-47'>前第47期</option><option value='-48'>前第48期</option><option value='-49'>前第49期</option><option value='-50'>前第50期</option><option value='-51'>前第51期</option><option value='-52'>前第52期</option><option value='-53'>前第53期</option><option value='-54'>前第54期</option><option value='-55'>前第55期</option><option value='-56'>前第56期</option><option value='-57'>前第57期</option><option value='-58'>前第58期</option><option value='-59'>前第59期</option><option value='-60'>前第60期</option><option value='-61'>前第61期</option><option value='-62'>前第62期</option><option value='-63'>前第63期</option><option value='-64'>前第64期</option><option value='-65'>前第65期</option><option value='-66'>前第66期</option><option value='-67'>前第67期</option><option value='-68'>前第68期</option><option value='-69'>前第69期</option><option value='-70'>前第70期</option><option value='-71'>前第71期</option><option value='-72'>前第72期</option><option value='-73'>前第73期</option><option value='-74'>前第74期</option><option value='-75'>前第75期</option><option value='-76'>前第76期</option><option value='-77'>前第77期</option><option value='-78'>前第78期</option><option value='-79'>前第79期</option><option value='-80'>前第80期</option><option value='-81'>前第81期</option><option value='-82'>前第82期</option><option value='-83'>前第83期</option><option value='-84'>前第84期</option><option value='-85'>前第85期</option><option value='-86'>前第86期</option><option value='-87'>前第87期</option><option value='-88'>前第88期</option><option value='-89'>前第89期</option><option value='-90'>前第90期</option><option value='-91'>前第91期</option><option value='-92'>前第92期</option><option value='-93'>前第93期</option><option value='-94'>前第94期</option><option value='-95'>前第95期</option><option value='-96'>前第96期</option><option value='-97'>前第97期</option><option value='-98'>前第98期</option><option value='-99'>前第99期</option><option value='-100'>前第100期</option>
+</select>
+<select id="afterPeriodCondition" name="afterPeriodCondition" class="">
+<option value="">后的单期</option>
+<option value='1'>后第1期</option><option value='2'>后第2期</option><option value='3'>后第3期</option><option value='4'>后第4期</option><option value='5'>后第5期</option><option value='6'>后第6期</option><option value='7'>后第7期</option><option value='8'>后第8期</option><option value='9'>后第9期</option><option value='10'>后第10期</option><option value='11'>后第11期</option><option value='12'>后第12期</option><option value='13'>后第13期</option><option value='14'>后第14期</option><option value='15'>后第15期</option><option value='16'>后第16期</option><option value='17'>后第17期</option><option value='18'>后第18期</option><option value='19'>后第19期</option><option value='20'>后第20期</option><option value='21'>后第21期</option><option value='22'>后第22期</option><option value='23'>后第23期</option><option value='24'>后第24期</option><option value='25'>后第25期</option><option value='26'>后第26期</option><option value='27'>后第27期</option><option value='28'>后第28期</option><option value='29'>后第29期</option><option value='30'>后第30期</option><option value='31'>后第31期</option><option value='32'>后第32期</option><option value='33'>后第33期</option><option value='34'>后第34期</option><option value='35'>后第35期</option><option value='36'>后第36期</option><option value='37'>后第37期</option><option value='38'>后第38期</option><option value='39'>后第39期</option><option value='40'>后第40期</option><option value='41'>后第41期</option><option value='42'>后第42期</option><option value='43'>后第43期</option><option value='44'>后第44期</option><option value='45'>后第45期</option><option value='46'>后第46期</option><option value='47'>后第47期</option><option value='48'>后第48期</option><option value='49'>后第49期</option><option value='50'>后第50期</option><option value='51'>后第51期</option><option value='52'>后第52期</option><option value='53'>后第53期</option><option value='54'>后第54期</option><option value='55'>后第55期</option><option value='56'>后第56期</option><option value='57'>后第57期</option><option value='58'>后第58期</option><option value='59'>后第59期</option><option value='60'>后第60期</option><option value='61'>后第61期</option><option value='62'>后第62期</option><option value='63'>后第63期</option><option value='64'>后第64期</option><option value='65'>后第65期</option><option value='66'>后第66期</option><option value='67'>后第67期</option><option value='68'>后第68期</option><option value='69'>后第69期</option><option value='70'>后第70期</option><option value='71'>后第71期</option><option value='72'>后第72期</option><option value='73'>后第73期</option><option value='74'>后第74期</option><option value='75'>后第75期</option><option value='76'>后第76期</option><option value='77'>后第77期</option><option value='78'>后第78期</option><option value='79'>后第79期</option><option value='80'>后第80期</option><option value='81'>后第81期</option><option value='82'>后第82期</option><option value='83'>后第83期</option><option value='84'>后第84期</option><option value='85'>后第85期</option><option value='86'>后第86期</option><option value='87'>后第87期</option><option value='88'>后第88期</option><option value='89'>后第89期</option><option value='90'>后第90期</option><option value='91'>后第91期</option><option value='92'>后第92期</option><option value='93'>后第93期</option><option value='94'>后第94期</option><option value='95'>后第95期</option><option value='96'>后第96期</option><option value='97'>后第97期</option><option value='98'>后第98期</option><option value='99'>后第99期</option><option value='100'>后第100期</option>
+</select>
+<select id="beforeAroundPeriodCondition" name="beforeAroundPeriodCondition" class="">
+<option value="">前的多期</option>
+<option value='-1'>前1期记录</option><option value='-2'>前2期记录</option><option value='-3'>前3期记录</option><option value='-4'>前4期记录</option><option value='-5'>前5期记录</option><option value='-6'>前6期记录</option><option value='-7'>前7期记录</option><option value='-8'>前8期记录</option><option value='-9'>前9期记录</option><option value='-10'>前10期记录</option><option value='-11'>前11期记录</option><option value='-12'>前12期记录</option><option value='-13'>前13期记录</option><option value='-14'>前14期记录</option><option value='-15'>前15期记录</option><option value='-16'>前16期记录</option><option value='-17'>前17期记录</option><option value='-18'>前18期记录</option><option value='-19'>前19期记录</option><option value='-20'>前20期记录</option><option value='-21'>前21期记录</option><option value='-22'>前22期记录</option><option value='-23'>前23期记录</option><option value='-24'>前24期记录</option><option value='-25'>前25期记录</option><option value='-26'>前26期记录</option><option value='-27'>前27期记录</option><option value='-28'>前28期记录</option><option value='-29'>前29期记录</option><option value='-30'>前30期记录</option><option value='-31'>前31期记录</option><option value='-32'>前32期记录</option><option value='-33'>前33期记录</option><option value='-34'>前34期记录</option><option value='-35'>前35期记录</option><option value='-36'>前36期记录</option><option value='-37'>前37期记录</option><option value='-38'>前38期记录</option><option value='-39'>前39期记录</option><option value='-40'>前40期记录</option><option value='-41'>前41期记录</option><option value='-42'>前42期记录</option><option value='-43'>前43期记录</option><option value='-44'>前44期记录</option><option value='-45'>前45期记录</option><option value='-46'>前46期记录</option><option value='-47'>前47期记录</option><option value='-48'>前48期记录</option><option value='-49'>前49期记录</option><option value='-50'>前50期记录</option><option value='-51'>前51期记录</option><option value='-52'>前52期记录</option><option value='-53'>前53期记录</option><option value='-54'>前54期记录</option><option value='-55'>前55期记录</option><option value='-56'>前56期记录</option><option value='-57'>前57期记录</option><option value='-58'>前58期记录</option><option value='-59'>前59期记录</option><option value='-60'>前60期记录</option><option value='-61'>前61期记录</option><option value='-62'>前62期记录</option><option value='-63'>前63期记录</option><option value='-64'>前64期记录</option><option value='-65'>前65期记录</option><option value='-66'>前66期记录</option><option value='-67'>前67期记录</option><option value='-68'>前68期记录</option><option value='-69'>前69期记录</option><option value='-70'>前70期记录</option><option value='-71'>前71期记录</option><option value='-72'>前72期记录</option><option value='-73'>前73期记录</option><option value='-74'>前74期记录</option><option value='-75'>前75期记录</option><option value='-76'>前76期记录</option><option value='-77'>前77期记录</option><option value='-78'>前78期记录</option><option value='-79'>前79期记录</option><option value='-80'>前80期记录</option><option value='-81'>前81期记录</option><option value='-82'>前82期记录</option><option value='-83'>前83期记录</option><option value='-84'>前84期记录</option><option value='-85'>前85期记录</option><option value='-86'>前86期记录</option><option value='-87'>前87期记录</option><option value='-88'>前88期记录</option><option value='-89'>前89期记录</option><option value='-90'>前90期记录</option><option value='-91'>前91期记录</option><option value='-92'>前92期记录</option><option value='-93'>前93期记录</option><option value='-94'>前94期记录</option><option value='-95'>前95期记录</option><option value='-96'>前96期记录</option><option value='-97'>前97期记录</option><option value='-98'>前98期记录</option><option value='-99'>前99期记录</option><option value='-100'>前100期记录</option>
+</select>
+<select id="afterAroundPeriodCondition" name="afterAroundPeriodCondition" class="">
+<option value="">后的多期</option>
+<option value='1'>后1期记录</option><option value='2'>后2期记录</option><option value='3'>后3期记录</option><option value='4'>后4期记录</option><option value='5'>后5期记录</option><option value='6'>后6期记录</option><option value='7'>后7期记录</option><option value='8'>后8期记录</option><option value='9'>后9期记录</option><option value='10'>后10期记录</option><option value='11'>后11期记录</option><option value='12'>后12期记录</option><option value='13'>后13期记录</option><option value='14'>后14期记录</option><option value='15'>后15期记录</option><option value='16'>后16期记录</option><option value='17'>后17期记录</option><option value='18'>后18期记录</option><option value='19'>后19期记录</option><option value='20'>后20期记录</option><option value='21'>后21期记录</option><option value='22'>后22期记录</option><option value='23'>后23期记录</option><option value='24'>后24期记录</option><option value='25'>后25期记录</option><option value='26'>后26期记录</option><option value='27'>后27期记录</option><option value='28'>后28期记录</option><option value='29'>后29期记录</option><option value='30'>后30期记录</option><option value='31'>后31期记录</option><option value='32'>后32期记录</option><option value='33'>后33期记录</option><option value='34'>后34期记录</option><option value='35'>后35期记录</option><option value='36'>后36期记录</option><option value='37'>后37期记录</option><option value='38'>后38期记录</option><option value='39'>后39期记录</option><option value='40'>后40期记录</option><option value='41'>后41期记录</option><option value='42'>后42期记录</option><option value='43'>后43期记录</option><option value='44'>后44期记录</option><option value='45'>后45期记录</option><option value='46'>后46期记录</option><option value='47'>后47期记录</option><option value='48'>后48期记录</option><option value='49'>后49期记录</option><option value='50'>后50期记录</option><option value='51'>后51期记录</option><option value='52'>后52期记录</option><option value='53'>后53期记录</option><option value='54'>后54期记录</option><option value='55'>后55期记录</option><option value='56'>后56期记录</option><option value='57'>后57期记录</option><option value='58'>后58期记录</option><option value='59'>后59期记录</option><option value='60'>后60期记录</option><option value='61'>后61期记录</option><option value='62'>后62期记录</option><option value='63'>后63期记录</option><option value='64'>后64期记录</option><option value='65'>后65期记录</option><option value='66'>后66期记录</option><option value='67'>后67期记录</option><option value='68'>后68期记录</option><option value='69'>后69期记录</option><option value='70'>后70期记录</option><option value='71'>后71期记录</option><option value='72'>后72期记录</option><option value='73'>后73期记录</option><option value='74'>后74期记录</option><option value='75'>后75期记录</option><option value='76'>后76期记录</option><option value='77'>后77期记录</option><option value='78'>后78期记录</option><option value='79'>后79期记录</option><option value='80'>后80期记录</option><option value='81'>后81期记录</option><option value='82'>后82期记录</option><option value='83'>后83期记录</option><option value='84'>后84期记录</option><option value='85'>后85期记录</option><option value='86'>后86期记录</option><option value='87'>后87期记录</option><option value='88'>后88期记录</option><option value='89'>后89期记录</option><option value='90'>后90期记录</option><option value='91'>后91期记录</option><option value='92'>后92期记录</option><option value='93'>后93期记录</option><option value='94'>后94期记录</option><option value='95'>后95期记录</option><option value='96'>后96期记录</option><option value='97'>后97期记录</option><option value='98'>后98期记录</option><option value='99'>后99期记录</option><option value='100'>后100期记录</option>
+</select>
+<select id="numAroundCondition" name="numAroundCondition" class="${numAroundConditionCondition}">
+<option value="">接近数据</option>
+<option value='1'>1个接近</option><option value='2'>2个接近</option><option value='3'>3个接近</option><option value='4'>4个接近</option><option value='5'>5个接近</option><option value='6'>6个接近</option><option value='7'>7个接近</option>
+</select>
+<i><font color="#FF0000">*</font>必须选择：需要查找的"期数"</i>
+</li>
+<li>
+<label>　　　　　</label>
+<input type="submit" class="btn3" value="搜索" onClick="javascript:historySearch('', 1, '30', '0');" />
+<input type="button" class="btn4" value="清除选择" onClick="javascript:resetInfos();" />
+</li>
+
+</ul>
+</div>
+</div>
+
+<div class="content clearfix" style="padding-top:0;">
+<div id="main" class="main">
+<article class="infos padding-b1">
+<div class="inner">
+<header id="topbartit" class="title">
+<dl class="clearfix">
+<dt><h2 style="background:#FFFF00">搜索结果</h2></dt>
+<dd class="left">
+<label>浏览方式：</label>
+<input type="checkbox" name="haoMaOrShengXiao" checked="checked" onClick="javascript:showHaoMaAndShengXiao();"> <a href="javascript:void(0);" onClick="javascript:showHaoMaAndShengXiao();">完整版显示</a>
+<input type="checkbox" name="haoMaOrShengXiao" onClick="javascript:showShengXiao();"> <a href="javascript:void(0);" onClick="javascript:showShengXiao();">只显生肖</a>
+<input type="checkbox" name="haoMaOrShengXiao" onClick="javascript:showHaoMa();"> <a href="javascript:void(0);" onClick="javascript:showHaoMa();">只显号码</a>&nbsp;
+<label>查看顺序：</label>
+<input type="checkbox" name="sortDownOrSize" checked="checked" onClick="javascript:showSortDown();" > <a href="javascript:void(0);" onClick="javascript:showSortDown();">落球顺序</a>
+<input type="checkbox" name="sortDownOrSize" onClick="javascript:showSortSize();"> <a href="javascript:void(0);" onClick="javascript:showSortSize();">大小顺序</a>
+</dd>
+<dd class="right2"><a href="/Source/kj/<?=$dates?>/sx.html" target="_blank">[生肖号码属性表]</a></dd>
+</dl>
+</header>
+<div class="bd">
+<table>
+<tr>
+<th style="width:66px">搅珠日期</th>
+<th class="mini bg-high2">期数</th>
+<th class="max"><?php if ($numIndex=='0'){?>平码（六个正码）<?php } ?></th>
+<th class="mini bg-high2">
+<?php
+if      ($numIndex=='0'){
+echo "特码";
+}elseif ($numIndex=='1'){
+echo "平一";
+}elseif ($numIndex=='2'){
+echo "平二";
+}elseif ($numIndex=='3'){
+echo "平三";
+}elseif ($numIndex=='4'){
+echo "平四";
+}elseif ($numIndex=='5'){
+echo "平五";
+}elseif ($numIndex=='6'){
+echo "平六";
+}elseif ($numIndex=='7'){
+echo "特码";
+}
+?>
+</th>
+<th style="width:29px">生肖</th>
+<th style="width:29px">单双</th>
+<th style="width:29px">波色</th>
+<th style="width:29px">大小</th>
+<th style="width:29px">五行</th>
+<th style="width:29px">特头</th>
+<th style="width:29px">尾数</th>
+<th class="min">合单双</th>
+<th style="width:29px">家野</th>
+<th style="width:29px">门数</th>
+<th style="width:29px">段位</th>
+<th style="width:29px">阴阳</th>
+<th style="width:29px">天地</th>
+<th style="width:29px">吉凶</th>
+<th style="width:29px">黑白</th>
+<th style="width:29px">色肖</th>
+<th style="width:29px">笔画</th>
+<th style="width:29px">男女</th>
+<th class="mid">总和单双</th>
+</tr>
+<foreach name="list" item="vo">
+<tr class="infolist">
+<td class="no num"><?=date("Y-m-d",$vo['begtime'])?></td>
+<td class="no bg-high2"><?php if (strstr($vo['title'], '期')){?>
+<?=$vo['title']?>
+<?php }else{?>
+<?=$vo['title']?>期
+<?php }?></td>
+<td>
+<?php if ($numIndex=='0'){?>
+<div class="sortDown clearfix">
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit1'],5)?> "><?=$vo['tit1']?></div>
+<div class="sx "><?=$vo['tit01']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit2'],5)?> "><?=$vo['tit2']?></div>
+<div class="sx "><?=$vo['tit02']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit3'],5)?> "><?=$vo['tit3']?></div>
+<div class="sx "><?=$vo['tit03']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit4'],5)?> "><?=$vo['tit4']?></div>
+<div class="sx "><?=$vo['tit04']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit5'],5)?> "><?=$vo['tit5']?></div>
+<div class="sx "><?=$vo['tit05']?></div>
+</div>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit6'],5)?>"><?=$vo['tit6']?></div>
+<div class="sx "><?=$vo['tit06']?></div>
+</div>
+</div>
+<?php } ?>
+</td>
+<td class="bg-high2">
+<?php if  ($numIndex=='0' || $numIndex=='7'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit7'],5)?> "><?=$vo['tit7']?></div>
+<div class="sx "><?=$vo['tit07']?></div>
+</div>
+<?php }elseif ($numIndex=='1'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit1'],5)?> "><?=$vo['tit1']?></div>
+<div class="sx "><?=$vo['tit01']?></div>
+</div>
+<?php }elseif ($numIndex=='2'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit2'],5)?> "><?=$vo['tit2']?></div>
+<div class="sx "><?=$vo['tit02']?></div>
+</div>
+<?php }elseif ($numIndex=='3'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit3'],5)?> "><?=$vo['tit3']?></div>
+<div class="sx "><?=$vo['tit03']?></div>
+</div>
+<?php }elseif ($numIndex=='4'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit4'],5)?> "><?=$vo['tit4']?></div>
+<div class="sx "><?=$vo['tit04']?></div>
+</div>
+<?php }elseif ($numIndex=='5'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit5'],5)?> "><?=$vo['tit5']?></div>
+<div class="sx "><?=$vo['tit05']?></div>
+</div>
+<?php }elseif ($numIndex=='6'){?>
+<div class="p">
+<div class="hm <?=yx_no_band($vo['tit2'],6)?> "><?=$vo['tit6']?></div>
+<div class="sx "><?=$vo['tit06']?></div>
+</div>
+<?php } ?>
+</td>
+<td  class=""><?=$vo['tit07']?></td>
+<td class="<?=yx_Other_class($vo['tit7'],1,0)?> "><?=yx_Other_class($vo['tit7'],2,0)?> </td>
+<td  class="<?=yx_no_band($vo['tit7'],8)?>"><?=$vo['bands']?></td>
+<td class="<?=yx_Other_class($vo['tit7'],1,1)?>"><?=yx_Other_class($vo['tit7'],2,1)?></td>
+<td class="<?=yx_wuxing_class(cz_lhc_xiao(3,$vo['tit7']))?> "><?=cz_lhc_xiao(3,$vo['tit7'])?></td>
+<td class="tou<?=substr($vo['tit7'],0,1)?>Class "><?=substr($vo['tit7'],0,1)?>头</td>
+<td class=""><?=substr($vo['tit7'],1,1)?>尾</td>
+<td class="">
+<?php
+$heshu=substr($vo['tit7'],0,1)+substr($vo['tit7'],1,1);
+if ($heshu<=9){
+$heshus="0".$heshu;
+}else{
+$heshus=$heshu;
+}
+if ($heshu % 2 ==0){
+echo $heshus."和双";
+}else{
+echo $heshus."和单";
+}
+?>
+</td>
+<td class="<?=yx_Other_class($vo['tit11'],1,1)?> "><?=$vo['tit11']?></td>
+<td class="menshu<?=cz_lhc_xiao(11,$vo['tit7'])?>Class "><?=cz_lhc_xiao(11,$vo['tit7'])?>门</td>
+<td class="duanwei<?=cz_lhc_xiao(9,$vo['tit7'])?>Class "><?=cz_lhc_xiao(9,$vo['tit7'])?>段</td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(21,$vo['tit07']))?>"><?=cz_lhc_xiao(21,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(22,$vo['tit07']))?>"><?=cz_lhc_xiao(22,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(23,$vo['tit07']))?>"><?=cz_lhc_xiao(23,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(20,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(24,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(25,$vo['tit07'])?></td>
+<td class="<?=yx_Other_txt(cz_lhc_xiao(20,$vo['tit07']))?>"><?=cz_lhc_xiao(26,$vo['tit07'])?></td>
+<td>
+<?php
+$zonger=$vo['tit1']+$vo['tit2']+$vo['tit3']+$vo['tit4']+$vo['tit5']+$vo['tit6']+$vo['tit7'];
+if ($zonger<=175){
+$show="(".$zonger.")≤175";
+}else{
+$show="(".$zonger.")≥176";
+}
+if ($zonger % 2 ==0){
+echo $show."<span class='shuangClass'>双</span>";
+}else{
+echo $show."<span class='danClass'>单</span>";
+}
+?>
+</td>
+</tr>
+</foreach>
+</table>
+<div class="pager">{$page}</div>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</form>
+
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".History_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".History_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>

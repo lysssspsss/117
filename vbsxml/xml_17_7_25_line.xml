@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?><anychart><settings>
+<chart_background>
+<corners all="5" type="square"/>
+</chart_background>
+<context_menu version_info="false" about_anychart="false">
+<save_as_image_item_text>另存为PNG图像</save_as_image_item_text>
+<print_chart_item_text>打印</print_chart_item_text>
+</context_menu>
+<animation enabled="True"/>
+</settings><charts><chart plot_type="Bubble"><chart_settings><title enabled="True" ><text>  特码    除三走势分析图    www.117kj.com</text></title>
+<axes>
+<x_axis tickmarks_placement="Center">
+<title enabled="false"/>
+<zoom enabled="true" start="200" visible_range="25" scroll_bar_position="Outside"/>
+<labels display_mode="Stager"/>
+</x_axis>
+<y_axis>
+<labels enabled="false"/>
+<scale minimum="-1" maximum="2.5" mode="Stacked"/>
+<title enabled="false"/>
+<axis_markers>
+<lines>
+<line value="0" color="Gray">
+<label enabled="true">
+<format>余零</format>
+</label>
+</line>
+<line value="1" color="Gray">
+<label enabled="true">
+<format>余一</format>
+</label>
+</line>
+<line value="2" color="Gray">
+<label enabled="true">
+<format>余二</format>
+</label>
+</line>
+</lines>
+</axis_markers>
+</y_axis>
+</axes>
+</chart_settings><data_plot_settings default_series_type="line" >
+<line_series point_padding="0.2" group_padding="1">
+<label_settings enabled="true">
+<background enabled="false"/>
+<font color="Rgb(45,45,45)" bold="true" size="15">
+<effects enabled="true">
+<glow enabled="true" color="White" opacity="3" blur_x="1.5" blur_y="1.5" strength="3"/>
+</effects>
+</font>
+<format>{%wintxt}{enabled:False}</format>
+</label_settings>
+<tooltip_settings enabled="true">
+<font render_as_html="True"/>
+<format><![CDATA[<font color="#000000" size="16"><b>
+期数:{%Name}{enabled:False}
+平码:{%winnum}
+特码:{%addnum}{enabled:False}
+开奖日期:{%windate}
+</b></font>]]></format>
+<background>
+<border type="Solid" color="DarkColor(%Color)"/>
+</background>
+<font color="DarkColor(%Color)" size="15"/>
+</tooltip_settings>
+<marker_settings enabled="true"/>
+<line_style>
+<line thickness="2"/>
+</line_style>
+</line_series>
+</data_plot_settings><data><series name="lottery">
+<point name="2017073" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30龙</font>]]>-
+<![CDATA[<font color="#0000FF">03羊</font>]]>-
+<![CDATA[<font color="#008822">28马</font>]]>-
+<![CDATA[<font color="#0000FF">42龙</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#0000FF">37鸡</font>]]>
+</attribute>
+<attribute name="wintxt">11</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">11猪/土</font>]]></attribute>
+<attribute name="windate">2017年06月24日</attribute>
+</attributes>
+</point>
+
+<point name="2017074" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12狗</font>]]>-
+<![CDATA[<font color="#FF0000">24狗</font>]]>-
+<![CDATA[<font color="#0000FF">48狗</font>]]>-
+<![CDATA[<font color="#FF0000">40马</font>]]>-
+<![CDATA[<font color="#FF0000">30龙</font>]]>-
+<![CDATA[<font color="#008822">44虎</font>]]>
+</attribute>
+<attribute name="wintxt">08</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">08虎/木</font>]]></attribute>
+<attribute name="windate">2017年06月27日</attribute>
+</attributes>
+</point>
+
+<point name="2017075" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29蛇</font>]]>-
+<![CDATA[<font color="#008822">11猪</font>]]>-
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#008822">16马</font>]]>-
+<![CDATA[<font color="#008822">27羊</font>]]>-
+<![CDATA[<font color="#0000FF">26猴</font>]]>
+</attribute>
+<attribute name="wintxt">19</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19兔/土</font>]]></attribute>
+<attribute name="windate">2017年06月29日</attribute>
+</attributes>
+</point>
+
+<point name="2017076" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">09牛</font>]]>-
+<![CDATA[<font color="#008822">39羊</font>]]>-
+<![CDATA[<font color="#0000FF">04马</font>]]>-
+<![CDATA[<font color="#008822">33牛</font>]]>-
+<![CDATA[<font color="#008822">27羊</font>]]>-
+<![CDATA[<font color="#0000FF">42龙</font>]]>
+</attribute>
+<attribute name="wintxt">35</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猪/水</font>]]></attribute>
+<attribute name="windate">2017年07月02日</attribute>
+</attributes>
+</point>
+
+<point name="2017077" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">15羊</font>]]>-
+<![CDATA[<font color="#008822">05蛇</font>]]>-
+<![CDATA[<font color="#008822">38猴</font>]]>-
+<![CDATA[<font color="#008822">27羊</font>]]>-
+<![CDATA[<font color="#0000FF">26猴</font>]]>-
+<![CDATA[<font color="#FF0000">02猴</font>]]>
+</attribute>
+<attribute name="wintxt">18</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18龙/金</font>]]></attribute>
+<attribute name="windate">2017年07月04日</attribute>
+</attributes>
+</point>
+
+<point name="2017078" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30龙</font>]]>-
+<![CDATA[<font color="#FF0000">07兔</font>]]>-
+<![CDATA[<font color="#FF0000">02猴</font>]]>-
+<![CDATA[<font color="#FF0000">08虎</font>]]>-
+<![CDATA[<font color="#0000FF">10鼠</font>]]>-
+<![CDATA[<font color="#008822">06龙</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">28马/土</font>]]></attribute>
+<attribute name="windate">2017年07月06日</attribute>
+</attributes>
+</point>
+
+<point name="2017079" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">21牛</font>]]>-
+<![CDATA[<font color="#FF0000">08虎</font>]]>-
+<![CDATA[<font color="#0000FF">36狗</font>]]>-
+<![CDATA[<font color="#008822">11猪</font>]]>-
+<![CDATA[<font color="#0000FF">03羊</font>]]>-
+<![CDATA[<font color="#0000FF">48狗</font>]]>
+</attribute>
+<attribute name="wintxt">37</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">37鸡/木</font>]]></attribute>
+<attribute name="windate">2017年07月08日</attribute>
+</attributes>
+</point>
+
+<point name="2017080" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">43兔</font>]]>-
+<![CDATA[<font color="#008822">22鼠</font>]]>-
+<![CDATA[<font color="#FF0000">45牛</font>]]>-
+<![CDATA[<font color="#FF0000">01鸡</font>]]>-
+<![CDATA[<font color="#0000FF">20虎</font>]]>-
+<![CDATA[<font color="#008822">11猪</font>]]>
+</attribute>
+<attribute name="wintxt">35</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猪/水</font>]]></attribute>
+<attribute name="windate">2017年07月12日</attribute>
+</attributes>
+</point>
+
+<point name="2017081" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04马</font>]]>-
+<![CDATA[<font color="#0000FF">41蛇</font>]]>-
+<![CDATA[<font color="#008822">27羊</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>-
+<![CDATA[<font color="#008822">05蛇</font>]]>
+</attribute>
+<attribute name="wintxt">18</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18龙/金</font>]]></attribute>
+<attribute name="windate">2017年07月13日</attribute>
+</attributes>
+</point>
+
+<point name="2017082" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29蛇</font>]]>-
+<![CDATA[<font color="#008822">43兔</font>]]>-
+<![CDATA[<font color="#0000FF">48狗</font>]]>-
+<![CDATA[<font color="#FF0000">35猪</font>]]>-
+<![CDATA[<font color="#0000FF">42龙</font>]]>-
+<![CDATA[<font color="#FF0000">34鼠</font>]]>
+</attribute>
+<attribute name="wintxt">26</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">26猴/金</font>]]></attribute>
+<attribute name="windate">2017年07月16日</attribute>
+</attributes>
+</point>
+
+<point name="2017083" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">14猴</font>]]>-
+<![CDATA[<font color="#008822">06龙</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#FF0000">40马</font>]]>-
+<![CDATA[<font color="#FF0000">46鼠</font>]]>-
+<![CDATA[<font color="#008822">33牛</font>]]>
+</attribute>
+<attribute name="wintxt">10</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">10鼠/火</font>]]></attribute>
+<attribute name="windate">2017年07月18日</attribute>
+</attributes>
+</point>
+
+<point name="2017084" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12狗</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>-
+<![CDATA[<font color="#0000FF">09牛</font>]]>-
+<![CDATA[<font color="#FF0000">34鼠</font>]]>-
+<![CDATA[<font color="#008822">05蛇</font>]]>-
+<![CDATA[<font color="#0000FF">26猴</font>]]>
+</attribute>
+<attribute name="wintxt">21</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">21牛/水</font>]]></attribute>
+<attribute name="windate">2017年07月21日</attribute>
+</attributes>
+</point>
+
+<point name="2017085" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36狗</font>]]>-
+<![CDATA[<font color="#0000FF">04马</font>]]>-
+<![CDATA[<font color="#008822">06龙</font>]]>-
+<![CDATA[<font color="#008822">27羊</font>]]>-
+<![CDATA[<font color="#0000FF">47猪</font>]]>-
+<![CDATA[<font color="#008822">49鸡</font>]]>
+</attribute>
+<attribute name="wintxt">03</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">03羊/金</font>]]></attribute>
+<attribute name="windate">2017年07月23日</attribute>
+</attributes>
+</point>
+
+<point name="2017086" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">08虎</font>]]>-
+<![CDATA[<font color="#008822">33牛</font>]]>-
+<![CDATA[<font color="#0000FF">15羊</font>]]>-
+<![CDATA[<font color="#0000FF">47猪</font>]]>-
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#0000FF">09牛</font>]]>
+</attribute>
+<attribute name="wintxt">01</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">01鸡/火</font>]]></attribute>
+<attribute name="windate">2017年07月25日</attribute>
+</attributes>
+</point>
+
+<point name="2017087" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42龙</font>]]>-
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#0000FF">03羊</font>]]>-
+<![CDATA[<font color="#008822">44虎</font>]]>-
+<![CDATA[<font color="#0000FF">31兔</font>]]>-
+<![CDATA[<font color="#0000FF">04马</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">40马/</font>]]></attribute>
+<attribute name="windate">2017年07月28日</attribute>
+</attributes>
+</point>
+
+<point name="2017088" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#FF0000">30龙</font>]]>-
+<![CDATA[<font color="#0000FF">15羊</font>]]>-
+<![CDATA[<font color="#008822">11猪</font>]]>-
+<![CDATA[<font color="#008822">43兔</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>
+</attribute>
+<attribute name="wintxt">17</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">17蛇/金</font>]]></attribute>
+<attribute name="windate">2017年07月30日</attribute>
+</attributes>
+</point>
+
+<point name="2017089" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>-
+<![CDATA[<font color="#0000FF">26猴</font>]]>-
+<![CDATA[<font color="#0000FF">36狗</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#0000FF">10鼠</font>]]>
+</attribute>
+<attribute name="wintxt">46</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">46鼠/木</font>]]></attribute>
+<attribute name="windate">2017年08月02日</attribute>
+</attributes>
+</point>
+
+<point name="2017090" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">24狗</font>]]>-
+<![CDATA[<font color="#FF0000">18龙</font>]]>-
+<![CDATA[<font color="#008822">06龙</font>]]>-
+<![CDATA[<font color="#FF0000">35猪</font>]]>-
+<![CDATA[<font color="#FF0000">40马</font>]]>-
+<![CDATA[<font color="#008822">22鼠</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">36狗/水</font>]]></attribute>
+<attribute name="windate">2017年08月03日</attribute>
+</attributes>
+</point>
+
+<point name="2017091" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">35猪</font>]]>-
+<![CDATA[<font color="#0000FF">14猴</font>]]>-
+<![CDATA[<font color="#0000FF">48狗</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#008822">39羊</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>
+</attribute>
+<attribute name="wintxt">31</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31兔/火</font>]]></attribute>
+<attribute name="windate">2017年08月06日</attribute>
+</attributes>
+</point>
+
+<point name="2017092" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鼠</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>-
+<![CDATA[<font color="#FF0000">08虎</font>]]>-
+<![CDATA[<font color="#0000FF">37鸡</font>]]>-
+<![CDATA[<font color="#008822">28马</font>]]>-
+<![CDATA[<font color="#008822">33牛</font>]]>
+</attribute>
+<attribute name="wintxt">07</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07兔/木</font>]]></attribute>
+<attribute name="windate">2017年08月08日</attribute>
+</attributes>
+</point>
+
+<point name="2017093" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">22鼠</font>]]>-
+<![CDATA[<font color="#FF0000">18龙</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>-
+<![CDATA[<font color="#008822">33牛</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#0000FF">42龙</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">29蛇/木</font>]]></attribute>
+<attribute name="windate">2017年08月10日</attribute>
+</attributes>
+</point>
+
+<point name="2017094" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">04马</font>]]>-
+<![CDATA[<font color="#0000FF">03羊</font>]]>-
+<![CDATA[<font color="#0000FF">15羊</font>]]>-
+<![CDATA[<font color="#FF0000">45牛</font>]]>-
+<![CDATA[<font color="#008822">38猴</font>]]>-
+<![CDATA[<font color="#0000FF">25鸡</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">28马/土</font>]]></attribute>
+<attribute name="windate">2017年08月13日</attribute>
+</attributes>
+</point>
+
+<point name="2017095" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">04马</font>]]>-
+<![CDATA[<font color="#0000FF">20虎</font>]]>-
+<![CDATA[<font color="#FF0000">07兔</font>]]>-
+<![CDATA[<font color="#0000FF">03羊</font>]]>-
+<![CDATA[<font color="#FF0000">19兔</font>]]>-
+<![CDATA[<font color="#FF0000">23猪</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27羊/土</font>]]></attribute>
+<attribute name="windate">2017年08月16日</attribute>
+</attributes>
+</point>
+
+<point name="2017096" y="0" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">44虎</font>]]>-
+<![CDATA[<font color="#008822">05蛇</font>]]>-
+<![CDATA[<font color="#008822">21牛</font>]]>-
+<![CDATA[<font color="#FF0000">29蛇</font>]]>-
+<![CDATA[<font color="#FF0000">24狗</font>]]>-
+<![CDATA[<font color="#008822">43兔</font>]]>
+</attribute>
+<attribute name="wintxt">42</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">42龙/土</font>]]></attribute>
+<attribute name="windate">2017年08月18日</attribute>
+</attributes>
+</point>
+
+<point name="2017097" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">34鼠</font>]]>-
+<![CDATA[<font color="#FF0000">02猴</font>]]>-
+<![CDATA[<font color="#008822">32虎</font>]]>-
+<![CDATA[<font color="#008822">43兔</font>]]>-
+<![CDATA[<font color="#FF0000">45牛</font>]]>-
+<![CDATA[<font color="#FF0000">23猪</font>]]>
+</attribute>
+<attribute name="wintxt">22</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">22鼠/水</font>]]></attribute>
+<attribute name="windate">2017年08月19日</attribute>
+</attributes>
+</point>
+</series></data></chart></charts></anychart>

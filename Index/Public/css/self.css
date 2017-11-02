@@ -1,0 +1,16 @@
+.header .branding .logo{ display:block; width:180px; height:48px; background:transparent url(images/kj-logo.png) no-repeat; text-indent:-9999px; margin-left:}
+.header .branding .logo-m{ display:block; width:156px; height:48px; background:transparent url(images/kj-logo-m.gif) no-repeat; margin-left:10px}
+.header{ border-bottom:5px solid #0e8a7a; background:#fff;}
+.nav .sub .arrow{ width:0; height:0; border-width:6px; border-style:solid; border-color:transparent transparent #0e8a7a; _border-color:#eeeeee #eeeeee #FF9900; _filter:chroma(color=#eeeeee); _overflow:hidden; position:absolute; top:0; left:89px;}
+.nav .sub ul{ border:1px solid #0e8a7a; width:180px; padding:5px 0; padding-left:10px; border-top:3px solid #0e8a7a; background:#fff; overflow:hidden; position:relative;}
+.txt_info{height:180px; background:#FFFFFF; border:7px solid #FF9900;}
+.focus{border-top:5px solid #0e8a7a; height:245px; background: #222222;}
+.focus .msg .action .share{ height:30px; background:#FF9900; line-height:30px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior:url(PIE.htc); position:relative;}
+.searchbar li a:hover{ background:#FF9900; color:#fff;}
+.search input[type="button"]{ width:130px; background:#FF9900;}
+*html .search .btn2{ width:130px; background:#FF9900; right:2px;}
+.flink dt h3{ font-size:16px; color:#FF9900;}
+.flink li a:hover{ color:#FF9900;}
+#tabbox{border: 7px solid #0e8a7a; padding:1px}
+.tabs .thistab,.tabs .thistab a:hover{background: #FF9900; color:#FFFFFF}
+.tab_con {margin:0 3px; border:1px dashed #FF9900}

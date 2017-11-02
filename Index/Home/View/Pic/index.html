@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>性感美女_美女写真_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="性感美女,美女写真,六合美女" />
+<meta name="description" content="性感美女_美女写真_<?=Cz_cig('site_name')?>" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<include file="Index:header" />
+<div class="content clearfix">
+<div id="main" class="main">
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;>&nbsp;性感美女</p>
+</div>
+<div class="blank10"></div>
+<div class="br bgff">
+ <div class="title28_bord"><h4>推荐图片</h4></div>
+<ul class="piclist" style="padding-left:8px">
+<foreach name="list1" item="vo">
+<li><a href="/meinv/{$vo.id}.html" alt="{$vo.title}" target="_blank"><img src="{$vo.picurl}" width="233" height="311" alt="{$vo.title}" /></a><p><a href="/meinv/{$vo.id}.html" alt="{$vo.title}" target="_blank">{$vo.title}</a></p></li>
+
+</foreach>
+</ul>
+<div class="blank10"></div>
+</div>
+<div class="blank10"></div>
+<div class="br bgff">
+ <div class="title28_bord"><h4>性感美女</h4></div>
+<ul class="piclist" style="padding-left:8px">
+<foreach name="list" item="vo">
+<volist name="vo['voo']" id="sub"><li><a href="/meinv/{$sub.id}.html" alt="{$sub.title}" target="_blank"><img src="{$sub.picurl}" width="185" height="311" alt="{$sub.title}" /></a><p><a href="/meinv/{$sub.id}.html" alt="{$sub.title}" target="_blank">{$sub.title}</a></p></li></volist> 
+
+</foreach>
+</ul>
+<div class="blank10"></div>
+<div class="pager">{$page}</div>
+<div class="blank10"></div>
+</div>
+</div>
+</div>
+
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Pic_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Pic_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>

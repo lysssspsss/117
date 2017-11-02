@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>江恩旋出号码分布走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">&nbsp &nbsp&nbsp简要说明：<li >江恩螺旋四方形，也叫江恩正方形。江恩螺旋四方形就是将市场循环一周八等分，而四方形的十字线和对角线上的价格就是极有可能发生转折的重要价位。香港彩票江恩螺旋四方形旋入矩阵是把49个号码按江恩四方形排列，以1为中心逆时针旋出，最终49被置于右下角。 </li><li ></li></div>
+
+<div class="datalist">
+<foreach name="list" item="vo">
+
+<table width="20%" id="table1" style="width:180px;">
+<tr>
+<td >
+<div align="center" class="table">
+<table width="100%" border="0" align="center" cellspacing="0" id="table2">
+<tr>
+<td  colspan='7'><p align='center'>{$vo['title']}期</td>
+</tr> 
+<?php
+$i=0;
+$zong=array("37","36","35","34","33","32","31","38","17","16","15","14","13","30","39","18","05","04","03","12","29","40","19","06","01","02","11","28","41","20","07","08","09","10","27","42","21","22","23","24","25","26","43","44","45","46","47","48","49");
+foreach ($zong as $key=>$value){
+$i++;
+?>
+<?php if (in_array($value, array($vo['tit1'],$vo['tit2'],$vo['tit3'],$vo['tit4'],$vo['tit5'],$vo['tit6'],$vo['tit7']))){?>
+<td class="<?=cz_band_txt($value)?>"><?=$value?></td>
+<?php }else{?>
+<td><em><?=$value?></em></td>
+<?php } ?>
+
+<?php if ($i % 7==0){?></tr><tr><?php } ?>
+
+<?php } ?>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</foreach>
+</div>
+
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

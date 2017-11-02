@@ -1,0 +1,127 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									评论设置
+								</small>
+							</h1>
+						</div>
+<div class="col-xs-12 col-sm-12 rule-top alert alert-info top10">
+						<button type="button" class="close" data-dismiss="alert">
+							<i class="ace-icon fa fa-times"></i>
+						</button>
+						评论代码设置！不懂得，千万不要修改！如不需要评论功能！请在左边的导航【特码资料】-【资料开关】这里关闭评论在首页显示即可！
+						</div>						
+<script>
+$(function(){
+	
+	$('#config').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#pl_index').val())){
+			$('#resone').attr("class", "middle highmsg");//ID为resone 重新class赋值
+			$('#resone').html('评论代码不能为空').show();//id为resone 赋值html值
+			$('#pl_index').focus(); 
+			return false;
+		}
+		
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href="{:U('sys/syspl')}";
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>						
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="config" id="config" method="post" action="{:U('runsyspl')}">
+                                <input type="hidden" name="id" value="{$config.id}" />
+								
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 首页评论代码 </label>
+										<div class="col-sm-9">
+
+											<textarea  name="pl_index" cols="120" class="col-xs-10 col-sm-7 limited"  id="pl_index">{$config.pl_index}</textarea>
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>首页评论代码（包括手机端）</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resone"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>								
+						
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 内容页评论代码 </label>
+										<div class="col-sm-9">
+                                            <textarea  name="pl_detail" cols="120" class="col-xs-10 col-sm-7 limited"  id="form-field-9">{$config.pl_detail}</textarea>
+                                            <input type="hidden" name="maxlength" value="300" />
+                                            <span class="help-inline col-xs-5 col-sm-5">
+												所有内容页评论代码
+											</span>
+									  </div>
+									</div>
+                                    <div class="space-4"></div>																		
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+
+<include file='index:footer' />
+
+
+	</body>
+</html>

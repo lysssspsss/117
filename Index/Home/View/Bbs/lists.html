@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>{$data.title}_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="{$data.title}" />
+<meta name="description" content="{$data.title}" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<include file="Index:header" />
+<div class="content clearfix">
+
+<div id="main" class="main">
+<div class="fleft" style="width:690px">
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('Home/Article')}">六合资料</a>&nbsp;&gt;&nbsp;<a href="{:U('Home/Article/lists',array('id'=>$data['id']))}">{$data.title}</a></p>
+</div>
+<div class="br bgff">
+<div class="title28_bord"><span class="fright"></span><h4>六合资料</h4></div>
+<ul class="newslist">
+<foreach name="list" item="vo">
+<volist name="vo['voo']" id="sub">
+<li><span>[<a href="{:U('Home/Article/lists',array('id'=>$vo['id']))}"><?=$vo['title']?></a>] {$sub.begtime|datetime}</span><a href="{:U('Home/Article/detail',array('id'=>$sub['id']))}.html" title="{$sub.title}" target="_blank">{$sub.title}</a></li>
+</volist>
+</foreach>
+</ul>
+<div class="blank10"></div>
+<div class="pager">{$page}</div>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="fright" style="width:300px">
+
+<div class="blank10"></div>
+<div class="br bgff">
+<div class="title28_bord"><span class="fright"></span><h4>精彩推荐</h4></div>
+<ul class="list14">
+<foreach name="list1" item="vo">
+<volist name="vo['voo']" id="sub">
+<li><a href="{:U('Home/Article/detail',array('id'=>$sub['id']))}.html" title="{$sub.title}" target="_blank">{$sub.title}</a></li>
+</volist>
+</foreach>
+</ul>
+<div class="blank10"></div>
+</div>
+<div class="blank10"></div>
+<div class="br bgff">
+<div class="title28_bord"><span class="fright"></span><h4>最新资料</h4></div>
+<ul class="list14">
+<foreach name="list2" item="vo">
+<volist name="vo['voo']" id="sub">
+<li><a href="{:U('Home/Article/detail',array('id'=>$sub['id']))}.html" title="{$sub.title}" target="_blank">{$sub.title}</a></li>
+</volist>
+</foreach>
+</ul>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="blank10"></div>
+</div>
+
+
+
+
+</div>
+
+<include file="Index:footer" />
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>

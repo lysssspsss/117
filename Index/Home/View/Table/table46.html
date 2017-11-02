@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>摇奖机位置分布走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">
+&nbsp &nbsp&nbsp简要说明：<li >香港彩票摇奖机位置矩阵将49个球按照摇奖机的顺序排列。第一列为1-10，第二列为11-20，第三列为21-30， 第四列为31-40，第五列为41-49。</li><li ></li></div>
+
+<div class="datalist">
+<foreach name="list" item="vo">
+
+<table width="20%" id="table1" style="width:180px;">
+<tr>
+<td >
+<div align="center" class="table">
+<table width="100%" border="0" align="center" cellspacing="0" id="table2">
+<tr>
+<td  colspan='7'><p align='center'>{$vo['title']}期</td>
+</tr> 
+<?php
+$i=0;
+$zong=array("10","20","30","40","09","19","29","39","49","08","18","28","38","48","07","17","27","37","47","06","16","26","36","46","05","15","25","35","45","04","14","24","34","44","03","13","23","33","43","02","12","22","32","42","01","11","21","31","41");
+foreach ($zong as $key=>$value){
+$i++;
+?>
+<?php if (in_array($value, array($vo['tit1'],$vo['tit2'],$vo['tit3'],$vo['tit4'],$vo['tit5'],$vo['tit6'],$vo['tit7']))){?>
+<td class="<?=cz_band_txt($value)?>"><?=$value?></td>
+<?php }else{?>
+<td><em><?=$value?></em></td>
+<?php } ?>
+
+<?php if ($i % 7==0){?></tr><tr><?php } ?>
+
+<?php } ?>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</foreach>
+</div>
+
+<!--主体内容结束-->
+</div>
+
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

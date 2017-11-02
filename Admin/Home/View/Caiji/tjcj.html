@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="{$Think.const.JS_URL}jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS_URL}bootstrap.min.js"></script>
+<body>
+<div class="place">
+<span>位置：</span>
+<ul class="placeul">
+<li><a href="__MODULE__/config.html">首页</a></li>
+<li><a href="__CONTROLLER__/index.html">采集管理</a></li>
+<li><a href="#">采集添加</a></li>
+</ul>
+</div>
+
+<div class="navbar">
+<div id="msg">
+<form class="form-horizontal tab-content" id="myTabContent" style="overflow: hidden;" action="{:U(Caiji/tjcj)}" method="post">
+    <div class="navbar-inner">
+        <a class="brand" href="javascript:void(0);">添加采集</a>
+    </div>
+    <p></p>
+    <div class="well">
+        <ul id="myTab" class="nav nav-pills span12">
+            <li class="active"><a href="#info" data-toggle="tab">基本信息</a></li>
+            <li><a href="#seo" data-toggle="tab">采集节点设置</a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <div class="form-horizontal tab-content">
+            <div class="tab-pane fade in active" id="info">
+                <div class="control-group">
+                    <label class="control-label" for="biaoti">采集项目名称</label>
+                    <div class="controls">
+                        <input type="text" name="biaoti" id="biaoti" placeholder="请输入采集项目名称" />
+                        <span class="help-inline">采集项目名称，中文</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="bianma">采集编码</label>
+                    <div class="controls">
+                        <select id="bianma" name="bianma">
+                            <option>UTF-8</option>
+                            <option>GB2312</option>
+                        </select>
+                        <span class="help-inline">抓取页面编码</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">文章所属分类</label>
+                    <div class="controls">
+                        <iframe frameborder=0 id=FrmRight name=right src="__CONTROLLER__/directory/?NumberID={$_SESSION['article_class']}" style="Z-INDEX: 1"></iframe>
+                        <span class="help-inline">文章所属分类</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="url">采集页面路径</label>
+                    <div class="controls">
+                        <!-- <textarea name="url" id="url" class="span4" placeholder="请输入采集页面路径"></textarea> -->
+                        <input type="text" name="url" id="url" class="span5" placeholder="请输入站点地址" />
+                        <span class="help-block">采集页面路径</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade in " id="seo">
+                <div class="control-group">
+                    <label class="control-label" for="fanwei">采集节点范围</label>
+                    <div class="controls">
+                        <input type="text" name="fanwei" id="fanwei" class="span4" />
+                        <span class="help-inline">采集列表节点范围标记(jquery 语法) 如：
+                        <code>.test li</code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="cjurl">列表地址</label>
+                    <div class="controls">
+                        <input type="text" name="cjurl" id="cjurl" class="span4" />
+                        <span class="help-inline">地址节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                    </div>
+                </div>                
+
+                <div class="control-group">
+                    <label class="control-label" for="title">标题</label>
+                    <div class="controls">
+                        <input type="text" name="title" id="title" class="span4" />
+                        <span class="help-inline">标题节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="picurl">采集缩略图</label>
+                    <div class="controls">
+                        <input type="text" name="picurl" id="picurl" class="span4" />
+                        <span class="help-inline">采集缩略图</span>
+                    </div>
+                </div>				
+				
+                <div class="control-group">
+                    <label class="control-label" for="glzd">过滤内容规则</label>
+                    <div class="controls">
+                        <input type="text" name="glzd" id="glzd" class="span4" />
+                        <span class="help-inline">过滤内容规则</span>
+                    </div>
+                </div>
+				
+                <div class="control-group">
+                    <label class="control-label" for="glbt">过滤标题规则</label>
+                    <div class="controls">
+                        <input type="text" name="glbt" id="glbt" class="span4" />
+                        <span class="help-inline">过滤标题规则</span>
+                    </div>
+                </div>				
+
+                <div class="control-group">
+                    <label class="control-label" for="cjmc">作者</label>
+                    <div class="controls">
+                        <input type="text" name="cjmc" id="cjmc" class="span4" />
+                        <span class="help-inline">作者节点标记(jquery 语法) 如：<code>.author</code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="nrfw">内容范围</label>
+                    <div class="controls">
+                        <input type="text" name="nrfw" id="nrfw" class="span4" />
+                        <span class="help-inline">访问量节点标记(jquery 语法) 如：<code>.list_hits</code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="nrgz">页面内容</label>
+                    <div class="controls">
+                        <input type="text" name="nrgz" id="nrgz" class="span4" />
+                        <span class="help-inline">页面内容节点标记(jquery 语法) 如：<code>.content</code></span>
+                    </div>
+                </div>                
+
+            </div>
+			<input type="submit"  value="提 交" class="btn btn-success" />
+            <input type="button" value="取 消" class="btn btn-info" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</form>	
+</div>	
+</div>
+</body>
+</html>

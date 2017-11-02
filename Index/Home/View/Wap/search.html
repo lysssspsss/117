@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<body>
+<foreach name="list" item="vo">
+<dl class="d">
+<dt><?=$vo['title']?>(开奖时间:<?=date("Y-m-d",$vo['begtime'])?>)</dt>
+<table width="100%" border="0" class="jl">
+<tr>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit1'],5)?>"><?=$vo['tit1']?></div><div class="sx"><?=$vo['tit01']?></div></div></td>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit2'],5)?>"><?=$vo['tit2']?></div><div class="sx"><?=$vo['tit02']?></div></div></td>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit3'],5)?>"><?=$vo['tit3']?></div><div class="sx"><?=$vo['tit03']?></div></div></td>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit4'],5)?>"><?=$vo['tit4']?></div><div class="sx"><?=$vo['tit04']?></div></div></td>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit5'],5)?>"><?=$vo['tit5']?></div><div class="sx"><?=$vo['tit05']?></div></div></td>
+<td width="13%"><div class="p"><div class="hm <?=yx_no_band($vo['tit6'],5)?>"><?=$vo['tit6']?></div><div class="sx"><?=$vo['tit06']?></div></div></td>
+<td width="7%"><font color="#BBBBBB">特</font></td>
+<td width="15%"><div class="p"><div class="hm <?=yx_no_band($vo['tit7'],5)?>"><?=$vo['tit7']?></div><div class="sx"><?=$vo['tit07']?></div></div></td>
+</tr>
+</table>
+</dl>
+</foreach>
+</body>
+</html>

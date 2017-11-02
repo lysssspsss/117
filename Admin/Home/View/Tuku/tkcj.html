@@ -1,0 +1,125 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									图库采集地址设置
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('textarea.limited').maxlength({
+		'feedback' : '.charsLeft', 
+	});
+	  
+	$('textarea.limitedone').maxlength({
+		'feedback' : '.charsLeftone', 
+	});
+	
+	$('#tuku_cj').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){		
+		if( '' == $.trim($('#site_url').val())){
+			$('#restwo').attr("class", "middle highmsg");//ID为resone 重新class赋值
+			$('#resone').html('').show();//id为resone 赋值html值
+			$('#restwo').html('网址不能为空').show();//id为resone 赋值html值
+			$('#site_url').focus(); 
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href="{:U('Tuku/tkcj')}";
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+<div class="col-xs-12 col-sm-12 rule-top alert alert-info top10">
+						<button type="button" class="close" data-dismiss="alert">
+							<i class="ace-icon fa fa-times"></i>
+						</button>
+						如图库图片无法正常打开，请联系QQ：4501870  获取最新的图库地址。
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="tuku_cj" id="tuku_cj" method="post" action="{:U('runtkcj')}">
+                                <input type="hidden" name="id" value="{$tuku_cj.id}" />
+
+                                   
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 站点网址 </label>
+										<div class="col-sm-9">
+											<input type="text" name="site_url" id="site_url" value="{$tuku_cj.site_url}"  class="col-xs-10 col-sm-5" />
+											<span class="lbl">&nbsp;&nbsp;<span class="red">*</span>必须加上http://  结尾要加上\ &nbsp; 如：http://www.178kj.cc/</span>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="restwo"></span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+
+<include file='index:footer' />
+
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+			<php>
+					$config=M('config')->where(array('id'=>1))->find();
+
+			</php>
+<!--底部start-->
+<div id="foot">
+	<div class="foot">
+    	<ul>
+			<li><a href="/">网站首页</a></li>
+			<li><a href="{:U('Home/History')}?id=2017">开奖记录</a></li>
+			<li><a href="{:U('Home/Charts/lhc1')}">走势图</a></li>
+			<li><a href="{$config.site_wap}" target="_blank">手机看开奖</a></li>
+			<li><a href="/Source/kj/2017/sx.html">号码属性对照</a></li>
+            <li><a href="/callback">开奖调用</a></li>
+        </ul>
+    </div>
+</div>
+
+    <div class="foot-txt">
+<p>{$config.site_qq|htmlspecialchars_decode|stripslashes}</p>
+<p>{$config.site_copyright|htmlspecialchars_decode|stripslashes}&nbsp;&nbsp;{$config.javascript|htmlspecialchars_decode|stripslashes}
+</p>
+</div>
+<!--底部end-->
+<script type="text/javascript" src="{$Think.const.JS_URL}zzsc.js"></script>
+<div class="bottom_tools">
+  <a id="scrollUp" href="javascript:;" title="飞回顶部"></a>
+</div>

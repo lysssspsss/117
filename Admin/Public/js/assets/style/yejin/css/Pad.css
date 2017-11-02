@@ -1,0 +1,33 @@
+﻿/*
+* name: Pad && MiddleScreen StyleSheet
+* version: v1.1.0
+* update: 尺寸细分代替横竖屏
+* date: 2015-08-10
+*/
+
+/* <1024 */
+/*header*/
+/*.logo{ float:none;}
+.nav{ float:none;}
+.top_nav{ height:auto}
+.nav ._lev2 ._menu{ width:205px;}
+.nav ._lev2 ._info{ width:635px;}
+.nav ._lev2 ._info ._txt{ width:310px}
+.nav ._lev2 ._menu a{ min-width:60px;}
+.banner .arr_prev{ margin-left:237px}
+.banner .arr_next{ margin-left:326px;}*/
+body{ min-width:1182px; overflow-x:auto; font-family:'Microsoft Yahei';padding-top: 0;}
+.header{ min-width: 1182px; position:static; width: auto;}
+.banner{ min-width:1182px}
+.zh_ban{ min-width:1182px; overflow:hidden}
+.wrap{ min-width:1182px}
+.his_con ._year-con{ overflow: auto;}
+.zt3_p2 ._list{ overflow: auto;}
+.zt1_p2 ._news ._right{ overflow: auto;}
+
+/* <768 */
+@media screen and (max-width: 768px){
+
+
+
+}

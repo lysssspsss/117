@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>黑白图库 - 马经历史图库这里是香港六合彩图库大全_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="117kj图库,117kj,马经,曾道人,福利传真,通天报,新报跑狗,香港正版挂牌,雷锋内幕报,平特,六合彩2016,东方心经,六合图库" />
+<meta name="description" content="117kj图库：这里是香港首发最新版图库 - 提供随时查看001-150期全年图纸记录,分有彩色图库、黑白图库、精品网址大全三大块。" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="/Index/Public/ls/js/checkLogin.js" type="text/javascript"></script>
+<script src="/Index/Public/ls/js/lightbox/js/modernizr.custom.js"></script>
+<script src="/Index/Public/ls/js/lightbox/js/lightbox-2.6.min.js"></script>
+<link href="/Index/Public/ls/js/lightbox/css/lightbox.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div id="headdivbox"></div>
+<div class="content clearfix">
+<div id="main" class="main">
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;>&nbsp;黑白图库</p>
+</div>
+<div class="blank10"></div>
+<div class="search">
+<form action="{:U('Home/Heibai')}" method="get">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <colgroup>
+    <col width="580">
+    <col width="180">
+    </colgroup>
+      <tbody><tr>
+        <td><input class="searchTxt" type="text" name="keywords" id="keywords" value="快速找图，输入关键字从请这里搜索" style="color: rgb(153, 153, 153);" onfocus="javascript:if(this.value == '快速找图，输入关键字从请这里搜索') this.value = ''; this.style.color='#333';" onblur="if(this.value == '') {this.value = '快速找图，输入关键字从请这里搜索';  this.style.color = '#999';}">
+        </td>
+        <td><input id="btnQuery" type="submit" name="btnQuery" class="searchBtn" value="搜 索"></td>
+      </tr>
+    </tbody></table>
+</form>
+</div>
+
+<div class="blank10"></div>
+<div class="br bgff">
+ <div class="title28_bord"><h4>黑白图库</h4></div>
+<div class="a_list"> 
+	<ul>
+<foreach name="list1" item="vo">
+<volist name="vo['voo1']" id="sub1">	
+<foreach name="list" item="vo">	
+		<volist name="vo['voo']" id="sub">
+
+
+		<li class="tplist"><label><a href="http://ls.lbyfw.net/black/{$sub.title}/{$sub1.content}.jpg" data-lightbox="image-set" class="bigimg" title="点击查看《{$sub1.title}第{$sub.title}期》" target="_blank">{$sub.title}</a></label><span class="key">{$sub1.content}</span><a href="{:U('Home/Heibai/detail',array('id'=>$sub1['id']))}.html" title="{$sub1.title}" onMouseOver="toolTip('<img src=http://slt.sj108.com/thumb/black/{$sub1.content}.jpg>')" onMouseOut="toolTip()" target="_blank">{$sub1.title}</a></li>
+	
+
+		</ul>		
+
+</volist> 
+</foreach>
+</volist>	
+</foreach>			
+</div>
+ <div class="clear"></div>
+ <div id="pages"></div>
+<div class="clear"></div>
+<div class="blank10"></div>
+</div>
+</div>
+</div>
+<script>
+function CheckAll(value,obj)  {
+var form=document.getElementsByTagName("form")
+for(var i=0;i<form.length;i++){
+for (var j=0;j<form[i].elements.length;j++){
+if(form[i].elements[j].type=="checkbox"){ 
+var e = form[i].elements[j]; 
+if (value=="selectAll"){e.checked=obj.checked}     
+else{e.checked=!e.checked;} 
+}
+}
+}
+}
+</script>
+<div id="fooderbox"></div>
+<script src='{$Think.const.JS_URL}config.js?v=117kj.com'></script>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>
+<script language="javascript" src="/Index/Public/ls/js/ToolTip.js"></script>

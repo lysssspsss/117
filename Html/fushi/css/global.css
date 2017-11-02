@@ -1,0 +1,70 @@
+/* CSS Document */
+
+*{ margin:0; padding:0;}
+body{ font-family: tahoma,"宋体"; font-size:12px; color:#000; line-height:2em; background: url(../images/header.jpg) top center no-repeat #000;}
+h1{line-height:1.3em;}
+a:hover img,img{ border:none;}
+ul{ list-style:none;}
+input,button,select,textarea{outline:none;font-family: tahoma,"宋体"; font-size:12px;}
+table input,table button,table select,table textarea{ vertical-align:middle;}
+textarea{resize:none}
+table{ border-collapse:collapse;}
+a{ text-decoration:none; color:#2b2a2a;}
+a:hover{ text-decoration: underline; color:#078cd1;}
+/*-------------------------结束公用样式--------------------------*/
+.clearfix:after{content:".";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}
+.clearfix{*zoom:1}
+.clear{clear:both;width:0px;height:0px;font-size:0px;overflow:hidden}
+input.inputclass{ margin:0 5px; margin-left:0;vertical-align:middle; _vertical-align:baseline;}
+
+.body { width: 1000px; margin: 0 auto; padding-top: 180px; position: relative;}
+.txt { width: 766px; height: 134px; overflow: hidden; text-indent: -9999px; position: absolute; top: 20px; right: 0; background: url(../images/txt.gif) 0 0 no-repeat;}
+.sc { width: 170px; height: 38px; overflow: hidden; text-indent: -9999px; padding-top: 47px; padding-left: 93px; display: block; position: absolute; top: 95px; right: 100px; background: url(../images/sc.gif) 0 0 no-repeat;}
+.top { width: 1000px; height: 30px; background: url(../images/top.png) top center no-repeat;}
+.foot { width: 1000px; height: 30px; background: url(../images/foot.png) bottom center no-repeat;}
+.containner { width: 940px; padding: 0 30px; background: url(../images/bg.png) 0 0 repeat-y;}
+.box .left { float: left; width: 700px;}
+.box .left input { width: 12px; height: 12px;}
+.box .left div { padding-bottom: 15px;}
+.box .right { float: right; width: 215px;}
+.box .right div { padding-bottom: 10px;}
+.qs { height: 50px; padding-top: 15px; font-size: 24px; text-align: center; font-family:"Microsoft YaHei";}
+.qs select { height: 40px; padding-left: 5px; font-size: 18px;}
+
+.qiu1,.qiu2,.qiu3,.qiu4,.qiu5,.qiu6,.qiu7 { width: 43px; height: 44px; line-height: 44px; margin-left: 5px; margin-right: 5px; display: inline-block; font-size: 20px; font-weight: bold; text-align: center; color: #fff; font-family: Tahoma, Geneva, sans-serif; background: url(../images/qiu.png) no-repeat;}
+.qiu1 { background-position: 0 0;}
+.qiu2 { background-position: 0 -60px;}
+.qiu3 { background-position: 0 -120px;}
+.qiu4 { background-position: 0 -180px;}
+.qiu5 { background-position: 0 -240px;}
+.qiu6 { background-position: 0 -300px;}
+.qiu7 { background-position: 0 -360px;}
+.qiu-last1,.qiu-last2 ,.qiu-last3,.qiu-last4,.qiu-last5,.qiu-last6,.qiu-last7 { width: 160px; height: 44px; line-height: 44px; margin-left: 5px; display: inline-block; font-size: 20px; text-align: center; color: #fff; font-family:"Microsoft YaHei"; background: url(../images/btn1.png) no-repeat;}
+.qiu-last1 { background-position: 0 0;}
+.qiu-last2 { background-position: 0 -60px;}
+.qiu-last3 { background-position: 0 -120px;}
+.qiu-last4 { background-position: 0 -180px;}
+.qiu-last5 { background-position: 0 -240px;}
+.qiu-last6 { background-position: 0 -300px;}
+.qiu-last7 { background-position: 0 -360px;}
+
+
+.btn1,.btn2,.btn3,.btn1:hover,.btn2:hover,.btn3:hover { width: 213px; height: 61px; display: block; overflow: hidden; text-indent: -9999px; border: 0; cursor: pointer; background: url(../images/btn2.png) no-repeat;}
+.btn1 { background-position: 0 0;}
+.btn2 { background-position: 0 -71px;}
+.btn3 { background-position: 0 -142px;}
+.btn1:hover { background-position: 0 -213px;}
+.btn2:hover { background-position: 0 -284px;}
+.btn3:hover { background-position: 0 -355px;}
+.btn4 { width: 212px; height: 122px; display: block; overflow: hidden; text-indent: -9999px; border: 0; cursor: pointer; background: url(../images/btn3.png) 0 0 no-repeat;}
+.btn4:hover { background: url(../images/btn3.png) 0 -130px no-repeat;}
+
+.txt-tit1,.txt-tit2 { width: 940px; height: 44px; line-height: 34px; padding-left: 20px; font-size: 16px; font-weight: bold; color: #fff; font-family:"Microsoft YaHei";}
+.txt-tit1 { background: url(../images/txt-tit1.png) 0 0 no-repeat;}
+.txt-tit2 { background: url(../images/txt-tit2.png) 0 0 no-repeat;}
+.txt-box { width: 896px; padding: 10px 20px; border-left: solid 2px #707070; border-right: solid 2px #707070;}
+.txt-foot { width: 940px; height: 10px; font-size: 0; line-height: 0; background: url(../images/txt-foot.png) bottom center no-repeat;}
+.green { color: #094;}
+.red { color: #f00;}
+.f-16 { font-size: 16px;}
+.grey-bg { margin-top: 10px; padding: 5px 10px; border-top: solid 1px #ddd; border-bottom: solid 1px #ddd; background: #eee;}

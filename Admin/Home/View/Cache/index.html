@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<script src="{$Think.const.JS_URL}/assets/js/jquery.min.js"></script>
+<body>
+<div class="place"><span>位置：</span><ul class="placeul"><li><a href="__MODULE__/config.html">首页</a></li><li><a href="#">缓存清理</a></li></ul></div>
+<div class="formbody">
+
+
+<table cellspacing="1" cellpadding="0" class="page_table">
+<tbody>
+<tr>
+<td width="21%" height="32" class="td_left">前台缓存清理</td>
+<td width="79%" class="left" style="padding:10px;">
+<input type="button" value="前台缓存清理" id="runtime" class="btn btn-success" />
+</td>
+</tr>
+
+<tr>
+<td class="td_left">后台缓存清理</td>
+<td class="left" style="padding:10px;">
+<input type="button" value="后台缓存清理" id="cache" class="btn btn-info" />
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function(){
+$('#runtime').click(function(){
+if(confirm("确认要清除前台缓存？")){
+var $type=$('#type').val();
+var $mess=$('#mess');
+$.post('__CONTROLLER__/runtime',{type:$type},function(data){
+alert("前台缓存清理成功");
+});
+}else{
+return false;
+}
+});
+$('#cache').click(function(){
+if(confirm("确认要清除后台缓存？")){
+var $type=$('#type').val();
+var $mess=$('#mess');
+$.post('__MODULE__/Administrator/runtime',{type:$type},function(data){
+alert("后台缓存清理成功");
+});
+}else{
+return false;
+}
+});
+});
+</script>

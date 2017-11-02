@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+* { margin: 0; padding: 0;}
+body{ font-family:"Microsoft YaHei";}
+.black_box { width: 100%; height: 40px; line-height: 40px; font-size: 30px; text-align: center; font-weight: bold; background: #000;}
+.black_box a { text-decoration: none;}
+.black_box a:hover { text-decoration: underline;}
+</style>
+<script type="text/javascript">
+function blinklink()
+{
+if (!document.getElementById('blink').style.color)
+ {
+ document.getElementById('blink').style.color="yellow"
+ }
+if (document.getElementById('blink').style.color=="yellow")
+ {
+ document.getElementById('blink').style.color="red"
+ }
+else
+ {
+ document.getElementById('blink').style.color="yellow"
+ }
+timer=setTimeout("blinklink()",100)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="blinklink()" onunload="stoptimer()">
+<div class="black_box"><p id="blink">117kj六合彩开奖现场，公式规律，精准打造【平特一肖】</p></div>
+</body>
+</html>

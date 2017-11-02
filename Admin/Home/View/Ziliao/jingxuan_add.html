@@ -1,0 +1,583 @@
+	<include file='index:header' />
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+<style>
+P {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+* {
+	WORD-WRAP: break-word
+}
+* {
+	WORD-WRAP: break-word
+}
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+* {
+	WORD-WRAP: break-word
+}
+* {
+	WORD-WRAP: break-word
+}
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+</style>
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									添加精选资料
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('#jingxuan_runadd').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#qihao').val())){
+			layer.alert('期号不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#qihao').focus(); 
+			});
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="jingxuan_runadd" id="jingxuan_runadd" method="post" action="__URL__/jingxuan_runadd">
+
+<table style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-COLLAPSE: collapse; WORD-WRAP: break-word; COLOR: buttontext; FONT-SIZE: 12px; CURSOR: default; PADDING-TOP: 0px" id="table1" border="1" cellspacing="1" bordercolorlight="#99ff99" cellpadding="0" width="100%">
+<tbody style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+
+
+<tr>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#FF0000" height="30" width="98%" align="middle" colspan="3">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px" color="#ffff00" size="5" face="Arial Black">请牢记(117kj)网址 www.117kj.com 
+	长期跟踪,稳赚不赔!
+		</font></b>
+	</td>
+</tr>
+
+
+<tr>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	<input type="text" style="width:25%" name="qihao" id="qihao" value="" />期:精选号码
+		</b></font>
+	</td>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="31" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+			
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px">
+
+<input type="text" style="width:50%" name="jxhm" id="jxhm" value="" />		
+				
+				</font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">特肖开:<input type="text" style="width:25%" name="jg" id="jg" value="？？" /></font></b>
+	</td>
+</tr>
+				
+
+					
+
+
+
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期:
+		</b></font><font color="#008080"><span style="font-size: 16pt"><b>精挑六码</b></span></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="31" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx6m" id="jx6m" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">特码开:<input type="text" style="width:25%" name="haoma" id="haoma" value="？？" /></font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期:一码中特
+		</b></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="31" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="ymzt" id="ymzt" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">平特开:<input type="text" style="width:25%" name="pt" id="pt" value="？？" /></font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期:精选一肖
+		</b></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="31" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jxyx" id="jxyx" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">单双开:<input type="text" style="width:25%" name="ds" id="ds" value="？？" /></font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期:精选
+		</b></font><font color="#008080"><span style="font-size: 16pt"><b>二肖</b></span></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="31" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx2x" id="jx2x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:{$vo.jg}{$vo.haoma}‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">:精选三肖</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx3x" id="jx3x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:{$vo.jg}{$vo.haoma}‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">:精选四肖</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx4x" id="jx4x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:{$vo.jg}{$vo.haoma}‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	期
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">:精选五肖</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx5x" id="jx5x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:{$vo.jg}{$vo.haoma}‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">期:精选六肖</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx6x" id="jx6x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:{$vo.jg}{$vo.haoma}‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">期:精选九肖</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jx9x" id="jx9x" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:</font></b><b style="WORD-WRAP: break-word; "><font style="WORD-WRAP: break-word; FONT-SIZE: 16pt; " color="#800080">{$vo.jg}{$vo.haoma}</font></b><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">期:</font></b><font color="#008080"><span style="font-size: 16pt"><b>单双中特</b></span></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="dszt" id="dszt" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:</font></b><b style="WORD-WRAP: break-word; "><font style="WORD-WRAP: break-word; FONT-SIZE: 16pt; " color="#800080">{$vo.jg}{$vo.haoma}</font></b><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">期:绝杀二尾</font></b>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="jsew" id="jsew" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:</font></b><b style="WORD-WRAP: break-word; "><font style="WORD-WRAP: break-word; FONT-SIZE: 16pt; " color="#800080">{$vo.jg}{$vo.haoma}</font></b><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖准</font></b>
+	</td>
+</tr>
+<tr>
+	<span style="WORD-WRAP: break-word">
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" height="30" width="23%" align="middle">
+		<font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px">
+	
+		</b></font><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#008080">期:</font></b><font color="#008080"><span style="font-size: 16pt"><b>平特一肖</b></span></font>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" width="55%" align="middle">
+		<table style="border-collapse: collapse; word-wrap: break-word; margin: 0; padding: 0" border="1" cellspacing="0" cellpadding="0" width="100%">
+		<tbody style="word-wrap: break-word; margin: 0; padding: 0">
+		<tr style="word-wrap: break-word; margin: 0; padding: 0">
+			<td height="33" width="62%" align="middle" style="word-wrap: break-word; margin: 0; padding: 0">
+				<span style="WORD-WRAP: break-word">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="padding: 0px; margin: 0px; word-wrap: break-word; font-size: 12pt; font-weight: 700;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; font-weight: 700; text-decoration: none; font-size: 16pt;">
+				<font color="#808000" face="黑体" size="3" style="word-wrap: break-word; font-size: 12pt; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px">
+				<b style="padding: 0px; margin: 0px; word-wrap: break-word;">
+				<span style="padding: 0px; margin: 0px; word-wrap: break-word; text-decoration: none; font-size: 16pt;">
+				<font color="#FF0000" style="word-wrap: break-word; font-weight: 700; letter-spacing: normal; margin: 0px; padding: 0px" face="微软雅黑">
+				
+				<font color="#FF0000" style="word-wrap: break-word; margin: 0px; padding: 0px"><input type="text" style="width:50%" name="ptyx" id="ptyx" value="" /></font></font></span></b></font></span></font></span></span>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#ffccff" width="20%" align="middle">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖開:</font></b><b style="WORD-WRAP: break-word; "><font style="WORD-WRAP: break-word; FONT-SIZE: 16pt; " color="#800080">{$vo.jg}{$vo.haoma}</font></b><b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 16pt; PADDING-TOP: 0px" color="#800080">‖准</font></b>
+	</td>
+</tr>
+
+<span style="WORD-WRAP: break-word">
+<tr>
+	<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; COLOR: #ffffff; FONT-SIZE: 10pt; PADDING-TOP: 0px" bgcolor="#FF0000" height="30" width="98%" align="middle" colspan="3">
+		<b style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px"><font style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; PADDING-TOP: 0px" color="#ffff00" size="5" face="Arial Black">请牢记(117kj)网址 www.117kj.com 
+	长期跟踪,稳赚不赔!
+		</font></b>
+	</td>
+</tr>
+</tbody>
+</table>
+
+									
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+	<include file='index:footer' />
+
+		</div><!-- /.main-container -->
+
+    		<!--下拉样式以及JS-->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/chosen.css" />
+		<script src="{$Think.const.JS_URL}/assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				if(!ace.vars['touch']) {
+					$('.chosen-select').chosen({allow_single_deselect:true}); 
+					$(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+						$('.chosen-select').each(function() {
+							 var $this = $(this);
+							 $this.next().css({'width': $this.parent().width()});
+						})
+					}).trigger('resize.chosen');
+			
+				}
+			});
+		</script>
+	</body>
+</html>

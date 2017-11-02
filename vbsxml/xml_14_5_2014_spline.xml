@@ -1,0 +1,2508 @@
+<?xml version="1.0" encoding="utf-8"?><anychart><settings>
+<chart_background>
+<corners all="5" type="square"/>
+</chart_background>
+<context_menu version_info="false" about_anychart="false">
+<save_as_image_item_text>另存为PNG图像</save_as_image_item_text>
+<print_chart_item_text>打印</print_chart_item_text>
+</context_menu>
+<animation enabled="True"/>
+</settings><charts><chart plot_type="Bubble"><chart_settings><title enabled="True" ><text>  正五码    大小单双分析图    www.117kj.com</text></title>
+<axes>
+<x_axis tickmarks_placement="Center">
+<title enabled="false"/>
+<zoom enabled="true" start="200" visible_range="25" scroll_bar_position="Outside"/>
+<labels display_mode="Stager"/>
+</x_axis>
+<y_axis>
+<labels enabled="false"/>
+<scale minimum="0" maximum="5" mode="Stacked"/>
+<title enabled="false"/>
+<axis_markers>
+<lines>
+<line value="1" color="Gray">
+<label enabled="true">
+<format>小单</format>
+</label>
+</line>
+<line value="2" color="Gray">
+<label enabled="true">
+<format>小双</format>
+</label>
+</line>
+<line value="3" color="Gray">
+<label enabled="true">
+<format>大单</format>
+</label>
+</line>
+<line value="4" color="Gray">
+<label enabled="true">
+<format>大双</format>
+</label>
+</line>
+</lines>
+</axis_markers>
+</y_axis>
+</axes>
+</chart_settings><data_plot_settings default_series_type="spline" >
+<line_series point_padding="0.2" group_padding="1">
+<label_settings enabled="true">
+<background enabled="false"/>
+<font color="Rgb(45,45,45)" bold="true" size="15">
+<effects enabled="true">
+<glow enabled="true" color="White" opacity="3" blur_x="1.5" blur_y="1.5" strength="3"/>
+</effects>
+</font>
+<format>{%wintxt}{enabled:False}</format>
+</label_settings>
+<tooltip_settings enabled="true">
+<font render_as_html="True"/>
+<format><![CDATA[<font color="#000000" size="16"><b>
+期数:{%Name}{enabled:False}
+平码:{%winnum}
+特码:{%addnum}{enabled:False}
+开奖日期:{%windate}
+</b></font>]]></format>
+<background>
+<border type="Solid" color="DarkColor(%Color)"/>
+</background>
+<font color="DarkColor(%Color)" size="15"/>
+</tooltip_settings>
+<marker_settings enabled="true"/>
+<line_style>
+<line thickness="2"/>
+</line_style>
+</line_series>
+</data_plot_settings><data><series name="lottery">
+<point name="2014001期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">43猪</font>]]>-
+<![CDATA[<font color="#008822">38龙</font>]]>-
+<![CDATA[<font color="#FF0000">01蛇</font>]]>-
+<![CDATA[<font color="#FF0000">46猴</font>]]>-
+<![CDATA[<font color="#0000FF">36马</font>]]>-
+<![CDATA[<font color="#008822">49蛇</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">21鸡/水</font>]]></attribute>
+<attribute name="windate">2014年01月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014002期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">31猪</font>]]>-
+<![CDATA[<font color="#008822">49蛇</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>-
+<![CDATA[<font color="#008822">32狗</font>]]>-
+<![CDATA[<font color="#008822">06鼠</font>]]>-
+<![CDATA[<font color="#008822">44狗</font>]]>
+</attribute>
+<attribute name="wintxt">06</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">43猪/水</font>]]></attribute>
+<attribute name="windate">2014年01月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014003期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">31猪</font>]]>-
+<![CDATA[<font color="#0000FF">09鸡</font>]]>-
+<![CDATA[<font color="#008822">38龙</font>]]>-
+<![CDATA[<font color="#0000FF">41牛</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>-
+<![CDATA[<font color="#FF0000">30鼠</font>]]>
+</attribute>
+<attribute name="wintxt">16</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">46猴/木</font>]]></attribute>
+<attribute name="windate">2014年01月07日</attribute>
+</attributes>
+</point>
+
+<point name="2014004期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">15兔</font>]]>-
+<![CDATA[<font color="#008822">28虎</font>]]>-
+<![CDATA[<font color="#0000FF">04虎</font>]]>-
+<![CDATA[<font color="#008822">39兔</font>]]>-
+<![CDATA[<font color="#FF0000">45鸡</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>
+</attribute>
+<attribute name="wintxt">45</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25蛇/金</font>]]></attribute>
+<attribute name="windate">2014年01月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014005期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36马</font>]]>-
+<![CDATA[<font color="#008822">39兔</font>]]>-
+<![CDATA[<font color="#008822">44狗</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>-
+<![CDATA[<font color="#0000FF">42鼠</font>]]>-
+<![CDATA[<font color="#0000FF">03兔</font>]]>
+</attribute>
+<attribute name="wintxt">42</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">17牛/金</font>]]></attribute>
+<attribute name="windate">2014年01月12日</attribute>
+</attributes>
+</point>
+
+<point name="2014006期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">09鸡</font>]]>-
+<![CDATA[<font color="#008822">11羊</font>]]>-
+<![CDATA[<font color="#008822">33鸡</font>]]>-
+<![CDATA[<font color="#0000FF">31猪</font>]]>-
+<![CDATA[<font color="#FF0000">34猴</font>]]>-
+<![CDATA[<font color="#008822">27兔</font>]]>
+</attribute>
+<attribute name="wintxt">34</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">21鸡/水</font>]]></attribute>
+<attribute name="windate">2014年01月14日</attribute>
+</attributes>
+</point>
+
+<point name="2014007期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">09鸡</font>]]>-
+<![CDATA[<font color="#0000FF">37蛇</font>]]>-
+<![CDATA[<font color="#FF0000">18鼠</font>]]>-
+<![CDATA[<font color="#008822">17牛</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>-
+<![CDATA[<font color="#0000FF">15兔</font>]]>
+</attribute>
+<attribute name="wintxt">16</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33鸡/金</font>]]></attribute>
+<attribute name="windate">2014年01月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014008期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">28虎</font>]]>-
+<![CDATA[<font color="#008822">44狗</font>]]>-
+<![CDATA[<font color="#FF0000">18鼠</font>]]>-
+<![CDATA[<font color="#008822">17牛</font>]]>-
+<![CDATA[<font color="#0000FF">03兔</font>]]>-
+<![CDATA[<font color="#0000FF">26龙</font>]]>
+</attribute>
+<attribute name="wintxt">03</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">38龙/木</font>]]></attribute>
+<attribute name="windate">2014年01月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014009期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">23羊</font>]]>-
+<![CDATA[<font color="#0000FF">20狗</font>]]>-
+<![CDATA[<font color="#FF0000">34猴</font>]]>-
+<![CDATA[<font color="#0000FF">37蛇</font>]]>-
+<![CDATA[<font color="#008822">49蛇</font>]]>-
+<![CDATA[<font color="#FF0000">08狗</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">44狗/水</font>]]></attribute>
+<attribute name="windate">2014年01月21日</attribute>
+</attributes>
+</point>
+
+<point name="2014010期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">04虎</font>]]>-
+<![CDATA[<font color="#FF0000">18鼠</font>]]>-
+<![CDATA[<font color="#008822">21鸡</font>]]>-
+<![CDATA[<font color="#0000FF">31猪</font>]]>-
+<![CDATA[<font color="#008822">27兔</font>]]>-
+<![CDATA[<font color="#008822">05牛</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07猪/木</font>]]></attribute>
+<attribute name="windate">2014年01月23日</attribute>
+</attributes>
+</point>
+
+<point name="2014011期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">38龙</font>]]>-
+<![CDATA[<font color="#0000FF">37蛇</font>]]>-
+<![CDATA[<font color="#008822">43猪</font>]]>-
+<![CDATA[<font color="#008822">05牛</font>]]>-
+<![CDATA[<font color="#0000FF">20狗</font>]]>-
+<![CDATA[<font color="#0000FF">48马</font>]]>
+</attribute>
+<attribute name="wintxt">20</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06鼠/水</font>]]></attribute>
+<attribute name="windate">2014年01月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014012期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30鼠</font>]]>-
+<![CDATA[<font color="#0000FF">20狗</font>]]>-
+<![CDATA[<font color="#0000FF">37蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04虎</font>]]>-
+<![CDATA[<font color="#008822">27兔</font>]]>-
+<![CDATA[<font color="#0000FF">31猪</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18鼠/金</font>]]></attribute>
+<attribute name="windate">2014年01月28日</attribute>
+</attributes>
+</point>
+
+<point name="2014013期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">26龙</font>]]>-
+<![CDATA[<font color="#0000FF">36马</font>]]>-
+<![CDATA[<font color="#008822">16虎</font>]]>-
+<![CDATA[<font color="#0000FF">03兔</font>]]>-
+<![CDATA[<font color="#FF0000">02龙</font>]]>-
+<![CDATA[<font color="#0000FF">04虎</font>]]>
+</attribute>
+<attribute name="wintxt">02</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">45鸡/木</font>]]></attribute>
+<attribute name="windate">2014年01月30日</attribute>
+</attributes>
+</point>
+
+<point name="2014014期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>
+</attribute>
+<attribute name="wintxt">13</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">37马/木</font>]]></attribute>
+<attribute name="windate">2014年02月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014015期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">39龙/火</font>]]></attribute>
+<attribute name="windate">2014年02月06日</attribute>
+</attributes>
+</point>
+
+<point name="2014016期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>
+</attribute>
+<attribute name="wintxt">37</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年02月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014017期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>
+</attribute>
+<attribute name="wintxt">25</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年02月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014018期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">30牛/木</font>]]></attribute>
+<attribute name="windate">2014年02月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014019期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">11猴/土</font>]]></attribute>
+<attribute name="windate">2014年02月15日</attribute>
+</attributes>
+</point>
+
+<point name="2014020期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">25</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猴/水</font>]]></attribute>
+<attribute name="windate">2014年02月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014021期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>
+</attribute>
+<attribute name="wintxt">03</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">45狗/木</font>]]></attribute>
+<attribute name="windate">2014年02月20日</attribute>
+</attributes>
+</point>
+
+<point name="2014022期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年02月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014023期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>
+</attribute>
+<attribute name="wintxt">41</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">05虎/水</font>]]></attribute>
+<attribute name="windate">2014年02月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014024期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>
+</attribute>
+<attribute name="wintxt">24</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">44猪/水</font>]]></attribute>
+<attribute name="windate">2014年02月27日</attribute>
+</attributes>
+</point>
+
+<point name="2014025期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>
+</attribute>
+<attribute name="wintxt">11</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">34鸡/金</font>]]></attribute>
+<attribute name="windate">2014年03月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014026期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>
+</attribute>
+<attribute name="wintxt">13</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">22鸡/水</font>]]></attribute>
+<attribute name="windate">2014年03月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014027期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>
+</attribute>
+<attribute name="wintxt">10</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">38蛇/木</font>]]></attribute>
+<attribute name="windate">2014年03月06日</attribute>
+</attributes>
+</point>
+
+<point name="2014028期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>
+</attribute>
+<attribute name="wintxt">24</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">40兔/</font>]]></attribute>
+<attribute name="windate">2014年03月08日</attribute>
+</attributes>
+</point>
+
+<point name="2014029期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>
+</attribute>
+<attribute name="wintxt">15</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年03月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014030期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>
+</attribute>
+<attribute name="wintxt">10</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">30牛/木</font>]]></attribute>
+<attribute name="windate">2014年03月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014031期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>
+</attribute>
+<attribute name="wintxt">21</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年03月15日</attribute>
+</attributes>
+</point>
+
+<point name="2014032期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>
+</attribute>
+<attribute name="wintxt">23</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年03月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014033期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>
+</attribute>
+<attribute name="wintxt">18</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年03月20日</attribute>
+</attributes>
+</point>
+
+<point name="2014034期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>
+</attribute>
+<attribute name="wintxt">11</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">04兔/金</font>]]></attribute>
+<attribute name="windate">2014年03月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014035期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年03月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014036期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>
+</attribute>
+<attribute name="wintxt">42</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">36羊/水</font>]]></attribute>
+<attribute name="windate">2014年03月27日</attribute>
+</attributes>
+</point>
+
+<point name="2014037期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>
+</attribute>
+<attribute name="wintxt">12</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">11猴/土</font>]]></attribute>
+<attribute name="windate">2014年03月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014038期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25马/金</font>]]></attribute>
+<attribute name="windate">2014年04月01日</attribute>
+</attributes>
+</point>
+
+<point name="2014039期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">03龙/金</font>]]></attribute>
+<attribute name="windate">2014年04月03日</attribute>
+</attributes>
+</point>
+
+<point name="2014040期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>
+</attribute>
+<attribute name="wintxt">19</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年04月05日</attribute>
+</attributes>
+</point>
+
+<point name="2014041期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>
+</attribute>
+<attribute name="wintxt">31</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年04月08日</attribute>
+</attributes>
+</point>
+
+<point name="2014042期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>
+</attribute>
+<attribute name="wintxt">42</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25马/金</font>]]></attribute>
+<attribute name="windate">2014年04月10日</attribute>
+</attributes>
+</point>
+
+<point name="2014043期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">13马/水</font>]]></attribute>
+<attribute name="windate">2014年04月12日</attribute>
+</attributes>
+</point>
+
+<point name="2014044期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年04月15日</attribute>
+</attributes>
+</point>
+
+<point name="2014045期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>
+</attribute>
+<attribute name="wintxt">17</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">42牛/土</font>]]></attribute>
+<attribute name="windate">2014年04月17日</attribute>
+</attributes>
+</point>
+
+<point name="2014046期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>
+</attribute>
+<attribute name="wintxt">20</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">03龙/金</font>]]></attribute>
+<attribute name="windate">2014年04月19日</attribute>
+</attributes>
+</point>
+
+<point name="2014047期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>
+</attribute>
+<attribute name="wintxt">03</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年04月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014048期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>
+</attribute>
+<attribute name="wintxt">01</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">16兔/木</font>]]></attribute>
+<attribute name="windate">2014年04月24日</attribute>
+</attributes>
+</point>
+
+<point name="2014049期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">46鸡/木</font>]]></attribute>
+<attribute name="windate">2014年04月26日</attribute>
+</attributes>
+</point>
+
+<point name="2014050期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>
+</attribute>
+<attribute name="wintxt">45</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年04月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014051期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">30牛/木</font>]]></attribute>
+<attribute name="windate">2014年05月01日</attribute>
+</attributes>
+</point>
+
+<point name="2014052期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>
+</attribute>
+<attribute name="wintxt">06</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25马/金</font>]]></attribute>
+<attribute name="windate">2014年05月03日</attribute>
+</attributes>
+</point>
+
+<point name="2014053期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">30牛/木</font>]]></attribute>
+<attribute name="windate">2014年05月06日</attribute>
+</attributes>
+</point>
+
+<point name="2014054期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>
+</attribute>
+<attribute name="wintxt">30</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">48羊/金</font>]]></attribute>
+<attribute name="windate">2014年05月08日</attribute>
+</attributes>
+</point>
+
+<point name="2014055期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>
+</attribute>
+<attribute name="wintxt">16</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">05虎/水</font>]]></attribute>
+<attribute name="windate">2014年05月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014056期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>
+</attribute>
+<attribute name="wintxt">22</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">08猪/木</font>]]></attribute>
+<attribute name="windate">2014年05月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014057期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>
+</attribute>
+<attribute name="wintxt">35</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07鼠/木</font>]]></attribute>
+<attribute name="windate">2014年05月15日</attribute>
+</attributes>
+</point>
+
+<point name="2014058期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>
+</attribute>
+<attribute name="wintxt">09</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07鼠/木</font>]]></attribute>
+<attribute name="windate">2014年05月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014059期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>
+</attribute>
+<attribute name="wintxt">34</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年05月20日</attribute>
+</attributes>
+</point>
+
+<point name="2014060期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>
+</attribute>
+<attribute name="wintxt">28</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年05月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014061期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>
+</attribute>
+<attribute name="wintxt">39</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">49马/土</font>]]></attribute>
+<attribute name="windate">2014年05月24日</attribute>
+</attributes>
+</point>
+
+<point name="2014062期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>
+</attribute>
+<attribute name="wintxt">44</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">01马/火</font>]]></attribute>
+<attribute name="windate">2014年05月27日</attribute>
+</attributes>
+</point>
+
+<point name="2014063期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猴/水</font>]]></attribute>
+<attribute name="windate">2014年05月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014064期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>
+</attribute>
+<attribute name="wintxt">02</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年05月31日</attribute>
+</attributes>
+</point>
+
+<point name="2014065期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">15龙/木</font>]]></attribute>
+<attribute name="windate">2014年06月03日</attribute>
+</attributes>
+</point>
+
+<point name="2014066期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>
+</attribute>
+<attribute name="wintxt">10</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年06月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014067期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>
+</attribute>
+<attribute name="wintxt">19</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年06月07日</attribute>
+</attributes>
+</point>
+
+<point name="2014068期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>
+</attribute>
+<attribute name="wintxt">44</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">40兔/</font>]]></attribute>
+<attribute name="windate">2014年06月10日</attribute>
+</attributes>
+</point>
+
+<point name="2014069期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">41</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">15龙/木</font>]]></attribute>
+<attribute name="windate">2014年06月12日</attribute>
+</attributes>
+</point>
+
+<point name="2014070期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>
+</attribute>
+<attribute name="wintxt">04</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">21狗/水</font>]]></attribute>
+<attribute name="windate">2014年06月17日</attribute>
+</attributes>
+</point>
+
+<point name="2014071期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>
+</attribute>
+<attribute name="wintxt">03</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07鼠/木</font>]]></attribute>
+<attribute name="windate">2014年06月19日</attribute>
+</attributes>
+</point>
+
+<point name="2014072期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>
+</attribute>
+<attribute name="wintxt">02</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">48羊/金</font>]]></attribute>
+<attribute name="windate">2014年06月21日</attribute>
+</attributes>
+</point>
+
+<point name="2014073期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>
+</attribute>
+<attribute name="wintxt">18</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">36羊/水</font>]]></attribute>
+<attribute name="windate">2014年06月24日</attribute>
+</attributes>
+</point>
+
+<point name="2014074期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>
+</attribute>
+<attribute name="wintxt">02</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">28兔/土</font>]]></attribute>
+<attribute name="windate">2014年06月26日</attribute>
+</attributes>
+</point>
+
+<point name="2014075期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>
+</attribute>
+<attribute name="wintxt">47</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">21狗/水</font>]]></attribute>
+<attribute name="windate">2014年06月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014076期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>
+</attribute>
+<attribute name="wintxt">43</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">20猪/土</font>]]></attribute>
+<attribute name="windate">2014年07月03日</attribute>
+</attributes>
+</point>
+
+<point name="2014077期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">47猴/金</font>]]></attribute>
+<attribute name="windate">2014年07月05日</attribute>
+</attributes>
+</point>
+
+<point name="2014078期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>
+</attribute>
+<attribute name="wintxt">39</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">36羊/水</font>]]></attribute>
+<attribute name="windate">2014年07月08日</attribute>
+</attributes>
+</point>
+
+<point name="2014079期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>
+</attribute>
+<attribute name="wintxt">22</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">08猪/木</font>]]></attribute>
+<attribute name="windate">2014年07月10日</attribute>
+</attributes>
+</point>
+
+<point name="2014080期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>
+</attribute>
+<attribute name="wintxt">13</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">43鼠/水</font>]]></attribute>
+<attribute name="windate">2014年07月12日</attribute>
+</attributes>
+</point>
+
+<point name="2014081期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>
+</attribute>
+<attribute name="wintxt">02</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">44猪/水</font>]]></attribute>
+<attribute name="windate">2014年07月15日</attribute>
+</attributes>
+</point>
+
+<point name="2014082期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>
+</attribute>
+<attribute name="wintxt">01</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">10鸡/火</font>]]></attribute>
+<attribute name="windate">2014年07月17日</attribute>
+</attributes>
+</point>
+
+<point name="2014083期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">49马/土</font>]]></attribute>
+<attribute name="windate">2014年07月19日</attribute>
+</attributes>
+</point>
+
+<point name="2014084期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>
+</attribute>
+<attribute name="wintxt">41</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">13马/水</font>]]></attribute>
+<attribute name="windate">2014年07月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014085期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>
+</attribute>
+<attribute name="wintxt">05</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年07月24日</attribute>
+</attributes>
+</point>
+
+<point name="2014086期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>
+</attribute>
+<attribute name="wintxt">15</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">40兔/</font>]]></attribute>
+<attribute name="windate">2014年07月26日</attribute>
+</attributes>
+</point>
+
+<point name="2014087期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>
+</attribute>
+<attribute name="wintxt">15</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年07月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014088期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>
+</attribute>
+<attribute name="wintxt">48</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">38蛇/木</font>]]></attribute>
+<attribute name="windate">2014年07月31日</attribute>
+</attributes>
+</point>
+
+<point name="2014089期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>
+</attribute>
+<attribute name="wintxt">22</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">28兔/土</font>]]></attribute>
+<attribute name="windate">2014年08月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014090期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>
+</attribute>
+<attribute name="wintxt">18</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">14蛇/水</font>]]></attribute>
+<attribute name="windate">2014年08月05日</attribute>
+</attributes>
+</point>
+
+<point name="2014091期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">11猴/土</font>]]></attribute>
+<attribute name="windate">2014年08月07日</attribute>
+</attributes>
+</point>
+
+<point name="2014092期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">37马/木</font>]]></attribute>
+<attribute name="windate">2014年08月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014093期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>
+</attribute>
+<attribute name="wintxt">07</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">32猪/火</font>]]></attribute>
+<attribute name="windate">2014年08月12日</attribute>
+</attributes>
+</point>
+
+<point name="2014094期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>
+</attribute>
+<attribute name="wintxt">08</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">11猴/土</font>]]></attribute>
+<attribute name="windate">2014年08月14日</attribute>
+</attributes>
+</point>
+
+<point name="2014095期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>
+</attribute>
+<attribute name="wintxt">26</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">15龙/木</font>]]></attribute>
+<attribute name="windate">2014年08月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014096期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>
+</attribute>
+<attribute name="wintxt">32</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">16兔/木</font>]]></attribute>
+<attribute name="windate">2014年08月19日</attribute>
+</attributes>
+</point>
+
+<point name="2014097期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18牛/金</font>]]></attribute>
+<attribute name="windate">2014年08月21日</attribute>
+</attributes>
+</point>
+
+<point name="2014098期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>
+</attribute>
+<attribute name="wintxt">12</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">13马/水</font>]]></attribute>
+<attribute name="windate">2014年08月23日</attribute>
+</attributes>
+</point>
+
+<point name="2014099期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>
+</attribute>
+<attribute name="wintxt">32</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">47猴/金</font>]]></attribute>
+<attribute name="windate">2014年08月26日</attribute>
+</attributes>
+</point>
+
+<point name="2014100期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>
+</attribute>
+<attribute name="wintxt">24</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">49马/土</font>]]></attribute>
+<attribute name="windate">2014年08月28日</attribute>
+</attributes>
+</point>
+
+<point name="2014101期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年08月30日</attribute>
+</attributes>
+</point>
+
+<point name="2014102期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>
+</attribute>
+<attribute name="wintxt">47</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25马/金</font>]]></attribute>
+<attribute name="windate">2014年09月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014103期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">01马/火</font>]]></attribute>
+<attribute name="windate">2014年09月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014104期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>
+</attribute>
+<attribute name="wintxt">25</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年09月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014105期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">32猪/火</font>]]></attribute>
+<attribute name="windate">2014年09月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014106期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>
+</attribute>
+<attribute name="wintxt">34</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猴/水</font>]]></attribute>
+<attribute name="windate">2014年09月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014107期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>
+</attribute>
+<attribute name="wintxt">06</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">29虎/木</font>]]></attribute>
+<attribute name="windate">2014年09月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014108期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>
+</attribute>
+<attribute name="wintxt">16</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年09月20日</attribute>
+</attributes>
+</point>
+
+<point name="2014109期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>
+</attribute>
+<attribute name="wintxt">12</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">23猴/火</font>]]></attribute>
+<attribute name="windate">2014年09月23日</attribute>
+</attributes>
+</point>
+
+<point name="2014110期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>
+</attribute>
+<attribute name="wintxt">44</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">38蛇/木</font>]]></attribute>
+<attribute name="windate">2014年09月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014111期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>
+</attribute>
+<attribute name="wintxt">26</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">24羊/火</font>]]></attribute>
+<attribute name="windate">2014年09月28日</attribute>
+</attributes>
+</point>
+
+<point name="2014112期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>
+</attribute>
+<attribute name="wintxt">39</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">47猴/金</font>]]></attribute>
+<attribute name="windate">2014年09月30日</attribute>
+</attributes>
+</point>
+
+<point name="2014113期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07鼠/木</font>]]></attribute>
+<attribute name="windate">2014年10月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014114期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">05虎</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>
+</attribute>
+<attribute name="wintxt">27</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">08猪/木</font>]]></attribute>
+<attribute name="windate">2014年10月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014115期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>
+</attribute>
+<attribute name="wintxt">13</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">48羊/金</font>]]></attribute>
+<attribute name="windate">2014年10月07日</attribute>
+</attributes>
+</point>
+
+<point name="2014116期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">39龙/火</font>]]></attribute>
+<attribute name="windate">2014年10月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014117期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>
+</attribute>
+<attribute name="wintxt">34</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">08猪/木</font>]]></attribute>
+<attribute name="windate">2014年10月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014118期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#008822">05虎</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>
+</attribute>
+<attribute name="wintxt">01</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年10月14日</attribute>
+</attributes>
+</point>
+
+<point name="2014119期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18牛/金</font>]]></attribute>
+<attribute name="windate">2014年10月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014120期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">25马/金</font>]]></attribute>
+<attribute name="windate">2014年10月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014121期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>
+</attribute>
+<attribute name="wintxt">17</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">42牛/土</font>]]></attribute>
+<attribute name="windate">2014年10月21日</attribute>
+</attributes>
+</point>
+
+<point name="2014122期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">11猴</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年10月23日</attribute>
+</attributes>
+</point>
+
+<point name="2014123期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>
+</attribute>
+<attribute name="wintxt">01</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">18牛/金</font>]]></attribute>
+<attribute name="windate">2014年10月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014124期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>
+</attribute>
+<attribute name="wintxt">26</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年10月28日</attribute>
+</attributes>
+</point>
+
+<point name="2014125期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年10月30日</attribute>
+</attributes>
+</point>
+
+<point name="2014126期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#008822">11猴</font>]]>
+</attribute>
+<attribute name="wintxt">10</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年11月01日</attribute>
+</attributes>
+</point>
+
+<point name="2014127期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">38蛇</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#FF0000">23猴</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年11月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014128期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>
+</attribute>
+<attribute name="wintxt">48</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">03龙/金</font>]]></attribute>
+<attribute name="windate">2014年11月06日</attribute>
+</attributes>
+</point>
+
+<point name="2014129期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>
+</attribute>
+<attribute name="wintxt">34</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">43鼠/水</font>]]></attribute>
+<attribute name="windate">2014年11月08日</attribute>
+</attributes>
+</point>
+
+<point name="2014130期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">05虎</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#0000FF">09狗</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>
+</attribute>
+<attribute name="wintxt">48</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">26蛇/金</font>]]></attribute>
+<attribute name="windate">2014年11月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014131期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>
+</attribute>
+<attribute name="wintxt">41</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">06牛/水</font>]]></attribute>
+<attribute name="windate">2014年11月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014132期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">34鸡</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>
+</attribute>
+<attribute name="wintxt">32</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">10鸡/火</font>]]></attribute>
+<attribute name="windate">2014年11月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014133期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">46鸡/木</font>]]></attribute>
+<attribute name="windate">2014年11月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014134期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#008822">16兔</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>
+</attribute>
+<attribute name="wintxt">19</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">12羊/土</font>]]></attribute>
+<attribute name="windate">2014年11月20日</attribute>
+</attributes>
+</point>
+
+<point name="2014135期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">44猪/水</font>]]></attribute>
+<attribute name="windate">2014年11月22日</attribute>
+</attributes>
+</point>
+
+<point name="2014136期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#008822">44猪</font>]]>-
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>
+</attribute>
+<attribute name="wintxt">35</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年11月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014137期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">02蛇</font>]]>-
+<![CDATA[<font color="#FF0000">45狗</font>]]>-
+<![CDATA[<font color="#008822">22鸡</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>
+</attribute>
+<attribute name="wintxt">40</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">44猪/水</font>]]></attribute>
+<attribute name="windate">2014年11月27日</attribute>
+</attributes>
+</point>
+
+<point name="2014138期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#0000FF">26蛇</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年11月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014139期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#008822">49马</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>
+</attribute>
+<attribute name="wintxt">49</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年12月02日</attribute>
+</attributes>
+</point>
+
+<point name="2014140期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#008822">27龙</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#FF0000">08猪</font>]]>
+</attribute>
+<attribute name="wintxt">36</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">35猴/水</font>]]></attribute>
+<attribute name="windate">2014年12月04日</attribute>
+</attributes>
+</point>
+
+<point name="2014141期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">21狗</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#FF0000">18牛</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>
+</attribute>
+<attribute name="wintxt">25</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">16兔/木</font>]]></attribute>
+<attribute name="windate">2014年12月06日</attribute>
+</attributes>
+</point>
+
+<point name="2014142期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#0000FF">41虎</font>]]>-
+<![CDATA[<font color="#0000FF">03龙</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">46鸡/木</font>]]></attribute>
+<attribute name="windate">2014年12月09日</attribute>
+</attributes>
+</point>
+
+<point name="2014143期" y="1" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#FF0000">13马</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>
+</attribute>
+<attribute name="wintxt">13</attribute>
+<attribute name="addnum"><![CDATA[<font color="#0000FF">31鼠/火</font>]]></attribute>
+<attribute name="windate">2014年12月11日</attribute>
+</attributes>
+</point>
+
+<point name="2014144期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#008822">17虎</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>-
+<![CDATA[<font color="#0000FF">20猪</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">19鼠/土</font>]]></attribute>
+<attribute name="windate">2014年12月13日</attribute>
+</attributes>
+</point>
+
+<point name="2014145期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">42牛</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#FF0000">07鼠</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#FF0000">34鸡</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">16兔/木</font>]]></attribute>
+<attribute name="windate">2014年12月16日</attribute>
+</attributes>
+</point>
+
+<point name="2014146期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">08猪</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">06牛</font>]]>-
+<![CDATA[<font color="#FF0000">29虎</font>]]>-
+<![CDATA[<font color="#008822">21狗</font>]]>
+</attribute>
+<attribute name="wintxt">29</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年12月18日</attribute>
+</attributes>
+</point>
+
+<point name="2014147期" y="4" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">43鼠</font>]]>-
+<![CDATA[<font color="#0000FF">36羊</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#FF0000">02蛇</font>]]>
+</attribute>
+<attribute name="wintxt">30</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">22鸡/水</font>]]></attribute>
+<attribute name="windate">2014年12月21日</attribute>
+</attributes>
+</point>
+
+<point name="2014148期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">35猴</font>]]>-
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#0000FF">04兔</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>
+</attribute>
+<attribute name="wintxt">04</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">33狗/金</font>]]></attribute>
+<attribute name="windate">2014年12月23日</attribute>
+</attributes>
+</point>
+
+<point name="2014149期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#0000FF">47猴</font>]]>-
+<![CDATA[<font color="#FF0000">24羊</font>]]>-
+<![CDATA[<font color="#FF0000">46鸡</font>]]>-
+<![CDATA[<font color="#FF0000">12羊</font>]]>-
+<![CDATA[<font color="#008822">43鼠</font>]]>
+</attribute>
+<attribute name="wintxt">12</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">30牛/木</font>]]></attribute>
+<attribute name="windate">2014年12月25日</attribute>
+</attributes>
+</point>
+
+<point name="2014150期" y="2" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">28兔</font>]]>-
+<![CDATA[<font color="#0000FF">15龙</font>]]>-
+<![CDATA[<font color="#0000FF">31鼠</font>]]>-
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">14蛇</font>]]>-
+<![CDATA[<font color="#0000FF">48羊</font>]]>
+</attribute>
+<attribute name="wintxt">14</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">40兔/</font>]]></attribute>
+<attribute name="windate">2014年12月27日</attribute>
+</attributes>
+</point>
+
+<point name="2014151期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#FF0000">01马</font>]]>-
+<![CDATA[<font color="#FF0000">40兔</font>]]>-
+<![CDATA[<font color="#FF0000">30牛</font>]]>-
+<![CDATA[<font color="#008822">39龙</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>
+</attribute>
+<attribute name="wintxt">25</attribute>
+<attribute name="addnum"><![CDATA[<font color="#FF0000">07鼠/木</font>]]></attribute>
+<attribute name="windate">2014年12月29日</attribute>
+</attributes>
+</point>
+
+<point name="2014152期" y="3" >
+<attributes>
+<attribute name="winnum">
+<![CDATA[<font color="#008822">32猪</font>]]>-
+<![CDATA[<font color="#0000FF">37马</font>]]>-
+<![CDATA[<font color="#FF0000">19鼠</font>]]>-
+<![CDATA[<font color="#0000FF">25马</font>]]>-
+<![CDATA[<font color="#008822">33狗</font>]]>-
+<![CDATA[<font color="#0000FF">10鸡</font>]]>
+</attribute>
+<attribute name="wintxt">33</attribute>
+<attribute name="addnum"><![CDATA[<font color="#008822">27龙/土</font>]]></attribute>
+<attribute name="windate">2014年12月31日</attribute>
+</attributes>
+</point>
+</series></data></chart></charts></anychart>

@@ -1,0 +1,57 @@
+/*
+* name: responsive
+* version: v1.1.7
+* update: 响应图片从ui.css集中到responsive.css
+* data: 2015-08-28
+*/
+
+/* import responsive stylesheet */
+@import url(./Pad.css) screen and (max-width: 1024px);
+@import url(./Mobile.css) screen and (max-width: 640px);
+
+/* hide template textarea */
+.UnpcPush textarea, .PcPush textarea, .MobilePush textarea, .UnmobilePush textarea{display: none;}
+
+/*
+* PcMode
+*/
+body:after {
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  content: 'Pc';
+}
+.PcMode:after { content: 'Pc' !important;}
+.UnpcPush, .MobilePush { display: none;}
+img[data-src] { opacity: 0 ; filter: alpha(opacity=0);}
+/*
+* PadMode
+*/
+@media screen and (max-width: 1024px) {
+
+
+  body{ user-select: none;-webkit-user-select: none;}
+  body,input,textarea,button,select {font-family:'Microsoft Yahei';font-size:14px;}
+  .wrap{}
+  .PcPush{display: none;}
+  .UnpcPush{display: block;}
+
+}
+
+/*
+* MobileMode
+*/
+@media screen and (max-width: 640px) {
+
+  body:after {
+    content: 'Mobile';
+  }
+  body,input,textarea,button,select {font-size:12px;}
+  .wrap{padding-left:4%;padding-right:4%; }
+  .UnmobilePush{display: none;}
+  .MobilePush{display:block;}
+  img[data-src]{opacity: 1;}
+
+}

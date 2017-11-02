@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>头数统计走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">  属性说明：将49个号码分为第一个数分为五组。 <li style="color:red">1、【一头】10、11、12、13、14、15、16、17、18、19</li><li style="color:red">2、【二头】20、21、22、23、24、25、26、27、28、29</li><li style="color:red">3、【三头】30、31、32、33、34、35、36、37、38、39</li><li style="color:red">4、【四头】40、41、42、43、44、45、46、47、48、49</li><li style="color:red">5、【零头】01、02、03、04、05、06、07、08、09</li></div><div class="table"><table  border="1" width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0"><tr><td></td><td></td><td>基</td><td>本</td><td>号</td><td>码</td><td></td><td></td><td></td><td>号</td><td>码</td><td></td><td>头</td><td>数</td><td></td><td></td><td>号</td><td>码</td><td></td><td>生</td><td>肖</td><td></td><td>出</td><td>现</td><td></td><td>次</td><td>数</td></tr><tr ><td>期数</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一肖</td><td>二肖</td><td>三肖</td><td>四肖</td><td>五肖</td><td>六肖</td><td>特肖</td><td>一头</td><td>二头</td><td>三头</td><td>四头</td><td>零头</td></tr>
+
+<foreach name="list" item="vo">
+<tr>
+<td >{$vo['title']}期</td>
+<td class="{$vo['tit1']|cz_band_txt}">{$vo['tit1']}</td>
+<td class="{$vo['tit2']|cz_band_txt}">{$vo['tit2']}</td>
+<td class="{$vo['tit3']|cz_band_txt}">{$vo['tit3']}</td>
+<td class="{$vo['tit4']|cz_band_txt}">{$vo['tit4']}</td>
+<td class="{$vo['tit5']|cz_band_txt}">{$vo['tit5']}</td>
+<td class="{$vo['tit6']|cz_band_txt}">{$vo['tit6']}</td>
+<td class="{$vo['tit7']|cz_band_txt}">{$vo['tit7']}</td>
+
+<?php      if(in_array($vo['tit1'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums1=$nums1+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit1'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa1=$numsa1+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit1'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb1=$numsb1+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit1'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc1=$numsc1+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit1'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd1=$numsd1+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+
+
+<?php      if(in_array($vo['tit2'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums2=$nums2+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit2'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa2=$numsa2+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit2'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb2=$numsb2+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit2'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc2=$numsc2+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit2'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd2=$numsd2+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+
+<?php      if(in_array($vo['tit3'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums3=$nums3+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit3'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa3=$numsa3+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit3'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb3=$numsb3+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit3'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc3=$numsc3+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit3'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd3=$numsd3+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+
+<?php      if(in_array($vo['tit4'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums4=$nums4+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit4'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa4=$numsa4+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit4'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb4=$numsb4+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit4'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc4=$numsc4+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit4'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd4=$numsd4+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+
+<?php      if(in_array($vo['tit5'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums5=$nums5+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit5'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa5=$numsa5+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit5'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb5=$numsb5+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit5'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc5=$numsc5+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit5'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd5=$numsd5+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+<?php      if(in_array($vo['tit6'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums6=$nums6+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit6'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa6=$numsa6+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit6'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb6=$numsb6+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit6'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc6=$numsc6+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit6'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd6=$numsd6+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+<?php      if(in_array($vo['tit7'], array("10","11","12","13","14","15","16","17","18","19"))){
+$nums7=$nums7+1;
+$hea=$hea+1;
+?>
+<td style="color:red;font-weight: 800">一</td>
+<?php }elseif(in_array($vo['tit7'], array("20","21","22","23","24","25","26","27","28","29"))){
+$numsa7=$numsa7+1;
+$heb=$heb+1;
+?>
+<td style="color:red;font-weight: 800">二</td>
+<?php }elseif(in_array($vo['tit7'], array("30","31","32","33","34","35","36","37","38","39"))){
+$numsb7=$numsb7+1;
+$hec=$hec+1;
+?>
+<td style="color:red;font-weight: 800">三</td>
+<?php }elseif(in_array($vo['tit7'], array("40","41","42","43","44","45","46","47","48","49"))){
+$numsc7=$numsc7+1;
+$hed=$hed+1;
+?>
+<td style="color:red;font-weight: 800">四</td>
+<?php }elseif(in_array($vo['tit7'], array("01","02","03","04","05","06","07","08","09"))){
+$numsd7=$numsd7+1;
+$hee=$hee+1;
+?>
+<td style="color:red;font-weight: 800">零</td>
+<?php } ?>
+
+<td class="bg"><?=$vo['tit01']?></td>
+<td class="bg"><?=$vo['tit02']?></td>
+<td class="bg"><?=$vo['tit03']?></td>
+<td class="bg"><?=$vo['tit04']?></td>
+<td class="bg"><?=$vo['tit05']?></td>
+<td class="bg"><?=$vo['tit06']?></td>
+<td class="cbg"><?=$vo['tit07']?></td>
+<?php
+if ($hea==""){
+$hea=0;
+}elseif($heb==""){
+$heb=0;
+}elseif($hec==""){
+$hec=0;
+}elseif($hed==""){
+$hed=0;
+}elseif($hee==""){
+$hee=0;
+}elseif($hef=="" || $hef<=0){
+$hef=0;
+}
+?>
+
+<td style="color:red;font-weight:800"><?=$hea?></td>
+<td style="color:red;font-weight:800"><?=$heb?></td>
+<td style="color:BLUE;font-weight:800"><?=$hec?></td>
+<td style="color:blue;font-weight:800"><?=$hed?></td>
+<td style="color:green;font-weight:800"><?=$hee?></td>
+</tr>
+<?php
+$hea=0;
+$heb=0;
+$hec=0;
+$hed=0;
+$hee=0;
+$hef=0;
+$zong1=$nums1+$nums2+$nums3+$nums4+$nums5+$nums6+$nums7;
+$zong2=$numsa1+$numsa2+$numsa3+$numsa4+$numsa5+$numsa6+$numsa7;
+$zong3=$numsb1+$numsb2+$numsb3+$numsb4+$numsb5+$numsb6+$numsb7;
+$zong4=$numsc1+$numsc2+$numsc3+$numsc4+$numsc5+$numsc6+$numsc7;
+$zong5=$numsd1+$numsd2+$numsd3+$numsd4+$numsd5+$numsd6+$numsd7;
+$zong6=$numse1+$numse2+$numse3+$numse4+$numse5+$numse6+$numse7;
+?>
+</foreach>
+
+<tr ><td>期数</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一码</td><td>二码</td><td>三码</td><td>四码</td><td>五码</td><td>六码</td><td>特码</td><td>一肖</td><td>二肖</td><td>三肖</td><td>四肖</td><td>五肖</td><td>六肖</td><td>特肖</td><td>一头</td><td>二头</td><td>三头</td><td>四头</td><td>零头</td></tr><tr><td></td><td></td><td>基</td><td>本</td><td>号</td><td>码</td><td></td><td></td><td></td><td>号</td><td>码</td><td></td><td>单</td><td>双</td><td></td><td></td><td></td><td>累</td><td>计</td><td>次</td><td>数</td><td>:</td><td style="color:red;font-weight: 800 "><?=$zong1?></td>
+<td style="color:red;font-weight: 800 "><?=$zong2?></td>
+<td style="color:blue;font-weight: 800 "><?=$zong3?></td>
+<td style="color:blue;font-weight: 800 "><?=$zong4?></td>
+<td style="color:green;font-weight: 800 "><?=$zong5?></td>
+</tr></table></div>
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

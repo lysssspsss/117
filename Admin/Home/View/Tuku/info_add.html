@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<link href="{$Think.const.CSS_URL}common.css" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.CZEDITOR}themes/default/default.css" rel="stylesheet" type="text/css" />
+<body>
+<div class="place">
+<span>位置：</span>
+<ul class="placeul">
+<li><a href="__MODULE__/config.html">首页</a></li>
+<li><a href="__CONTROLLER__/index.html">彩图管理</a></li>
+<li><a href="#">添加彩图</a></li>
+</ul>
+</div>
+<div class="formbody">
+<div id="msg">
+<input id="ClassID"  type="hidden" value="">
+<table class="page_table" cellpadding="0" cellspacing="1">
+<tr>
+<td width="10%" class="td_left">信息标题：</td>
+<td width="90%" class="left"><input id="title" type="text" style="width:350px;" class="biankuan" placeholder="请输入标题名称"/></td>
+</tr>
+<tr>
+<td width="9%"  class="td_left">信息分类：</td>
+<td colspan="2" class="left">
+<iframe frameborder=0 id=FrmRight name=right src="__CONTROLLER__/directory/?NumberID={$_SESSION['tuku_class']}" style="HEIGHT:30px; VISIBILITY: inherit; WIDTH: 100%; Z-INDEX: 1"></iframe></td>
+</tr>
+<tr>
+<td width="10%" class="td_left">彩图标识：</td>
+<td width="90%" class="left"><input  type="text" id="content" value="" class="biankuan" style="width:350px;"/></td>
+</tr>
+<tr>
+<td>
+</td>
+<td align="left">
+<input type="button"  value="提交内容" class="tijiao_input"  onClick="Get_add_Save()"/>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}jquery.min.js"></script>
+
+<script>
+//==========设置几秒跳转
+var i = 2; 
+var intervalid; 
+function TiaoSecond(Yoyo){ 
+if (i ==0) { 
+window.location.href =Yoyo; 
+clearInterval(intervalid); 
+} 
+document.getElementById("mes").innerHTML = i; 
+i--; 
+} 	
+//==========设置几秒结束
+
+
+//=======================获取数据
+function Get_add_Save(){
+var title   =$("#title").attr("value");
+var ClassID =$("#ClassID").attr("value");
+var path    =$("#path").attr("value");
+var content =$("#content").attr("value");
+jQuery.ajax({
+url: "__SELF__",
+dataType:"json",
+type:"POST",
+data:{Action:"Add",title:title,ClassID:ClassID,path:path,content:content},
+beforeSend: function(XHR){
+$('#msg').html('<center><br><br><img alt="正在加载中..." src="{$Think.const.IMG_URL}Loading/load1.gif" ></center>');	
+},
+success:function(data) {
+$("#msg").html(data.msg)
+intervalid =setInterval("TiaoSecond('__CONTROLLER__/info_add.html')",1000);//==========执行几秒跳转
+}
+});
+
+}
+</script>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+html{color:#666;background:#fff;margin:0px;padding:0 0 50px 0;font-size:14px}
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0}
+ul,ol,li{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4,h5,h6,s,i,em{font-size:12px;font-weight:normal}
+body{ margin: 0 auto; font:14px/25px "Microsoft YaHei",Verdana, Geneva, sans-serif; color:#666;}
+.clearfix:after{content:".";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}
+.clearfix{*zoom:1}
+.clear{clear:both;width:0px;height:0px;font-size:0px;overflow:hidden}
+a { color: #3399ff; text-decoration: none;}
+
+#top { width: 100%; height: 230px; position: relative; background: #3399ff;}
+.top { width: 1000px; height: 230px; margin:0 auto; position: relative; background: url(../images/zodiac.jpg) 0 15px no-repeat;}
+.top_txt { padding-top: 180px; padding-left: 200px; line-height: 33px; font-size: 16px; font-weight: bold; color: #fff;}
+.top_txt a { color: #fff;}
+.top_txt span { width: 122px; height: 33px; line-height: 28px; margin: 0 10px; padding: 0 10px; display: inline-block; background: url(../images/blue01.png) 0 0 no-repeat;}
+.top_red { width: 193px; height: 73px; position: absolute; bottom: -8px; right: 73px; background: url(../images/red.png) 0 0 no-repeat;}
+.top_foot { width: 100%; height: 15px; position: absolute; bottom: -7px; background: url(../images/diot.png) 0 0 repeat-x;}
+#main { width: 998px; margin: 40px auto 0 auto;}
+.main_top { width: 998px; height: 32px; background: url(../images/top.png) 0 0 no-repeat;}
+.main_top span.aa,
+.main_top span.bb { line-height: 32px; font-size: 16px; color: #fff; text-align: center; display: inline-block;}
+.main_top span.aa { width: 370px;}
+.main_top span.bb { width: 190px;}
+.main_foot { width: 998px; height: 32px; background: url(../images/foot.png) 0 0 no-repeat;}
+.main { background: url(../images/main.png) 0 0 repeat-y;}
+.left { float: left; width: 630px; padding-left: 30px; text-align: center; position: relative;}
+.left h1 { height: 60px; line-height: 60px; padding-top: 20px; font-size: 40px; font-weight: bold; color: #fd7902;}
+.left h3 { font-size: 16px;}
+.left .pic { width: 610px; height: 500px; margin-top: 20px; padding: 10px; background: url(../images/line.png) 0 0 no-repeat;}
+.left .z { width: 90px; height: 90px; position: absolute; top: 40px; right: 0; background: url(../images/z.png) 0 0 no-repeat;}
+.right { float: right; width: 290px; position: relative;}
+.right_tit { width: 145px; height: 42px; position: absolute; left: -27px; top: -15px; background: url(../images/blue02.png) 0 0 no-repeat;}
+.right_tit span { padding-left: 30px; color: #fff; font-size: 16px;}
+.right ul { padding-top: 35px;}
+.right ul li { float: left; width: 115px; height: 25px; margin-right: 10px; margin-bottom: 10px; padding-left: 15px; background: url(../images/white.png) 0 0 no-repeat;}
+.right ul li span { padding-right: 5px;}

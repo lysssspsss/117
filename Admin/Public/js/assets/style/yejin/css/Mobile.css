@@ -1,0 +1,308 @@
+﻿/*
+* name: Mobile && SmallScreen StyleSheet
+* version: v1.1.0
+* update: 尺寸细分代替横竖屏
+* date: 2015-08-10
+*/
+
+/* <640 */
+body{ min-width:0;padding-top: 0;}
+.header{ min-width: 0}
+.banner{ min-width:0}
+.zh_ban{ min-width:0; overflow:auto}
+.wrap{ min-width:0}
+/*header*/
+body{ font-size:12px; z-index:90;}
+.header{ position:relative;}
+.topBar ._top{ position:static}
+.topBar ._top ._lk em{ padding:0 2px;}
+.topBar ._top ._fac{ width:87px;}
+.topBar ._lan{ width:79px}
+.topBar ._lan ._val { padding-left:4px;}
+.topBar ._lan ._val b{ display:none}
+.topBar ._lan .sele_ a{ padding-left:12px;}
+.logo{ float:none; text-align:center}
+.nav{ display:none}
+.mobile_key{ display:block;}
+.zj_fac ._tab{ height:auto;}
+.zj_fac ._tab li{ width:48%; margin-bottom:20px;}
+.zj_fac ._list li{ float:none; width:auto;}
+.topBar ._top ._lk{ width:auto;}
+
+/*footer*/
+.foot_hd{ display:none}
+.foot_bd{ display:none;}
+.foot_btm{ line-height:normal; padding:10px 0; text-align:center; height:auto;}
+.foot_btm ._left{ float:none;}
+
+/*common*/
+.channel_st a, .channel_st{ font-size:20px;}
+.zh_part{ margin-top:15px;}
+.xc_con{ margin-top:0}
+.xc_banner{ display:none;}
+.xc_con .channel_list{ height:auto; padding-left:0;}
+.xc_con .channel_list ul{ overflow:hidden}
+.xc_con .channel_list ._t{ position:static; width:auto; margin-top:20px;}
+.xc_con .channel_list li{ width:50%; margin-left:0; text-align:center; background-color:#0080cb;margin-top:1px;}
+.xc_con .channel_list li a{ color:#fff; border-right:1px solid #fff; }
+.xc_con .channel_list li.cur{ background-color:#552a03}
+.channelT ._t{ font-size:20px;}
+.xc_con .channel_list ._t ._arr{ display:none;}
+.channelT{ margin:20px 0}
+.channelT ._posi{ display:none}
+.content ._left{ float:none; width:auto;}
+.content ._right{ float:none; width:auto;}
+.channelT ._t{ float:none}
+.channelT ._tab{ float:none;}
+.channelT ._tab li{ float:none; height:35px; line-height:35px; text-align:center; background-color:#0080cb;  font-size:20px; border-right:0; margin-right:0; padding-right:0;}
+.channelT ._tab .tab_t_cur, .channelT ._tab .tab_t_cur a, .channelT ._tab a:hover{ color:#fff;}
+
+/*index*/
+.banner{ height:200px}
+.banner ._img{ width:640px; margin-left:-320px; height:200px;}
+.banner ._wz{ display:none !important}
+.inews{ float:none; width:auto;}
+.inews ._topnews ._info ._t{ font-size:14px;}
+.inews ._topnews ._info ._p{ font-size:12px;}
+.inews ._topnews ._left{ float:none; width:auto;}
+.inews ._topnews ._info{ float:none; width:auto; margin-top:10px;}
+.inews_bd ._info ._t{ font-size:20px;}
+.inews_bd ._info{ float:none; width:auto; height:auto; margin-bottom:10px;}
+.inews ._topnewslist{ float:none; width:auto; margin-top:50px;}
+.i-part1 ._right{ float:none; width:auto; }
+.i-part1 ._right ._hd{ height:auto}
+.i-part1 ._right ._bd{ font-size:12px;}
+.i-part1 ._right ._bd span{ padding-left:10px;}
+.i-part1 ._right ._news ._list li ._st{ width:70%;}
+.i-part2 ._left{ float:none; width:auto;}
+.i-part2 ._left ._hd ._txt{ width:50%}
+.i-part2 ._left ._hd ._img{ width:50%; height:180px;}
+.i-part2 ._left ._hd ._img img{ height:180px;}
+.i-part2 ._left ._bd ._imgs{ width:50%}
+.i-part2 ._left ._bd ._txt{ width:50%}
+.i-part2 ._left ._bd ._imgs .slide_nav{ display:none}
+.subcom_ban{display: none;}
+.map_tab .map_con ._img{ position:static; display: none;}
+.map_tab .map_con ._img img{ display:none;}
+.map_tab .map_con ._dot{ position:static; float:left; margin-right:2%; margin-bottom:2%; width:48%;}
+.i-part2 ._right{display: none; float:none; width:auto;height:258px; background:url(../images/phone_map.jpg); background-size:100% auto;}
+.pro_zh .map_tab .map_con.map_china {height:258px; background:url(../images/phone_map.jpg); background-size:100% auto;}
+.pro_zh .map_tab .map_con.map_world {height:258px; background:url(../images/phone_wrold_map.jpg); background-size:100% auto;}
+.map_tab .map_con ._dot ._txt{ display:block; position:static; float:right; width:70%;}
+.map_tab .map_con .au_point ._zb{ float:right;}
+.map_tab .map_con .js_point{ overflow:hidden}
+.map_tab .map_con{ height:auto; }
+.map_tab .map_con ._tab{ display: none; width:100%; bottom:auto; top:0;}
+.map_tab .map_con ._tab li{ width:100%; margin-right:0;}
+.map_tab ._list{ margin-top:20px;}
+.map_tab ._list li{ font-size:20px;}
+
+
+
+/*资深专家*/
+.doctor { width:100%; height:auto; overflow:hidden}
+.line_tit { width:100%; position:relative; height:35px; margin:10px auto; overflow:hidden}
+.line_tit a { position:absolute; left:50%; margin-left:-50px; display:block; width:100px; background:#fff; line-height:35px; height:35px; text-align:center; z-index:3}
+.line_tit span { position:absolute; left:0; top:18px; display:block; width:100%; height:2px; background:#ccc;}
+.doctor_con { float:none; width:96%; height:155px; margin:10px auto; border:none; border-bottom:1px solid #ccc; padding:6px; overflow:hidden}
+.doctor_con img { float:left; width:75px; height:93px; margin-right:10px}
+.doctor_con span { display:block; line-height:35px; background:#c21213; color:#fff; }
+.doctor_con p {  line-height:30px; color:#4d4d4d;height:120px; overflow:hidden}
+
+/*报价*/
+.not { display:none}
+ .baojia { float:left; width:100%; height:auto; margin-bottom:10px; overflow:hidden}
+ .baojia table, .baojia table tr { float:left; display:block; width:100%; background:#fff;}
+ .baojia table tr { border-bottom:1px solid #e9e9e9;}
+ .baojia table tr.tit { background:#2B2B2B; height:50px; line-height:50px; }
+ .baojia table tr.tit td { color:#fff;}
+ .baojia table tr, .baojia table td { line-height:40px; color:#4e4e4e; text-align:center}
+ .baojia table .t1, .baojia table .t4 { float:left; width:20%; text-indent:.5em}
+ .baojia table .t2, .baojia table .t3 { float:left; width:30%; text-indent:.5em}
+ 
+ .baojia ul { width:100%;}
+ .baojia ul li { float:left; width:33.3%; line-height:50px; text-align:center; color:#4e4e4e}
+ .baojia ul li.on { background:#1787c9; color:#fff;}
+ 
+ ._jishu { float:right; width:100%; height:auto; background:#fff; overflow:hidden}
+ ._jishu h2 { display:block; line-height:40px; background:#33a3e5; text-indent:1em; color:#fff; font-size:16px;}
+ ._jishu ._list1 li { background:url(../img/arr_r_on.png) left 10px center no-repeat; background-size:12px;}
+
+.i-part1 .show { float:left; width:100%;}
+
+/*关于我们综合*/
+.zh_ban .ban_info{ height:auto}
+.zh_ban .wrap{ padding:0}
+.zh_ban .ban_img{ position:static; margin-left:0; width:auto; height:200px; max-width:100%;}
+.zh_ban{ height:auto;}
+.zh_ban .ban_info{ position:static; width:auto;}
+.zh_ban .ban_info ._t{ margin-top:0;font-size:20px;}
+.zh_ban .ban_info ._st{ font-size:16px;}
+.about_zhbox04 ._imgs{ float:none; width:auto;}
+.about_zhbox04 ._list{ float:none; width:auto; height:auto;}
+.about_zhbox04 ._tab li{ margin-right:15px;}
+.aboutzh_c ._img{ float:none; width:auto;}
+.aboutzh_c ._info{ float:none; height:auto; width:auto; padding:10px;}
+.aboutzh_c ._info ._t{ font-size:16px; margin-left:0; margin-top:0;}
+.aboutzh_c ._info ._p{ margin:0;}
+.aboutzh_history ._hd ._t{ float:none; font-size:20px;}
+.aboutzh_history ._hd ._tab{ float:none;}
+.aboutzh_history ._hd ._tab li{ float:none; width:auto;}
+.about_zhbox03 ul{ width:auto;}
+.about_zhbox03 li{ float:left; margin-right:2%; margin-bottom:2%; width:48%;}
+.tz_baogao .baogao_list ._info:after{ display:none}
+.about_zhbox03 li.l1{ height:140px;}
+/*投资者关系*/
+
+
+
+/*社会责任*/
+
+.shzr_ban{ display:none !important;}
+.shzr_ban_info{ position:static; margin-left:0; padding:4%; width:auto; background:#dda400}
+.shzr_ban_info ._t{ margin-top:0; font-size:25px;}
+.shzr_box01 ._lk{ float:none; width:auto; margin-right:0}
+.shzr_box01 ._imgs{ float:none; width:auto}
+.shzr_box01 ._baogao{ float:none; width:auto;}
+.shzr_box01 ._imgs{ float:none; width:auto;}
+.shzr_box02 ._left ._hd{ float:none; height:auto; padding:0 10px 15px; width:auto;}
+.shzr_btm{ height:auto;}
+.shzr_box02 ._left{ float:none;}
+.shzr_box02 ._right{ float:none;}
+.shzr_box02 ._right ._hd, .shzr_box02 ._right ._bd{ float:none; width:auto;}
+.shzr_box02 ._left ._hd ._t{ margin-top:0; font-size:20px;}
+.shzr_box02 ._left ._bd{ float:none; width:auto;}
+.shzr_box01 ._imgs{ height:180px;}
+.shzr_t{ font-size:20px;}
+.shzr_box02 ._right ._txt ._t{ font-size:20px;}
+.shzr_box02 ._right ._txt{ height:auto}
+.shzr_box02 ._left ._bd ._txt{ height:auto}
+.shzr_box02 ._right ._bd ._txt ._t{ font-size:14px;}
+
+/*媒体中心*/
+.zh_ban .newszh_ban{ display:none !important}
+.zh_ban .news_arrs{ display:none;}
+.newszh_news_list ._imgs{ float:none; width:auto}
+.newszh_news_list ._imgs img{ position:absolute; top:0; left:50%; margin-left:-200px; width:400px; max-width:none; height:293px;}
+.newszh_news_list ._list{ position:static; width:auto; height:auto;}
+.newszh_sear ._inp ._sel{ float:none; width:100%; display:block;}
+.newszh_sear ._inp input[type="text"]{ display:block; width:100%; margin:10px 0;}
+.newszh_sear ._inp ._t{ float:none}
+.zt_list ul{ width:auto;}
+.zt_list li{ float:none; width:auto; margin-right:0; margin-bottom:15px;}
+.news_img .mli{ float:none; margin-right:0;}
+.news_img .l1{ width:auto;}
+.news_img .l2{ width:auto;}
+.news_img .l3{ width:auto;}
+.news_img .l4{ float:none; width:auto;}
+.yebao ._img{ float:none}
+.yebao ._c{ float:none; width:auto;}
+.yebao ._c ._t{ font-size:14px;}
+
+/*人力综合*/
+.job_ban{ display:none;}
+.jobzh_bd ul{ margin-top:0;}
+.jobzh_hd{ display:none}
+.jobzh_bd li:after{ display:none}
+.jobzh_bd{ margin-top:30px;}
+
+/*公告*/
+.baogao_list ._time{ float:none; border:0; width:auto;}
+.baogao_list ._info{ float:none; border:0; height:auto; width:auto;}
+.content ._right .baogao_img a{ width:50%;}
+
+/*大事记*/
+.his_con ._year-list{ position:relative; width:auto; height:auto;}
+.his_con ._year-con{ float:none; width:auto; overflow:auto; padding-right:0;}
+.his_con ._year-con ._news ._list{ width:auto;}
+.his_con ._year-con ._news li{ width:320px;}
+.his_con ._year-con ._news .his_arrs{ display:none}
+
+
+/*董事长专栏*/
+.ds_hd ._img{ float:none; width:auto;}
+.ds_hd ._info{ float:none; width:auto; padding:10px; height:auto;}
+.ds_btm ._left01{ float:none; width:auto; margin-right:0; height:auto;}
+.ds_btm ._left02{ float:none; width:auto;}
+.ds_btm ._left03{ float:none; width:auto;}
+
+/*媒体中心*/
+.pic_list li{ float:none; width:auto; margin-right:0;}
+.scon_tab li{ float:none; width:auto; margin-right:0}
+
+/*社会招聘*/
+.job_top_sear dt{ position:static;}
+.job_top_sear dl{ padding-left:0;}
+.job_top_sear dd ._sel{ margin:5px 0}
+.job_top_sear dt{ text-align:left}
+
+/*时代矿工专题*/
+.zt1_p1 ._img .slide_nav a{ width:45%; margin-right:2%; margin-bottom:5%;}
+.zt1_p1 ._img .slide_nav .on{ top:auto;}
+
+.zt1_p1 ._img .slide_nav .on img{ border:0; height:65px;}
+.zt1_ban{ display:none;}
+.zt1_p1{ margin-top:0; padding:0; position:static;}
+.zt1_p1 ._img{ float:none; width:auto;z-index:1; height:175px;padding-bottom: 20px;}
+.zt1_p1 ._txt{ float:none; width:auto;}
+.zt1_p1 ._txt ._c{ padding:8px}
+.zt1_p1 ._txt ._st{ font-size:19px;}
+.zt1_p2{ padding:0}
+.zt_channelT{ width:auto}
+.zt1_p2 ._list ._imgs .cell{ float:none; margin-right:0;}
+.zt1_p2 ._list ._imgs .cell img{ width:auto; height:auto}
+.zt1_p2 ._list{ height:700px;}
+.zt1_p2 ._news ._left{ float:none; width:auto;}
+.zt1_p2 ._news ._right{ float:none; width:auto;}
+.zt1_p1 ._img .slide_nav{ display:none}
+/*紫金在海外*/
+.subcom_btm ul{ width:auto}
+.subcom_btm li{ float:none; margin-right:0; width:auto;}
+
+.i-part1 ._right ._hd .tab_c ._t1{ font-size:17px;}
+.i-part1 ._right ._hd .tab_c ._t3{ font-size:17px;}
+.i-part1 ._right ._hd .tab_c ._c img{ width:16%; padding-top:5px;}
+
+/*360*/
+.zt_banner .arrs{position:absolute;z-index:21;  top:50%;width:99px; height:85px;}
+.zt_banner .arr_prev{left:0px;background:url(../images/ztimg/ztbj_03.png) no-repeat; }
+.zt_banner .arr_next{right:0px;background:url(../images/ztimg/ztbj_04.png) no-repeat; }
+.procc_nav{ margin-top:-73px; height:70px;}
+.procc_nav a{width:70px; height:25px;line-height:25px;font-size:14px;}
+
+/*生态*/
+.stkg_ban{display: none !important;}
+.zt4_p1 ._img{float: none; width: auto;}
+.zt4_p1 ._info{float: none;width: auto;height: auto;}
+.zt4_p2 ._left{float: none;width: auto;}
+.zt4_p2 ._right{float: none; width: auto;}
+.zt4_cht ._t big{font-size: 22px;}
+.zt4_p3 ._con{height: auto;overflow: auto;}
+.zt4_p3 ._tab{float: none; width: auto;}
+.zt4_p3 ._intro{float: none;width: auto;}
+.zt4_p4 .k_arrs{display: none;}
+.zt4_p3 ._tab .tab_t_cur a:after{display: none;}
+
+/*社会责任*/
+.shzt_ban{ display: none;}
+.zt_daoyu{display: none;}
+.zt3_cht ._ch{font-size: 25px;}
+.zt3_cht ._en{font-size: 14px;}
+.zt3_p1_con ._left{float: none;width: auto;}
+.zt3_p1_con ._right{float: none;width: auto;}
+.zt3_p2 ._list li{width: 100%; height: auto;}
+.zt3_p2 ._list ._img{width: 100%;}
+.zt3_p2 ._list ._txt{width: 100%;}
+.zt3_p2 ._list ._txt ._box{padding: 15px;}
+.zt3_p4 ul{width: auto;}
+.zt3_p4 li{float: none; width: auto; margin-right: 0;}
+.zt3_his_tab li{width: 48%;}
+.zt3_his_tabc{padding: 10px;}
+
+/* <320 */
+@media screen and (max-width: 320px){
+
+
+
+
+}

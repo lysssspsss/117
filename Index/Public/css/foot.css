@@ -1,0 +1,176 @@
+﻿	* {
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.con {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto 5px;
+}
+h2 {
+    color: #333333;
+    font-size: 13px;
+}
+h2 span {
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    font-weight: 100;
+    padding-right: 5px;
+}
+h2 a {
+    color: #333333;
+}
+.listT2 {
+    border-bottom: 3px solid #FF0000;
+    height: 20px;
+    line-height: 20px;
+    padding: 8px 3px 3px;
+}
+.sxdz {
+    font-family: arial,sans-serif,宋体;
+    height: 70px;
+    padding-top: 8px;
+    text-align: center;
+    width: 100%;
+}
+.sxdz li {
+    color: #FFFFFF;
+    float: left;
+    font-size: 10pt;
+    width: 16%;
+}
+.sx {
+    color: #990000;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+.sx1{
+    color: #990000;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom:1px solid gray;
+}
+.bg_blue {
+    background-color: #0066FF;
+}
+.bg_green {
+    background-color: #009900;
+}
+.bg_red {
+    background-color: #FF0000;
+}
+
+.dbsm {
+	width: 1000px;
+    height: 53px;
+    line-height: 23px;
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.table3{
+    color: #0000FF;
+    font-family: arial,sans-serif,宋体;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.table3 td{
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 6px;
+    border: 1px solid gray;
+}
+
+.table4 {
+    color: #FFFFFF;
+    font-family: arial,sans-serif,宋体;
+    font-size: 13px;
+}
+
+
+.table4 td {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD;
+    border-image: none;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    line-height: 28px;
+}
+.table4 .font {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}	
+
+
+.gglj{
+	border: 1px solid green;
+	width: 1000px;
+	height: 300px;
+	margin: 0 auto;
+}
+.jesu {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.listT1 {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    height: 20px;
+    line-height: 20px;
+    padding: 8px 3px 3px;
+}  
+.table5 {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    font-family: arial,sans-serif,宋体;
+}
+.table5 td {
+    border-color: rgb(221, 221, 221) rgb(221, 221, 221);
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+}
+#tdright {
+    border-right-color: rgb(255, 255, 255);
+}
+#tdbottom {
+    border-bottom-color: rgb(255, 255, 255);
+} 
+
+
+.left
+{
+  width: 700px;
+  position: absolute;
+}
+.right
+{
+	margin-top: 20px;
+	margin-right: 15px;
+width: 281px;
+height: 330px;
+float: right;
+}

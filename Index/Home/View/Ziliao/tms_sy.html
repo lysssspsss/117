@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>六合秘典-解诗全部期数</title>
+<style>
+* { margin: 0; padding: 0;}
+body { font-size: 12px; color: #000;background:#ffffff;}
+.clearfix:after{content:".";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}
+.clearfix{*zoom:1}
+.clear{clear:both;width:0px;height:0px;font-size:0px;overflow:hidden}
+
+.box { width: 1000px; margin: 0 auto;}
+.qi { float: left; width: 480px; height: 140px; margin: 4px; border: dashed 1px #ccc; position: relative;}
+.qiLeft { width: 95px; height: 30px; line-height: 30px; text-align: center; background: #3399ff; position: absolute; left: 0; top: 0;}
+.qiLeft h1 { color: #fff; font-size: 18px; font-weight: normal; font-family: "Arial Black","Microsoft YaHei";}
+.qiMid { width: 95px; height: 98px; padding-top: 12px; text-align: center; background: #e1f0ff; position: absolute; left: 0; top: 30px;}
+.qiMid span { width: 40px; height: 40px; line-height: 40px; margin: 5px auto; text-align: center; color: #fff; display: block; border-radius: 50px; font-size: 24px; font-family: "Microsoft YaHei"; background: #f00;}
+.qiMid font { color: #f00; font-size: 18px; display: block; font-family: "Arial Black";}
+.qiRight { width: 365px; height: 110px; overflow: hidden; position: absolute; right: 15px; top: 15px;}
+.qiRight dl {}
+.qiRight dt { padding-bottom: 5px; font-size: 18px; font-weight: bold; color: #f00;}
+.qiRight dd { line-height: 1.45em;}
+</style>
+</head>
+
+<body>
+
+<foreach name="list" item="vo">
+<!--每期开始-->
+	<div class="qi clearfix">
+    	<div class="qiLeft" style="position: absolute; left: 0px; top: 0px; height: 30px">
+		<h1>{$vo.qihao}期</h1></div>
+   	  <div class="qiMid">特码<span><strong>{$vo.shengxiao}</strong></span><font>{$vo.tema}</font></div>
+    	<div class="qiRight" style="position: absolute; left: 112px; top: 22px; height: 111px">
+        	<dl>
+            	<dt>{$vo.temashi}</dt>
+                <dd>解：{$vo.jieshi}</dd>
+            </dl>
+      </div>
+    </div>
+<!--每期结束-->
+</foreach>
+</body>
+</html>

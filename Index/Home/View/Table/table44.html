@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>号码行列分布走势图</title>
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}view.css"/>
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<include file="Index:header" />
+<div class="main">
+<include file="Index:chart" />
+<include file="Table:form" />
+<!--主体内容开始-->
+<div class="boxs">&nbsp &nbsp&nbsp简要说明：<li >规则七星矩阵是将香港彩票的49个奖号依照7x7的正方形矩阵按大小顺序排列。横向以7的倍数为分割，竖向以除7的余数为分割。 可以方便分析除7整数和余数的区域分布情况。</li><li ></li></div>
+<div class="datalist">
+<foreach name="list" item="vo">
+
+<table width="20%" id="table1" style="width:180px;">
+<tr>
+<td >
+<div align="center" class="table">
+<table width="100%" border="0" align="center" cellspacing="0" id="table2">
+<tr>
+<td  colspan='7'><p align='center'>{$vo['title']}期</td>
+</tr> 
+<?php
+$i=0;
+$zong=array("01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49");
+foreach ($zong as $key=>$value){
+$i++;
+?>
+<?php if (in_array($value, array($vo['tit1'],$vo['tit2'],$vo['tit3'],$vo['tit4'],$vo['tit5'],$vo['tit6'],$vo['tit7']))){?>
+<td class="<?=cz_band_txt($value)?>"><?=$value?></td>
+<?php }else{?>
+<td><em><?=$value?></em></td>
+<?php } ?>
+
+<?php if ($i % 7==0){?></tr><tr><?php } ?>
+
+<?php } ?>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+
+</table>
+</foreach>
+</div>
+<!--主体内容结束-->
+
+</div>
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Table_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Table_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>

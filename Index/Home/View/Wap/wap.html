@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>1976年-{$dates}年开奖记录[手机版]- 请选择年份</title>
+<meta name="keywords" content="手机报码,手机报码网,手机开奖网址,手机开奖结果,记录查询	">
+<meta name="description" content="第一时间更新开奖结果,不用电脑上网也可以用手机查看最新开奖结果,查询全年开奖记录">
+</head>
+<body>
+<style> 
+BODY {
+PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+UL {
+PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+h1 {
+PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+LI {
+PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+A {
+color:#0000FF;TEXT-DECORATION: none
+}
+A:hover {
+COLOR: #FF0000
+}
+h1 {
+PADDING-BOTTOM: 0px; LINE-HEIGHT: 35px; MARGIN-TOP: -1px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BACKGROUND: #FE9F01; HEIGHT: 35px; COLOR: #fff; PADDING-TOP: 0px; font-size:14px
+}
+h1 span{float:right}
+.list LI A {
+DISPLAY: block
+}
+.list LI {
+BORDER-BOTTOM: #e2e4e8 1px dotted; TEXT-ALIGN: center; LINE-HEIGHT: 33px; FLOAT: left; HEIGHT: 33px; OVERFLOW: hidden; BORDER-RIGHT: #e2e4e8 1px dotted; -webkit-box-sizing: border-box
+}
+.list LI {
+WIDTH: 20%
+}
+.di{padding:3px 0; line-height:1.5em; color:#999; font-family:"宋体"; background:#fbfbfb; border-top:1px solid #efefef; margin-top:5px}
+.tishi{color:#999; font-family:"宋体"; padding:3px}
+</style>
+<link href="{$Think.const.CSS_URL}m.css" rel="stylesheet" type="text/css" />
+<include file="Wap:header" />
+<h1>请选择年份</h1>
+<ul class="list clearfix">
+<?php for($i =1976; $i <= $dates; $i++) { ?>
+<li><a href="__CONTROLLER__/history.html?id=<?=$i?>"><?=$i?>年</a></li>
+<?php } ?>
+
+</ul>
+<div style="clear:both"></div>
+<br><br><br><br><br><br><br><br><br>
+<include file="Wap:footer" />
+</body>
+</html>

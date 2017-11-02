@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>{$data.title}_<?=Cz_cig('site_name')?></title>
+<meta name="keywords" content="{$data.title}" />
+<meta name="description" content="{$data.title}_<?=Cz_cig('site_name')?>" />
+<link href="{$Think.const.CSS_URL}list.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}self.css" rel="stylesheet" type="text/css" />
+<link href="{$Think.const.CSS_URL}main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><script src="{$Think.const.JS_URL}html5.js" type="text/javascript"></script><![endif]-->
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}superslide.js" type="text/javascript"></script>
+<script src="{$Think.const.JS_URL}My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<include file="Index:header" />
+<div class="content clearfix">
+<div id="main" class="main">
+<div class="br p10 bgff">
+<p>您的位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{:U('Home/Pic/index')}">性感美女</a></p>
+</div>
+<div class="blank10"></div>
+<div class="br bgff">
+<div class="article_text">
+ <h1>{$data.title}</h1>
+ <div class="info_text"><span>时间：</span>{$data.begtime|datetime}</div>
+<div class="blank10"></div> 
+ <div id="textzoom">
+			<!--广告开始-->
+			<foreach name="plug_ad_17" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="960" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->   
+<div style="text-align:center;">{$data.content}</div>
+			<!--广告开始-->
+			<foreach name="plug_ad_18" item="v">
+			<if condition="$v[plug_ad_checkid]==1">
+			<a target="_blank" href="{$v.plug_ad_url}"><font color="#0066FF"><img src="__PUBLIC__/{$v.plug_ad_pic}" width="960" title="{$v.plug_ad_name}" /></font></a><br>	
+			<elseif condition="$v[plug_ad_checkid]==2"/>
+			{$v.plug_ad_js|htmlspecialchars_decode|stripslashes}
+			</if>			
+			</foreach>
+			<!--广告结束-->  
+</div>
+<div class="blank10"></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<include file="Index:footer" />
+		<script>
+			var bgSelect = setInterval(function(){
+				$(".Pic_nav").addClass("li_checked").siblings().removeClass("li_checked");
+				if($(".Pic_nav").length != 0){
+					clearInterval(bgSelect);
+				}
+			},200)
+		</script>
+</body>
+</html>
+<script src="{$Think.const.JS_URL}history.js" type="text/javascript"></script>

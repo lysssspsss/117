@@ -1,0 +1,198 @@
+	<include file='index:header' />
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+
+	<include file='index:left' />
+
+
+			<!-- /section:basics/sidebar -->
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="page-content">
+
+                        
+                        
+                        <!--主题-->
+						<div class="page-header">
+							<h1>
+								您当前操作
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									修改三期必出
+								</small>
+							</h1>
+						</div>
+
+<script>
+$(function(){
+	$('#sanqi_edit').ajaxForm({
+		beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+		success: complete, // 这是提交后的方法
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#qihao1').val())){
+			layer.alert('期号不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#qihao1').focus(); 
+			});
+			return false;
+		}
+
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			alert(data.info);
+			return false;	
+		}
+	}
+ 
+});
+</script>
+
+
+						<div class="row">
+							<div class="col-xs-12">
+								<form class="form-horizontal" name="sanqi_edit" id="sanqi_edit" method="post" action="__URL__/sanqi_runedit">
+								<input type="hidden" name="id" id="id" value="{$sanqi.id}" />
+	
+<table id="table400903536" border="0" bordercolorlight="#e8c979" bordercolordark="#e8c979" cellpadding="0" width="100%" bgcolor="#ffccff" style="padding: 0px; margin: 0px; font-family: 宋体; letter-spacing: normal; orphans: auto; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 12px; cursor: default; color: buttontext;">
+
+	<tbody>
+
+
+			<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" bgcolor="#00FF00" height="31" width="91%" colspan="4">
+</td>		
+
+<!--hpbegin-->
+
+		<tr>
+
+			<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" bgcolor="#ffffff" height="73" width="12%" align="center">
+
+			<b><font size="3"><input type="text" style="width:25%" name="qihao1" id="qihao1" value="{$sanqi.qihao1}" />期<br>
+			
+			<input type="text" style="width:25%" name="qihao2" id="qihao2" value="{$sanqi.qihao2}" />期<br>
+
+			<input type="text" style="width:25%" name="qihao3" id="qihao3" value="{$sanqi.qihao3}" />期</font></b></td>
+			
+
+			<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" bgcolor="#ffffff" height="73" width="35%" align="center">
+
+			<font size="6" color="#FF0000"><b><input type="text" style="width:35%" name="sanqi" id="sanqi" value="{$sanqi.sanqi}" /></b></font></td><td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" bgcolor="#ffffff" height="73" width="19%" align="center">		
+
+			<table id="table400903569" border="0" width="85%"><tbody><tr>
+				<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" height="20">
+
+				<span style="font-weight: 700; text-decoration: blink">
+
+				<font face="黑体" size="4" color="#0000FF"></font></span><span style="WORD-WRAP: break-word; FONT-SIZE: 9pt; FONT-WEIGHT: 700; TEXT-DECORATION: none"><b style="WORD-WRAP: break-word"><span style="WORD-WRAP: break-word; FONT-WEIGHT: 700; TEXT-DECORATION: none"><font style="WORD-WRAP: break-word" color="#ff0000" size="2"><b><span>
+				<font style="padding:0px; MARGIN: 0px; word-wrap:break-word; font-weight:700; text-decoration:blink" color="#0000ff" face="黑体" size="4">
+				{$sanqi.qihao1}期開:<input type="text" style="width:25%" name="jg1" id="jg1" value="{$sanqi.jg1}" /><input type="text" style="width:25%" name="haoma1" id="haoma1" value="{$sanqi.haoma1}" /></font></span></b></font></span></b></span></td></tr><tr><td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px">
+
+					<b style="WORD-WRAP: break-word">
+
+					<span style="WORD-WRAP: break-word; FONT-WEIGHT: 700; TEXT-DECORATION: none">
+
+					<b><span>
+
+					<font style="WORD-WRAP: break-word" color="#ff0000" size="2">
+
+					<span style="WORD-WRAP: break-word; FONT-SIZE: 9pt; FONT-WEIGHT: 700; TEXT-DECORATION: none">
+
+					<font style="padding:0px; MARGIN: 0px; word-wrap:break-word; font-weight:700; text-decoration:blink" size="4" color="#0000ff" face="黑体">
+
+					{$sanqi.qihao2}期開:<input type="text" style="width:25%" name="jg2" id="jg2" value="{$sanqi.jg2}" /><input type="text" style="width:25%" name="haoma2" id="haoma2" value="{$sanqi.haoma2}" /></font></span></font></span></b></span></b></td></tr><tr><td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px">
+
+					<b style="WORD-WRAP: break-word">
+
+					<span style="WORD-WRAP: break-word; FONT-WEIGHT: 700; TEXT-DECORATION: none">
+
+					<b><span>
+
+					<font style="WORD-WRAP: break-word" color="#ff0000" size="2">
+
+					<span style="WORD-WRAP: break-word; FONT-SIZE: 9pt; FONT-WEIGHT: 700; TEXT-DECORATION: none">
+
+					<font style="padding:0px; MARGIN: 0px; word-wrap:break-word; font-weight:700; text-decoration:blink" size="4" color="#0000ff" face="黑体">
+
+					{$sanqi.qihao3}期開:<input type="text" style="width:25%" name="jg3" id="jg3" value="{$sanqi.jg3}" /><input type="text" style="width:25%" name="haoma3" id="haoma3" value="{$sanqi.haoma3}" /></font></span></font></span></b></span></b></td></tr></tbody></table></td>
+					
+
+								
+
+		</tr>
+	<tbody>
+
+		<tr>
+
+			<td style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 9pt; PADDING-TOP: 0px" bgcolor="#00FF00" height="3" width="91%" colspan="4">
+</td>
+
+		</tr>
+
+
+		<!--hpend-->
+
+
+		</tbody>
+		</table>
+	
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="ace-icon fa fa-check bigger-110"></i>
+												保存
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="ace-icon fa fa-undo bigger-110"></i>
+												重置
+											</button>
+										</div>
+									</div>
+								</form>
+                        	</div>
+                        </div>
+									<div class="hr hr-24"></div>
+
+<include file='index:header_nav' />
+
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+
+	<include file='index:footer' />
+
+		</div><!-- /.main-container -->
+
+    		<!--下拉样式以及JS-->
+		<link rel="stylesheet" href="{$Think.const.JS_URL}/assets/css/chosen.css" />
+		<script src="{$Think.const.JS_URL}/assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				if(!ace.vars['touch']) {
+					$('.chosen-select').chosen({allow_single_deselect:true}); 
+					$(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+						$('.chosen-select').each(function() {
+							 var $this = $(this);
+							 $this.next().css({'width': $this.parent().width()});
+						})
+					}).trigger('resize.chosen');
+			
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+
+
+#container  a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+#container {
+  overflow: hidden;
+  margin:0px auto 0;
+  border-top:5px solid #ffab00;
+  position:relative;
+}
+#container .decora { position:absolute; left:50%; margin-left:-510px; bottom:0px; width:1020px; height:30px; border-top:5px solid #676976; z-index:999; background:#fff;}
+
+#sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sli {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sli.active {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slideCopy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+}
+
+.slideCopy p { font-size: 18px; }
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: auto 0;
+  cursor: pointer;
+  z-index: 100;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+#prev {
+  left: 30px;
+  background-image: url(../img/arrow-left.png);
+  background-position: 13px center;
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+}
+
+#next {
+  right: 30px;
+  background-image: url(../img/arrow-right.png);
+  background-position: 16px center;
+  transform: translateX(-20px);
+  -webkit-transform: translateX(-20px);
+}
+
+.sliderHovered .arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sliderHovered #prev {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+.sliderHovered #next {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}

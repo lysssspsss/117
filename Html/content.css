@@ -1,0 +1,26 @@
+*{ margin:0; padding:0;}
+html {}
+body{ height: 100%; font-family:"Microsoft YaHei", Tahoma, Geneva, sans-serif,"宋体"; font-size:12px; color:#000; line-height:1.8em;}
+h1{line-height:1.3em;}
+a:hover img,img{ border:none;}
+ul{ list-style:none;}
+input,button,select,textarea{outline:none; font-family:"Microsoft YaHei", Tahoma, Geneva, sans-serif,"宋体"; font-size:12px;}
+table input,table button,table select,table textarea{ vertical-align:middle;}
+textarea{resize:none}
+table{ border-collapse:collapse;}
+a{ text-decoration:none; color:#039e6d;}
+a:hover{ color:#f00; text-decoration: underline; }
+
+/*标题*/
+.tit { height: 35px; line-height: 35px; font-size: 16px; color: #FFF; }
+
+/*资料文本*/
+.pd{ font-size:18px; border-top: 4;}
+
+/*底部关闭*/
+.pp a {font-size:17px; color:#000; line-height:1.7em; }
+.pp a:hover{ color: #F00; text-decoration:none;}
+
+/*收藏*/
+.sc a {font-size:17px; color:#06F; }
+.sc a:hover{ color: #F00; text-decoration:none;}
